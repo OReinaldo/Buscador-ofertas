@@ -1,432 +1,627 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard de Ofertas de Empleo</title>
-  <style>
-    :root {
-      --bg-color: #f8fafc;
-      --card-bg: #ffffff;
-      --text-primary: #0f172a;
-      --text-secondary: #64748b;
-      --border-color: #e2e8f0;
-      
-      --primary: #4f46e5;
-      --primary-light: #e0e7ff;
-      --success: #10b981;
-      --success-bg: #ecfdf5;
-      --warning: #f59e0b;
-      --warning-bg: #fffbeb;
-      --danger: #ef4444;
-      --danger-bg: #fef2f2;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Empleo y Deporte</title>
+    <!-- Font Awesome 6 para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+        }
 
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
-    }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); padding: 20px; }
+        .container { max-width: 1300px; margin: 0 auto; }
 
-    * { box-sizing: border-box; }
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-      background: var(--bg-color); 
-      color: var(--text-primary); 
-      margin: 0; 
-      padding: 32px 20px; 
-    }
-    
-    .container { max-width: 1350px; margin: 0 auto; }
-    
-    .header-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    h1 { margin: 0; font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; }
-    
-    .last-updated-badge {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      background: #ffffff;
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid var(--border-color);
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: var(--shadow-sm);
-    }
+        header { margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        h1 { font-size: 1.8rem; font-weight: 700; color: #0f172a; display: flex; align-items: center; gap: 10px; }
+        .update-time { font-size: 0.85rem; color: var(--text-muted); background: #e0f2fe; padding: 6px 12px; border-radius: 20px; font-weight: 500; }
 
-    /* CONTADORES SUPERIORES */
-    .stats-bar {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-    .stat-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: var(--shadow-sm);
-    }
-    .stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-    .stat-card.active { border-width: 2px; }
-    
-    .stat-card[data-filter="Todas"].active { border-color: var(--text-primary); background: #ffffff; }
-    .stat-card[data-filter="Pendiente"].active { border-color: var(--warning); background: var(--warning-bg); }
-    .stat-card[data-filter="Me interesa"].active { border-color: var(--success); background: var(--success-bg); }
-    .stat-card[data-filter="Descartada"].active { border-color: var(--danger); background: var(--danger-bg); }
+        /* BLOQUE DE CONTADORES CON FILTRADO INTERACTIVO */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 25px;
+        }
 
-    .stat-number { font-size: 2.25rem; font-weight: 800; line-height: 1; margin-bottom: 6px; }
-    .stat-label { font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 700; }
+        .stat-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
 
-    /* CONTROLES Y BUSCADOR */
-    .controls-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 28px;
-      background: var(--card-bg);
-      padding: 10px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      flex-wrap: wrap;
-    }
-    .segmented-tabs {
-      display: inline-flex;
-      background: #f1f5f9;
-      padding: 4px;
-      border-radius: 10px;
-      gap: 4px;
-    }
-    .tab-btn {
-      padding: 8px 18px;
-      border: none;
-      background: transparent;
-      border-radius: 8px;
-      font-weight: 600;
-      color: var(--text-secondary);
-      cursor: pointer;
-      font-size: 0.875rem;
-      transition: all 0.2s ease;
-    }
-    .tab-btn.active { background: var(--card-bg); color: var(--primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
+        }
 
-    .search-box {
-      padding: 10px 16px;
-      border: 1px solid var(--border-color);
-      background: #f8fafc;
-      border-radius: 10px;
-      min-width: 300px;
-      font-size: 0.875rem;
-      outline: none;
-    }
+        .stat-card.active {
+            border-color: var(--primary);
+            background: #eff6ff;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+        }
 
-    /* GRID DE TARJETAS */
-    .grid-ofertas {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 20px;
-    }
-    
-    .job-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.25s ease;
-    }
-    
-    .job-card.state-pendiente { border-left: 6px solid var(--warning); }
-    .job-card.state-interesa { border-left: 6px solid var(--success); background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%); }
-    .job-card.state-descartada { border-left: 6px solid var(--danger); opacity: 0.75; }
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
 
-    .job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
-    .job-title { font-size: 1.05rem; font-weight: 700; margin: 0; color: var(--text-primary); }
-    
-    .badges-container { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
-    
-    .badge-site { 
-      font-size: 0.725rem;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-weight: 700;
-      white-space: nowrap;
-      background: #e0e7ff; 
-      color: #3730a3; 
-    }
-    
-    .badge-cat { 
-      font-size: 0.725rem;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-weight: 600;
-      background: #f1f5f9; 
-      color: var(--text-secondary); 
-      border: 1px solid var(--border-color); 
-    }
+        .icon-total { background: #dbeafe; color: #2563eb; }
+        .icon-nuevas { background: #fef9c3; color: #ca8a04; }
+        .icon-deporte { background: #f3e8ff; color: #7c3aed; }
+        .icon-empresas { background: #ffedd5; color: #ea580c; }
+        .icon-pendientes { background: #e0f2fe; color: #0284c7; }
+        .icon-interesa { background: #d1fae5; color: #059669; }
+        .icon-descartadas { background: #ffe4e6; color: #e11d48; }
 
-    .badge-modalidad {
-      font-size: 0.7rem;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      border: 1px solid transparent;
-      white-space: nowrap;
-    }
+        .stat-info { display: flex; flex-direction: column; overflow: hidden; }
+        .stat-number { font-size: 1.3rem; font-weight: 700; color: #0f172a; line-height: 1.1; }
+        .stat-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; margin-top: 3px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 
-    .badge-remoto { background-color: #ecfdf5; color: #047857; border-color: #a7f3d0; }
-    .badge-hibrido { background-color: #fff7ed; color: #c2410c; border-color: #fed7aa; }
-    .badge-presencial { background-color: #f8fafc; color: #475569; border-color: #cbd5e1; }
+        /* BARRA DE FILTROS METADATA Y FECHAS */
+        .filter-panel {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid var(--border);
+            margin-bottom: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
 
-    .job-info { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 18px; }
-    .job-info p { margin: 5px 0; display: flex; align-items: center; gap: 6px; }
+        .filter-group {
+            display: flex;
+            align-items: center;
+            background: #f1f5f9;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 12px;
+            gap: 8px;
+            flex: 1 1 180px;
+        }
 
-    .job-actions {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-color);
-    }
-    .btn-action {
-      flex: 1;
-      padding: 9px;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      background: #ffffff;
-      cursor: pointer;
-      font-size: 0.8rem;
-      font-weight: 700;
-      transition: all 0.2s ease;
-    }
-    .btn-action.interesa { color: var(--success); border-color: #a7f3d0; }
-    .btn-action.interesa.active-state { background: var(--success); color: #ffffff; }
-    .btn-action.descartar { color: var(--danger); border-color: #fecaca; }
-    .btn-action.descartar.active-state { background: var(--danger); color: #ffffff; }
-    .btn-link { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.85rem; }
-  </style>
+        .filter-group i { color: var(--primary); font-size: 0.95rem; }
+        
+        .filter-group input, .filter-group select {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            font-size: 0.88rem;
+            color: var(--text);
+        }
+
+        .filter-group input[type="date"] {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .active-filter-indicator {
+            width: 100%;
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 5px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .btn-reset-filter {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 0.8rem;
+        }
+
+        /* GRID DE TARJETAS */
+        .jobs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 18px; }
+        
+        .job-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 18px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .job-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .job-card.card-descartada { border-color: #fecdd3; background: #ffebee; opacity: 0.85; }
+        .job-card.card-interesa { border-color: #a7f3d0; background: #f0fdf4; }
+
+        .badge-container { display: flex; gap: 6px; position: absolute; top: 12px; right: 12px; flex-wrap: wrap; justify-content: flex-end; }
+        
+        .badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            text-transform: uppercase;
+        }
+
+        .badge-nueva { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+        .badge-deporte { background: #f3e8ff; color: #6b21a8; }
+        .badge-empresa { background: #ffedd5; color: #c2410c; }
+        .badge-general { background: #e0e7ff; color: #3730a3; }
+
+        .job-title { font-size: 1.05rem; font-weight: 600; margin: 15px 0 12px 0; color: #0f172a; padding-right: 60px; line-height: 1.3; }
+        
+        .job-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        
+        .icon-meta-empresa { color: #2563eb; }
+        .icon-meta-ubicacion { color: #ef4444; }
+        .icon-meta-modalidad { color: #10b981; }
+        .icon-meta-fecha { color: #f59e0b; }
+        .icon-meta-fuente { color: #6366f1; }
+
+        .state-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .btn-state {
+            border: 1px solid var(--border);
+            background: #f8fafc;
+            color: var(--text-muted);
+            border-radius: 6px;
+            padding: 5px 10px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.15s;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .btn-state:hover { background: #e2e8f0; }
+        .btn-state.active-interesa { background: #d1fae5; color: #047857; border-color: #a7f3d0; }
+        .btn-state.active-descartar { background: #ffe4e6; color: #be123c; border-color: #fecdd3; }
+
+        .job-footer {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-apply {
+            background: var(--primary);
+            color: white;
+            padding: 7px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+        .btn-apply:hover { background: var(--primary-hover); }
+
+        .empty-state { text-align: center; grid-column: 1 / -1; padding: 40px; color: var(--text-muted); font-size: 1.1rem; }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="header-title">
-      <h1>Dashboard de Ofertas de Empleo</h1>
-      <div class="last-updated-badge">
-        🕒 Última actualización: <span id="fecha-actualizacion">--/--/---- --:--</span>
-      </div>
+<div class="container">
+    <header>
+        <h1><i class="fa-solid fa-briefcase" style="color: var(--primary);"></i> Panel de Oportunidades</h1>
+        <div id="updateTime" class="update-time"><i class="fa-regular fa-clock" style="color: var(--primary);"></i> Cargando actualización...</div>
+    </header>
+
+    <!-- BLOQUE DE CONTADORES CON FILTRADO -->
+    <div class="stats-grid">
+        <div class="stat-card active" id="stat-TODAS" onclick="seleccionarFiltroContador('TODAS')">
+            <div class="stat-icon icon-total"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="stat-info">
+                <span class="stat-number" id="countTotal">0</span>
+                <span class="stat-label">Total Ofertas</span>
+            </div>
+        </div>
+
+        <div class="stat-card" id="stat-NUEVAS" onclick="seleccionarFiltroContador('NUEVAS')">
+            <div class="stat-icon icon-nuevas"><i class="fa-solid fa-bolt"></i></div>
+            <div class="stat-info">
+                <span class="stat-number" id="countNuevas">0</span>
+                <span class="stat-label">Nuevas Hoy</span>
+            </div>
+        </div>
+
+        <div class="stat-card" id="stat-DEPORTE" onclick="seleccionarFiltroContador('DEPORTE')">
+            <div class="stat-icon icon-deporte"><i class="fa-solid fa-trophy"></i></div>
+            <div class="stat-info">
+                <span class="stat-number" id="countDeporte">0</span>
+                <span class="stat-label">Deporte</span>
+            </div>
+        </div>
+
+        <div class="stat-card" id="stat-EMPRESAS" onclick="seleccionarFiltroContador('EMPRESAS')">
+            <div class="stat-icon icon-empresas"><i class="fa-solid fa-building"></i></div>
+            <div class="stat-info">
+                <span class="stat-number" id="countEmpresas">0</span>
+                <span class="stat-label">Empresas Vigo</span>
+            </div>
+        </div>
+
+        <div class="stat-card" id="stat-PENDIENTES" onclick="seleccionarFiltroContador('PENDIENTES')">
+            <div class="stat-icon icon-pendientes"><i class="fa-regular fa-clock"></i></div>
+            <div class="stat-info">
+                <span class="stat-number" id="countPendientes">0</span>
+                <span class="stat-label">Pendientes</span>
+            </div>
+        </div>
+
+        <div class="stat-card" id="stat-INTERESA" onclick="seleccionarFiltroContador('INTERESA')">
+            <div class="stat-icon icon-interesa"><i class="fa-solid fa-heart"></i></div>
+            <div class="stat-info">
+                <span class="stat-number" id="countInteresa">0</span>
+                <span class="stat-label">Me Interesa</span>
+            </div>
+        </div>
+
+        <div class="stat-card" id="stat-DESCARTADAS" onclick="seleccionarFiltroContador('DESCARTADAS')">
+            <div class="stat-icon icon-descartadas"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="stat-info">
+                <span class="stat-number" id="countDescartadas">0</span>
+                <span class="stat-label">Descartadas</span>
+            </div>
+        </div>
     </div>
 
-    <!-- CONTADORES SUPERIORES -->
-    <div class="stats-bar">
-      <div class="stat-card active" data-filter="Todas" onclick="filtrarEstado('Todas')">
-        <div class="stat-number" id="cnt-todas">0</div>
-        <div class="stat-label">Todas las ofertas</div>
-      </div>
-      <div class="stat-card" data-filter="Pendiente" onclick="filtrarEstado('Pendiente')">
-        <div class="stat-number" id="cnt-pendiente" style="color: var(--warning);">0</div>
-        <div class="stat-label">Pendientes</div>
-      </div>
-      <div class="stat-card" data-filter="Me interesa" onclick="filtrarEstado('Me interesa')">
-        <div class="stat-number" id="cnt-interesa" style="color: var(--success);">0</div>
-        <div class="stat-label">Me interesa</div>
-      </div>
-      <div class="stat-card" data-filter="Descartada" onclick="filtrarEstado('Descartada')">
-        <div class="stat-number" id="cnt-descartada" style="color: var(--danger);">0</div>
-        <div class="stat-label">Descartadas</div>
-      </div>
+    <!-- PANEL DE FILTROS METADATA Y RANGO DE FECHAS -->
+    <div class="filter-panel">
+        <div class="filter-group" style="flex: 2 1 240px;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="inputBuscar" placeholder="Buscar cargo, empresa o ubicación..." oninput="filtrarOfertas()">
+        </div>
+
+        <div class="filter-group">
+            <i class="fa-solid fa-filter"></i>
+            <select id="selectCategoria" onchange="filtrarOfertas()">
+                <option value="">Todas las categorías</option>
+                <option value="DEPORTE">🏆 Deporte</option>
+                <option value="EMPRESAS">🏢 Empresas</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <i class="fa-solid fa-laptop-house"></i>
+            <select id="selectModalidad" onchange="filtrarOfertas()">
+                <option value="">Todas las modalidades</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Híbrido">Híbrido</option>
+                <option value="Remoto">Remoto</option>
+            </select>
+        </div>
+
+        <!-- FILTROS POR FECHA -->
+        <div class="filter-group" title="Fecha desde">
+            <i class="fa-regular fa-calendar-minus" style="color: var(--warning);"></i>
+            <input type="date" id="fechaDesde" onchange="filtrarOfertas()">
+        </div>
+
+        <div class="filter-group" title="Fecha hasta">
+            <i class="fa-regular fa-calendar-plus" style="color: var(--warning);"></i>
+            <input type="date" id="fechaHasta" onchange="filtrarOfertas()">
+        </div>
+
+        <div id="activeFilterLabel" class="active-filter-indicator">
+            <span>Filtro activo: <strong>Todas las ofertas</strong></span>
+            <button class="btn-reset-filter" onclick="limpiarTodosFiltros()">Restablecer todos los filtros</button>
+        </div>
     </div>
 
-    <!-- FILTROS Y BUSCADOR -->
-    <div class="controls-bar">
-      <div class="segmented-tabs">
-        <button class="tab-btn active" onclick="filtrarCategoria('Todas', this)">Todas</button>
-        <button class="tab-btn" onclick="filtrarCategoria('EMPRESAS', this)">Empresas</button>
-        <button class="tab-btn" onclick="filtrarCategoria('DEPORTE', this)">Deporte</button>
-      </div>
-      <input type="text" id="buscador" class="search-box" placeholder="🔍 Buscar por puesto, empresa o ciudad..." oninput="renderizarOfertas()">
-    </div>
+    <!-- CONTENEDOR DE OFERTAS -->
+    <div id="jobsGrid" class="jobs-grid"></div>
+</div>
 
-    <!-- LISTADO DE OFERTAS -->
-    <div id="contenedor-ofertas" class="grid-ofertas"></div>
-  </div>
+<script>
+    let todasLasOfertas = [];
+    let fechaUltimaActualizacion = "";
+    let filtroContadorActivo = "TODAS";
 
-  <script>
-    let ofertasGlobales = [];
-    let estadoActual = "Todas";
-    let categoriaActual = "Todas";
-
-    function obtenerEstadosGuardados() {
-      const guardados = localStorage.getItem('ofertas_estados_user');
-      return guardados ? JSON.parse(guardados) : {};
+    // 1. Lógica auxiliar para validar si una oferta es PENDIENTE
+    function esPendiente(oferta) {
+        // Es pendiente si no tiene estado definido o si no está guardada ni descartada
+        return !oferta.estado || oferta.estado === 'pendiente' || (oferta.estado !== 'me_interesa' && oferta.estado !== 'descartada');
     }
 
-    function guardarEstadoLocal(url, estado) {
-      const estados = obtenerEstadosGuardados();
-      estados[url] = estado;
-      localStorage.setItem('ofertas_estados_user', JSON.stringify(estados));
-    }
-
-    async function cargarDatos() {
-      try {
-        const res = await fetch('ofertas.json?t=' + new Date().getTime());
-        const data = await res.json();
-        
-        // Compatibilidad con objeto estructurado u orden simple por array
-        if (Array.isArray(data)) {
-          ofertasGlobales = data;
-          document.getElementById('fecha-actualizacion').innerText = "Reciente";
-        } else {
-          ofertasGlobales = data.ofertas || [];
-          document.getElementById('fecha-actualizacion').innerText = data.ultima_actualizacion || "Desconocida";
+    // 2. Recuperar estados de localStorage
+    function getEstadosGuardados() {
+        try {
+            return JSON.parse(localStorage.getItem('ofertas_estados_v1')) || {};
+        } catch(e) {
+            return {};
         }
+    }
+
+    // 3. Guardar estado en localStorage
+    function setEstadoGuardado(id, estado) {
+        const estados = getEstadosGuardados();
+        if (estado === 'pendiente') {
+            delete estados[id]; // Si vuelve a pendiente, lo limpiamos de la memoria local
+        } else {
+            estados[id] = estado;
+        }
+        localStorage.setItem('ofertas_estados_v1', JSON.stringify(estados));
+    }
+
+    async function cargarOfertas() {
+        try {
+            const response = await fetch('ofertas.json');
+            const data = await response.json();
+            const estadosGuardados = getEstadosGuardados();
+
+            todasLasOfertas = (data.ofertas || []).map((item, index) => {
+                const idUnico = item.id || item.job_url || (item.title + '_' + item.company + '_' + index);
+                // Si el usuario guardó un estado en localStorage se aplica, si no se mantiene el por defecto
+                const estadoGuardado = estadosGuardados[idUnico];
+                return {
+                    ...item,
+                    id: idUnico,
+                    estado: estadoGuardado || item.estado || 'pendiente'
+                };
+            });
+            
+            if (data.ultima_actualizacion) {
+                document.getElementById('updateTime').innerHTML = `<i class="fa-regular fa-clock" style="color: var(--primary);"></i> Actualizado: ${data.ultima_actualizacion}`;
+                fechaUltimaActualizacion = data.ultima_actualizacion.split(' ')[0];
+            }
+
+            actualizarContadoresGenerales();
+            filtrarOfertas();
+        } catch (error) {
+            console.error('Error al cargar ofertas.json:', error);
+            document.getElementById('jobsGrid').innerHTML = '<div class="empty-state"><i class="fa-solid fa-circle-exclamation" style="color:var(--danger)"></i> No se pudieron cargar las ofertas. Asegúrate de tener ofertas.json accesible.</div>';
+        }
+    }
+
+    function esOfertaUltimaActualizacion(fechaOferta) {
+        if (!fechaOferta || !fechaUltimaActualizacion) return false;
+        return fechaOferta.trim() === fechaUltimaActualizacion.trim();
+    }
+
+    function parsearFecha(fechaStr) {
+        if (!fechaStr) return null;
+        if (fechaStr.includes('/')) {
+            const partes = fechaStr.split('/');
+            if (partes.length === 3) {
+                return new Date(partes[2], partes[1] - 1, partes[0]);
+            }
+        }
+        return new Date(fechaStr);
+    }
+
+    function seleccionarFiltroContador(tipo) {
+        filtroContadorActivo = tipo;
         
-        const estadosLocales = obtenerEstadosGuardados();
-        ofertasGlobales.forEach(o => {
-          if (estadosLocales[o.job_url]) {
-            o.estado = estadosLocales[o.job_url];
-          }
+        document.querySelectorAll('.stat-card').forEach(card => card.classList.remove('active'));
+        const cardActiva = document.getElementById(`stat-${tipo}`);
+        if (cardActiva) cardActiva.classList.add('active');
+
+        const labels = {
+            'TODAS': 'Todas las ofertas',
+            'NUEVAS': 'Nuevas (última actualización)',
+            'DEPORTE': 'Sector Deporte',
+            'EMPRESAS': 'Empresas Vigo',
+            'PENDIENTES': 'Pendientes (sin responder)',
+            'INTERESA': 'Me Interesa',
+            'DESCARTADAS': 'Descartadas'
+        };
+        
+        document.getElementById('activeFilterLabel').querySelector('strong').textContent = labels[tipo] || tipo;
+        filtrarOfertas();
+    }
+
+    function cambiarEstadoOferta(id, nuevoEstado) {
+        const oferta = todasLasOfertas.find(o => o.id === id);
+        if (oferta) {
+            // Si hace clic en el botón que ya estaba seleccionado, conmuta de nuevo a 'pendiente'
+            const estadoFinal = (oferta.estado === nuevoEstado) ? 'pendiente' : nuevoEstado;
+            oferta.estado = estadoFinal;
+            setEstadoGuardado(id, estadoFinal);
+
+            // Recalcula contadores inmediatamente y aplica filtros
+            actualizarContadoresGenerales();
+            filtrarOfertas();
+        }
+    }
+
+    // Recálculo estricto de todos los contadores
+    function actualizarContadoresGenerales() {
+        const total = todasLasOfertas.length;
+        const nuevas = todasLasOfertas.filter(o => esOfertaUltimaActualizacion(o.fecha)).length;
+        const deporte = todasLasOfertas.filter(o => o.categoria === 'DEPORTE').length;
+        const empresas = todasLasOfertas.filter(o => o.categoria === 'EMPRESAS').length;
+        
+        // PENDIENTES = Todas las que NO están guardadas ('me_interesa') NI descartadas ('descartada')
+        const pendientes = todasLasOfertas.filter(o => esPendiente(o)).length;
+        const interesa = todasLasOfertas.filter(o => o.estado === 'me_interesa').length;
+        const descartadas = todasLasOfertas.filter(o => o.estado === 'descartada').length;
+
+        document.getElementById('countTotal').textContent = total;
+        document.getElementById('countNuevas').textContent = nuevas;
+        document.getElementById('countDeporte').textContent = deporte;
+        document.getElementById('countEmpresas').textContent = empresas;
+        document.getElementById('countPendientes').textContent = pendientes;
+        document.getElementById('countInteresa').textContent = interesa;
+        document.getElementById('countDescartadas').textContent = descartadas;
+    }
+
+    function limpiarTodosFiltros() {
+        document.getElementById('inputBuscar').value = '';
+        document.getElementById('selectCategoria').value = '';
+        document.getElementById('selectModalidad').value = '';
+        document.getElementById('fechaDesde').value = '';
+        document.getElementById('fechaHasta').value = '';
+        seleccionarFiltroContador('TODAS');
+    }
+
+    function filtrarOfertas() {
+        const texto = document.getElementById('inputBuscar').value.toLowerCase();
+        const categoria = document.getElementById('selectCategoria').value;
+        const modalidad = document.getElementById('selectModalidad').value;
+        
+        const fDesdeStr = document.getElementById('fechaDesde').value;
+        const fHastaStr = document.getElementById('fechaHasta').value;
+        const fDesde = fDesdeStr ? new Date(fDesdeStr + 'T00:00:00') : null;
+        const fHasta = fHastaStr ? new Date(fHastaStr + 'T23:59:59') : null;
+
+        const filtradas = todasLasOfertas.filter(item => {
+            const coincideTexto = (item.title + ' ' + item.company + ' ' + item.location).toLowerCase().includes(texto);
+            const coincideCategoria = !categoria || item.categoria === categoria;
+            const coincideModalidad = !modalidad || item.modalidad === modalidad;
+
+            // Filtro de Fechas
+            let coincideFecha = true;
+            if (fDesde || fHasta) {
+                const fechaItem = parsearFecha(item.fecha);
+                if (fechaItem) {
+                    if (fDesde && fechaItem < fDesde) coincideFecha = false;
+                    if (fHasta && fechaItem > fHasta) coincideFecha = false;
+                }
+            }
+
+            // Filtro según la Tarjeta / Contador seleccionado
+            let coincideContador = true;
+            if (filtroContadorActivo === 'NUEVAS') coincideContador = esOfertaUltimaActualizacion(item.fecha);
+            else if (filtroContadorActivo === 'DEPORTE') coincideContador = (item.categoria === 'DEPORTE');
+            else if (filtroContadorActivo === 'EMPRESAS') coincideContador = (item.categoria === 'EMPRESAS');
+            else if (filtroContadorActivo === 'PENDIENTES') coincideContador = esPendiente(item);
+            else if (filtroContadorActivo === 'INTERESA') coincideContador = (item.estado === 'me_interesa');
+            else if (filtroContadorActivo === 'DESCARTADAS') coincideContador = (item.estado === 'descartada');
+
+            return coincideTexto && coincideCategoria && coincideModalidad && coincideFecha && coincideContador;
         });
 
-        actualizarContadores();
-        renderizarOfertas();
-      } catch (e) {
-        console.error("Error al cargar ofertas.json:", e);
-      }
+        renderizarOfertas(filtradas);
     }
 
-    function actualizarContadores() {
-      const counts = { "Todas": ofertasGlobales.length, "Pendiente": 0, "Me interesa": 0, "Descartada": 0 };
-      ofertasGlobales.forEach(o => {
-        const est = o.estado || "Pendiente";
-        if (counts[est] !== undefined) counts[est]++;
-      });
-
-      document.getElementById('cnt-todas').innerText = counts["Todas"];
-      document.getElementById('cnt-pendiente').innerText = counts["Pendiente"];
-      document.getElementById('cnt-interesa').innerText = counts["Me interesa"];
-      document.getElementById('cnt-descartada').innerText = counts["Descartada"];
-    }
-
-    function filtrarEstado(estado) {
-      estadoActual = estado;
-      document.querySelectorAll('.stat-card').forEach(card => {
-        card.classList.toggle('active', card.getAttribute('data-filter') === estado);
-      });
-      renderizarOfertas();
-    }
-
-    function filtrarCategoria(categoria, btn) {
-      categoriaActual = categoria;
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderizarOfertas();
-    }
-
-    function cambiarEstado(url, nuevoEstado) {
-      const item = ofertasGlobales.find(o => o.job_url === url);
-      if (item) {
-        const estadoFinal = item.estado === nuevoEstado ? "Pendiente" : nuevoEstado;
-        item.estado = estadoFinal;
-        guardarEstadoLocal(url, estadoFinal);
-        actualizarContadores();
-        renderizarOfertas();
-      }
-    }
-
-    function renderizarOfertas() {
-      const contenedor = document.getElementById('contenedor-ofertas');
-      const textoBusqueda = document.getElementById('buscador').value.toLowerCase();
-      contenedor.innerHTML = '';
-
-      const filtradas = ofertasGlobales.filter(item => {
-        const estadoItem = item.estado || "Pendiente";
-        const coincideEstado = (estadoActual === "Todas") || (estadoItem === estadoActual);
-        const coincideCategoria = (categoriaActual === "Todas") || (item.categoria === categoriaActual);
+    function renderizarOfertas(ofertas) {
+        const grid = document.getElementById('jobsGrid');
         
-        const fechaTexto = item.fecha || item.date || "";
-        const texto = `${item.title} ${item.company} ${item.location} ${fechaTexto}`.toLowerCase();
-        const coincideBusqueda = texto.includes(textoBusqueda);
+        if (ofertas.length === 0) {
+            grid.innerHTML = '<div class="empty-state"><i class="fa-solid fa-folder-open"></i> No se encontraron ofertas con los filtros seleccionados.</div>';
+            return;
+        }
 
-        return coincideEstado && coincideCategoria && coincideBusqueda;
-      });
-
-      if (filtradas.length === 0) {
-        contenedor.innerHTML = `
-          <div style="grid-column: 1/-1; text-align: center; color: var(--text-secondary); padding: 50px 20px;">
-            No se encontraron ofertas con los criterios seleccionados.
-          </div>`;
-        return;
-      }
-
-      filtradas.forEach(item => {
-        const est = item.estado || "Pendiente";
-        
-        let estadoClass = "state-pendiente";
-        if (est === "Me interesa") estadoClass = "state-interesa";
-        if (est === "Descartada") estadoClass = "state-descartada";
-
-        const modalidad = item.modalidad || "Presencial";
-        const claseModalidad = `badge-${modalidad.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
-        
-        const fechaPublicacion = item.fecha || item.date || "Sin fecha";
-
-        const card = document.createElement('div');
-        card.className = `job-card ${estadoClass}`;
-        card.innerHTML = `
-          <div>
-            <div class="job-header">
-              <h3 class="job-title">${item.title}</h3>
-              <div class="badges-container">
-                <span class="badge-modalidad ${claseModalidad}">${modalidad}</span>
-                <span class="badge-site">${item.site}</span>
-              </div>
-            </div>
-            <div class="job-info">
-              <p>🏢 <strong>${item.company}</strong></p>
-              <p>📍 ${item.location}</p>
-              <p>📅 ${fechaPublicacion}</p>
-              <p style="margin-top:10px;"><span class="badge-cat">${item.categoria}</span></p>
-            </div>
-          </div>
-          
-          <div class="job-actions">
-            <a href="${item.job_url}" target="_blank" class="btn-link">Abrir ↗</a>
+        grid.innerHTML = ofertas.map(item => {
+            const esNueva = esOfertaUltimaActualizacion(item.fecha);
+            const esDescartada = item.estado === 'descartada';
+            const esInteresa = item.estado === 'me_interesa';
             
-            <button class="btn-action interesa ${est === 'Me interesa' ? 'active-state' : ''}" 
-                    onclick="cambiarEstado('${item.job_url}', 'Me interesa')">
-              ${est === 'Me interesa' ? '✓ Interesa' : '⭐ Interesa'}
-            </button>
+            let badgeCategoriaHTML = '';
+            if (item.categoria === 'DEPORTE') {
+                badgeCategoriaHTML = `<span class="badge badge-deporte"><i class="fa-solid fa-trophy"></i> Deporte</span>`;
+            } else if (item.categoria === 'EMPRESAS') {
+                badgeCategoriaHTML = `<span class="badge badge-empresa"><i class="fa-solid fa-building"></i> Empresas</span>`;
+            } else {
+                badgeCategoriaHTML = `<span class="badge badge-general">${item.categoria || 'General'}</span>`;
+            }
 
-            <button class="btn-action descartar ${est === 'Descartada' ? 'active-state' : ''}" 
-                    onclick="cambiarEstado('${item.job_url}', 'Descartada')">
-              ${est === 'Descartada' ? '✓ Descartada' : '❌ Descartar'}
-            </button>
-          </div>
-        `;
-        contenedor.appendChild(card);
-      });
+            return `
+                <div class="job-card ${esDescartada ? 'card-descartada' : ''} ${esInteresa ? 'card-interesa' : ''}">
+                    <div class="badge-container">
+                        ${esNueva ? `<span class="badge badge-nueva"><i class="fa-solid fa-bolt" style="color: #ca8a04;"></i> ¡Nueva!</span>` : ''}
+                        ${badgeCategoriaHTML}
+                    </div>
+
+                    <h2 class="job-title">${item.title}</h2>
+
+                    <div>
+                        <div class="job-meta">
+                            <i class="fa-solid fa-building icon-meta-empresa"></i>
+                            <span>${item.company || 'Empresa no especificada'}</span>
+                        </div>
+                        <div class="job-meta">
+                            <i class="fa-solid fa-location-dot icon-meta-ubicacion"></i>
+                            <span>${item.location}</span>
+                        </div>
+                        <div class="job-meta">
+                            <i class="fa-solid fa-laptop icon-meta-modalidad"></i>
+                            <span>${item.modalidad || 'Presencial'}</span>
+                        </div>
+                        <div class="job-meta">
+                            <i class="fa-regular fa-calendar icon-meta-fecha"></i>
+                            <span>Detectada: ${item.fecha || 'Reciente'}</span>
+                        </div>
+                    </div>
+
+                    <!-- BOTONES DE CAMBIO DE ESTADO -->
+                    <div class="state-actions">
+                        <button class="btn-state ${esInteresa ? 'active-interesa' : ''}" onclick="cambiarEstadoOferta('${item.id}', 'me_interesa')">
+                            <i class="fa-${esInteresa ? 'solid' : 'regular'} fa-heart" style="color: #059669;"></i> ${esInteresa ? 'Guardado' : 'Guardar'}
+                        </button>
+                        <button class="btn-state ${esDescartada ? 'active-descartar' : ''}" onclick="cambiarEstadoOferta('${item.id}', 'descartada')">
+                            <i class="fa-solid fa-trash-can" style="color: #e11d48;"></i> ${esDescartada ? 'Descartada' : 'Descartar'}
+                        </button>
+                    </div>
+
+                    <div class="job-footer">
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">
+                            <i class="fa-solid fa-globe icon-meta-fuente"></i> ${item.site || 'Web'}
+                        </span>
+                        <a href="${item.job_url}" target="_blank" rel="noopener" class="btn-apply">
+                            Ver oferta <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }).join('');
     }
 
-    cargarDatos();
-  </script>
+    cargarOfertas();
+</script>
+
 </body>
 </html>
