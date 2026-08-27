@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "27/08/2026 22:12",
-    "total_ofertas": 58,
+    "ultima_actualizacion": "27/08/2026 22:18",
+    "total_ofertas": 59,
     "ofertas": [
         {
             "title": "Director/a Asociado/a | Desarrollo de una Oficina INTEDYA",
@@ -201,6 +201,17 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Supply Chain Planner",
+            "company": "Trivium Packaging",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457479356",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
             "title": "Industrial Purchasing Manager Stellantis Mangualde",
             "company": "Stellantis",
             "location": "Vigo, Galicia, Spain",
@@ -212,12 +223,12 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Junior Contabilidad y Finanzas - O Grove",
-            "company": "Deloitte",
-            "location": "Vigo, Galicia, Spain",
+            "title": "Automation & OT Engineer",
+            "company": "Syngenta",
+            "location": "Pontevedra, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4448017431",
+            "job_url": "https://www.linkedin.com/jobs/view/4459805487",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -267,12 +278,45 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "ASESOR/A COMERCIAL INMOBILIARIO/A",
+            "company": "RE/MAX Balaídos",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4455077800",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
             "title": "Consultor/ a Comercial en Pontevedra",
             "company": "Grupo Isonor",
             "location": "Pontevedra, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4456234060",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
+            "title": "Comercial para Endesa en Supermercado DIA L-S",
+            "company": "Salesland",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4456272928",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
+            "title": "Técnico/a de soporte a negocio Employee Benefits",
+            "company": "Howden",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4456218215",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -300,12 +344,12 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Director/a Comercial",
-            "company": "Michael Page",
-            "location": "A Coruña, Galicia, Spain",
+            "title": "Operator & License Owner, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4455892502",
+            "job_url": "https://www.linkedin.com/jobs/view/4459604731",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -322,45 +366,12 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Director/a Agencia Comercial en Ferrol",
-            "company": "Laboral Group",
-            "location": "El Ferrol, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457083572",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Operator & License Owner, Santiago",
-            "company": "Stranger Soccer",
-            "location": "Santiago de Compostela, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459604731",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
             "title": "Club Manager - Ourense Norte",
             "company": "Synergym España",
             "location": "Ourense, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4458670491",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Director of Sales & Partnerships",
-            "company": "Lox Club",
-            "location": "Rianjo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457739202",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
