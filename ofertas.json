@@ -1,5 +1,5 @@
 {
-    "ultima_actualizacion": "27/08/2026 20:52",
+    "ultima_actualizacion": "27/08/2026 21:00",
     "total_ofertas": 48,
     "ofertas": [
         {
@@ -25,12 +25,34 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Finance & Controlling Director (Pontevedra Area)",
+            "company": "Michael Page",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457249248",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
             "title": "Director Territorial Galicia - Business Development",
             "company": "Claire Joster",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4443683238",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
+            "title": "Supply Chain Planner",
+            "company": "Trivium Packaging",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457479356",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -80,6 +102,28 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Industrial Purchasing Manager Stellantis Mangualde",
+            "company": "Stellantis",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4391499499",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
+            "title": "Coordinador/a Flying Doc – Industrialización",
+            "company": "ALTEN Spain",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4418767294",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
             "title": "Operations Internship - Galicia - Start 2027",
             "company": "Amazon.com",
             "location": "Porriño, GA, ES",
@@ -102,100 +146,12 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Técnico/a de proyectos ambientales",
-            "company": "EGA CONSULTORES",
-            "location": "Porriño, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457900339",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Jefe de Obra (Galicia)",
-            "company": "Michael Page",
-            "location": "Pontevedra, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457226614",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Global Business Applications CSV and Test Management Lead",
-            "company": "Straumann Group",
-            "location": "Pontevedra, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4446237337",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Junior Supply Chain",
-            "company": "Capgemini Engineering",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4447553635",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Ingeniero/a de Proyectos de Instalaciones",
-            "company": "Randstad España",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4454608331",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Especialista Senior HVAC (Pharma)",
-            "company": "SEGULA Technologies",
-            "location": "Porriño, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459679686",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Finance & Controlling Director (Pontevedra Area)",
-            "company": "Michael Page",
-            "location": "Pontevedra, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457249248",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
             "title": "Country Finances Manager - Spain",
             "company": "Plastic Omnium",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4457264661",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Industrial Purchasing Manager Stellantis Mangualde",
-            "company": "Stellantis",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4391499499",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -300,6 +256,17 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Junior Supply Chain",
+            "company": "Capgemini Engineering",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4447553635",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
             "title": "Monitor/a Deportivo Multidisciplinar - Vigo Centro Areal",
             "company": "Synergym España",
             "location": "Vigo, Galicia, Spain",
@@ -311,12 +278,34 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Director/a Comercial",
+            "company": "Michael Page",
+            "location": "A Coruña, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4455892502",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
             "title": "COORDINADOR/A DE SERVICIOS DEPORTIVOS - LA CORUÑA",
             "company": "Salzillo Global",
             "location": "A Coruña, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4456234244",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
+            "title": "Director/a Agencia Comercial en Ferrol",
+            "company": "Laboral Group",
+            "location": "El Ferrol, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457083572",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -339,6 +328,17 @@
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4458670491",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
+            "title": "Director of Sales & Partnerships",
+            "company": "Lox Club",
+            "location": "Rianjo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457739202",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
