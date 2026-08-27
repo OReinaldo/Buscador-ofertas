@@ -5,6 +5,7 @@ import unicodedata
 from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
+import cloudscraper
 from jobspy import scrape_jobs
 
 HEADERS = {
@@ -85,36 +86,84 @@ def es_ubicacion_valida(ubicacion_raw, categoria):
 
 
 # =========================================================================
-# 1. SCRAPER FUTBOLJOBS
+# 1. SCRAPER FUTBOLJOBS (Con Bypass Cloudflare & Rotación URLs)
 # =========================================================================
 def obtener_ofertas_futboljobs():
     ofertas = []
-    url = "https://futboljobs.com/ofertas-empleo-futbol/"
-    print("\n🔍 Scraping FutbolJobs...")
+    print("\n🔍 Scraping FutbolJobs con Cloudscraper...")
+
+    urls_candidatas = [
+        "https://futboljobs.com/",
+        "https://futboljobs.com/ofertas-de-empleo/",
+        "https://futboljobs.com/ofertas/",
+        "https://futboljobs.com/empleo/"
+    ]
 
     try:
-        res = requests.get(url, headers=HEADERS, timeout=12)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.text, 'html.parser')
-            enlaces = soup.find_all('a', href=re.compile(r'/oferta/|/job/'))
-            
-            vistos = set()
-            for a in enlaces:
-                href = a.get('href', '')
-                titulo = a.get_text(strip=True)
-                
-                if len(titulo) < 5 and '/oferta/' in href:
-                    slug = href.strip('/').split('/')[-1]
-                    titulo = slug.replace('-', ' ').capitalize()
+        scraper = cloudscraper.create_scraper(
+            browser={
+                'browser': 'chrome',
+                'platform': 'windows',
+                'desktop': True
+            }
+        )
 
-                if href not in vistos and len(titulo) > 8:
+        html_content = None
+        for url in urls_candidatas:
+            try:
+                res = scraper.get(url, timeout=15)
+                if res.status_code == 200:
+                    html_content = res.text
+                    print(f"  └─ Conexión exitosa en {url}")
+                    break
+            except Exception:
+                continue
+
+        if html_content:
+            soup = BeautifulSoup(html_content, 'html.parser')
+            
+            # Buscar tarjetas de empleo o enlaces con rutas de ofertas
+            tarjetas = soup.find_all("li", class_=re.compile(r"(job_listing|job-card|oferta)", re.I))
+            if not tarjetas:
+                tarjetas = soup.find_all("div", class_=re.compile(r"(job-item|oferta-item|article)", re.I))
+            if not tarjetas:
+                tarjetas = [a.parent for a in soup.find_all("a", href=re.compile(r"/oferta/|/job/|/empleo/", re.I))]
+
+            vistos = set()
+            for elem in tarjetas:
+                enlace_tag = elem.find("a", href=True) if elem.name != "a" else elem
+                if not enlace_tag or not enlace_tag.has_attr("href"):
+                    continue
+
+                href = enlace_tag["href"]
+                if not href.startswith("http"):
+                    href = "https://futboljobs.com" + href
+
+                titulo = enlace_tag.get_text(strip=True)
+                if not titulo or len(titulo) < 5:
+                    title_elem = elem.find(["h2", "h3", "h4", "strong"])
+                    if title_elem:
+                        titulo = title_elem.get_text(strip=True)
+
+                if not titulo or "ver oferta" in titulo.lower() or len(titulo) < 6:
+                    continue
+
+                company = "Club / Entidad Deportiva"
+                company_elem = elem.find(class_=re.compile(r"(company|empresa|club)", re.I))
+                if company_elem:
+                    company = company_elem.get_text(strip=True)
+
+                loc = "Galicia / Norte Portugal / Internacional"
+                loc_elem = elem.find(class_=re.compile(r"(location|ubicacion|ciudad)", re.I))
+                if loc_elem:
+                    loc = loc_elem.get_text(strip=True)
+
+                if href not in vistos:
                     vistos.add(href)
-                    loc = "Galicia / Norte Portugal / Internacional"
-                    
                     if es_ubicacion_valida(loc, "DEPORTE"):
                         ofertas.append({
                             "title": titulo[:80],
-                            "company": "Club / Entidad Deportiva",
+                            "company": company,
                             "location": loc,
                             "modalidad": detectar_modalidad(f"{titulo} {loc}"),
                             "site": "FutbolJobs",
@@ -122,7 +171,11 @@ def obtener_ofertas_futboljobs():
                             "categoria": "DEPORTE",
                             "estado": "Pendiente"
                         })
+                        
             print(f"  └─ FutbolJobs: {len(ofertas)} ofertas.")
+        else:
+            print("  └─ No se pudo obtener respuesta HTTP 200 de ninguna URL de FutbolJobs.")
+
     except Exception as e:
         print(f"  └─ Error en FutbolJobs: {e}")
 
