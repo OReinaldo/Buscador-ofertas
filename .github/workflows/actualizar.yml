@@ -1,4 +1,4 @@
-name: Actualización Diaria de Ofertas
+name: Actualización Diaria de ofertas
 
 on:
   schedule:
