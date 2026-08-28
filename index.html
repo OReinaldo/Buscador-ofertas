@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard de Empleo y Deporte</title>
-    <!-- Font Awesome 6 para Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
@@ -259,7 +258,6 @@
         <div id="updateTime" class="update-time"><i class="fa-regular fa-clock" style="color: var(--primary);"></i> Cargando actualización...</div>
     </header>
 
-    <!-- BLOQUE DE CONTADORES CON FILTRADO -->
     <div class="stats-grid">
         <div class="stat-card active" id="stat-TODAS" onclick="seleccionarFiltroContador('TODAS')">
             <div class="stat-icon icon-total"><i class="fa-solid fa-layer-group"></i></div>
@@ -318,7 +316,6 @@
         </div>
     </div>
 
-    <!-- PANEL DE FILTROS METADATA Y RANGO DE FECHAS -->
     <div class="filter-panel">
         <div class="filter-group" style="flex: 2 1 240px;">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -344,7 +341,6 @@
             </select>
         </div>
 
-        <!-- FILTROS POR FECHA -->
         <div class="filter-group" title="Fecha desde">
             <i class="fa-regular fa-calendar-minus" style="color: var(--warning);"></i>
             <input type="date" id="fechaDesde" onchange="filtrarOfertas()">
@@ -361,7 +357,6 @@
         </div>
     </div>
 
-    <!-- CONTENEDOR DE OFERTAS -->
     <div id="jobsGrid" class="jobs-grid"></div>
 </div>
 
@@ -372,7 +367,6 @@
 
     // 1. Lógica auxiliar para validar si una oferta es PENDIENTE
     function esPendiente(oferta) {
-        // Es pendiente si no tiene estado definido o si no está guardada ni descartada
         return !oferta.estado || oferta.estado === 'pendiente' || (oferta.estado !== 'me_interesa' && oferta.estado !== 'descartada');
     }
 
@@ -389,7 +383,7 @@
     function setEstadoGuardado(id, estado) {
         const estados = getEstadosGuardados();
         if (estado === 'pendiente') {
-            delete estados[id]; // Si vuelve a pendiente, lo limpiamos de la memoria local
+            delete estados[id];
         } else {
             estados[id] = estado;
         }
@@ -404,7 +398,6 @@
 
             todasLasOfertas = (data.ofertas || []).map((item, index) => {
                 const idUnico = item.id || item.job_url || (item.title + '_' + item.company + '_' + index);
-                // Si el usuario guardó un estado en localStorage se aplica, si no se mantiene el por defecto
                 const estadoGuardado = estadosGuardados[idUnico];
                 return {
                     ...item,
@@ -433,7 +426,7 @@
 
     function parsearFecha(fechaStr) {
         if (!fechaStr) return null;
-        if (fechaStr.includes('/')) {
+        if (typeof fechaStr === 'string' && fechaStr.includes('/')) {
             const partes = fechaStr.split('/');
             if (partes.length === 3) {
                 return new Date(partes[2], partes[1] - 1, partes[0]);
@@ -466,25 +459,21 @@
     function cambiarEstadoOferta(id, nuevoEstado) {
         const oferta = todasLasOfertas.find(o => o.id === id);
         if (oferta) {
-            // Si hace clic en el botón que ya estaba seleccionado, conmuta de nuevo a 'pendiente'
             const estadoFinal = (oferta.estado === nuevoEstado) ? 'pendiente' : nuevoEstado;
             oferta.estado = estadoFinal;
             setEstadoGuardado(id, estadoFinal);
 
-            // Recalcula contadores inmediatamente y aplica filtros
             actualizarContadoresGenerales();
             filtrarOfertas();
         }
     }
 
-    // Recálculo estricto de todos los contadores
     function actualizarContadoresGenerales() {
         const total = todasLasOfertas.length;
         const nuevas = todasLasOfertas.filter(o => esOfertaUltimaActualizacion(o.fecha)).length;
         const deporte = todasLasOfertas.filter(o => o.categoria === 'DEPORTE').length;
         const empresas = todasLasOfertas.filter(o => o.categoria === 'EMPRESAS').length;
         
-        // PENDIENTES = Todas las que NO están guardadas ('me_interesa') NI descartadas ('descartada')
         const pendientes = todasLasOfertas.filter(o => esPendiente(o)).length;
         const interesa = todasLasOfertas.filter(o => o.estado === 'me_interesa').length;
         const descartadas = todasLasOfertas.filter(o => o.estado === 'descartada').length;
@@ -522,7 +511,6 @@
             const coincideCategoria = !categoria || item.categoria === categoria;
             const coincideModalidad = !modalidad || item.modalidad === modalidad;
 
-            // Filtro de Fechas
             let coincideFecha = true;
             if (fDesde || fHasta) {
                 const fechaItem = parsearFecha(item.fecha);
@@ -532,7 +520,6 @@
                 }
             }
 
-            // Filtro según la Tarjeta / Contador seleccionado
             let coincideContador = true;
             if (filtroContadorActivo === 'NUEVAS') coincideContador = esOfertaUltimaActualizacion(item.fecha);
             else if (filtroContadorActivo === 'DEPORTE') coincideContador = (item.categoria === 'DEPORTE');
@@ -542,6 +529,15 @@
             else if (filtroContadorActivo === 'DESCARTADAS') coincideContador = (item.estado === 'descartada');
 
             return coincideTexto && coincideCategoria && coincideModalidad && coincideFecha && coincideContador;
+        });
+
+        // Ordenación por fecha por defecto (más recientes primero)
+        filtradas.sort((a, b) => {
+            const fechaA = parsearFecha(a.fecha);
+            const fechaB = parsearFecha(b.fecha);
+            const timeA = fechaA && !isNaN(fechaA) ? fechaA.getTime() : 0;
+            const timeB = fechaB && !isNaN(fechaB) ? fechaB.getTime() : 0;
+            return timeB - timeA;
         });
 
         renderizarOfertas(filtradas);
@@ -597,7 +593,6 @@
                         </div>
                     </div>
 
-                    <!-- BOTONES DE CAMBIO DE ESTADO -->
                     <div class="state-actions">
                         <button class="btn-state ${esInteresa ? 'active-interesa' : ''}" onclick="cambiarEstadoOferta('${item.id}', 'me_interesa')">
                             <i class="fa-${esInteresa ? 'solid' : 'regular'} fa-heart" style="color: #059669;"></i> ${esInteresa ? 'Guardado' : 'Guardar'}
