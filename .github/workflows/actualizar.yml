@@ -3,7 +3,7 @@ name: Actualización Diaria de ofertas
 on:
   schedule:
     # Se ejecuta diariamente a las 08:00 UTC (09:00/10:00 hora de España/Portugal según horario de verano)
-    - cron: '17 */2 * * *'
+    - cron: '25 20 * * *'
   workflow_dispatch: # Permite ejecutar la tarea manualmente desde la web de GitHub
 
 permissions:
