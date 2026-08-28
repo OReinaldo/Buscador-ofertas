@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "28/08/2026 07:39",
-    "total_ofertas": 55,
+    "ultima_actualizacion": "28/08/2026 07:45",
+    "total_ofertas": 58,
     "ofertas": [
         {
             "title": "Director/a Asociado/a | Desarrollo de una Oficina INTEDYA",
@@ -135,6 +135,72 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Técnico/a de proyectos ambientales",
+            "company": "EGA CONSULTORES",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457900339",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
+        },
+        {
+            "title": "Jefe de Obra (Galicia)",
+            "company": "Michael Page",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457226614",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
+        },
+        {
+            "title": "Global Business Applications CSV and Test Management Lead",
+            "company": "Straumann Group",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4446237337",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
+        },
+        {
+            "title": "Junior Supply Chain",
+            "company": "Capgemini Engineering",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4447553635",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
+            "title": "Ingeniero/a de Proyectos de Instalaciones",
+            "company": "Randstad España",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4454608331",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
+        },
+        {
+            "title": "Especialista Senior HVAC (Pharma)",
+            "company": "SEGULA Technologies",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4459679686",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
+        },
+        {
             "title": "Country Finances Manager - Spain",
             "company": "Plastic Omnium",
             "location": "Vigo, Galicia, Spain",
@@ -146,34 +212,12 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Técnico De Mantenimiento",
-            "company": "AKWEL",
+            "title": "Automation & OT Engineer",
+            "company": "Syngenta",
             "location": "Pontevedra, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457606793",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Junior Technical Proposal Engineer",
-            "company": "Alén Space",
-            "location": "Nigrán, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4449004193",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Responsable De Control De Producción",
-            "company": "GEIMU MOBILIARIO SL",
-            "location": "Pontevedra, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458655518",
+            "job_url": "https://www.linkedin.com/jobs/view/4459805487",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "28/08/2026"
@@ -201,17 +245,6 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "COMERCIAL JUNIOR POSTVENTA ZONA PONTEVEDRA",
-            "company": "Crown Lift Trucks UK",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459047550",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
             "title": "Comercial y grupos",
             "company": "GRUPO DESGΛL",
             "location": "Vigo, Galicia, Spain",
@@ -221,6 +254,17 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
+        },
+        {
+            "title": "COMERCIAL JUNIOR POSTVENTA ZONA PONTEVEDRA",
+            "company": "Crown Lift Trucks UK",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4459047550",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
         },
         {
             "title": "Sales Territory Manager Galicia & Asturias.",
@@ -278,23 +322,23 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Junior Supply Chain",
-            "company": "Capgemini Engineering",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4447553635",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
             "title": "Monitor/a Deportivo Multidisciplinar - Vigo Centro Areal",
             "company": "Synergym España",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4457976844",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
+        },
+        {
+            "title": "Director of Sales & Partnerships",
+            "company": "Lox Club",
+            "location": "Rianjo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457739202",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "28/08/2026"
@@ -309,6 +353,17 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
+        },
+        {
+            "title": "Director/a Comercial",
+            "company": "Michael Page",
+            "location": "A Coruña, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4455892502",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
         },
         {
             "title": "COORDINADOR/A DE SERVICIOS DEPORTIVOS - LA CORUÑA",
@@ -333,15 +388,15 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "DESARROLLO DE NEGOCIO COMERCIAL",
-            "company": "Sargadelos",
-            "location": "Cervo, Galicia, Spain",
+            "title": "Staff Comercial",
+            "company": "Fitness Park España",
+            "location": "A Coruña, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459884484",
+            "job_url": "https://www.linkedin.com/jobs/view/4459162453",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "28/08/2026"
         },
         {
             "title": "Club Manager - Physical Maia",
@@ -438,28 +493,6 @@
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4457347785",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Coach // Instrutor de Fitness",
-            "company": "BHOUT",
-            "location": "Porto, Portugal",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4456530678",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Consultor/a Comercial - Holmes Place Boavista",
-            "company": "Holmes Place Portugal",
-            "location": "Porto, Porto, Portugal",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458292882",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -575,6 +608,17 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Personal de Conducción para Coregal en Mos",
+            "company": "Empresa InfoJobs",
+            "location": "Vigo / Pontevedra, España",
+            "modalidad": "Presencial",
+            "site": "InfoJobs",
+            "job_url": "https://www.infojobs.net/mos/personal-conduccion-para-coregal-mos/of-i4cfde4a2c74b1f9f9d42056c2c6196?applicationOrigin=search-new&page=1&sortBy=PUBLICATION_DATE",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
+        },
+        {
             "title": "Gerocultor/a para Centro de día en Baiona",
             "company": "Empresa InfoJobs",
             "location": "Vigo / Pontevedra, España",
@@ -592,17 +636,6 @@
             "modalidad": "Presencial",
             "site": "InfoJobs",
             "job_url": "https://www.infojobs.net/marin/responsable-carniceria-para-supermercados-familia-marin-pontevedra/of-i65854d7a9c4e9fafd9d934d7d16db5?applicationOrigin=search-new&page=1&sortBy=PUBLICATION_DATE",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Oficial de mantenimiento",
-            "company": "Empresa InfoJobs",
-            "location": "Vigo / Pontevedra, España",
-            "modalidad": "Presencial",
-            "site": "InfoJobs",
-            "job_url": "https://www.infojobs.net/vigo/oficial-mantenimiento/of-i62f97cfaf840a6b88636a3d49529e6?applicationOrigin=search-new&page=1&sortBy=PUBLICATION_DATE",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "28/08/2026"
