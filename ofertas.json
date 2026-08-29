@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "29/08/2026 06:21",
-    "total_ofertas": 59,
+    "ultima_actualizacion": "29/08/2026 08:21",
+    "total_ofertas": 56,
     "ofertas": [
         {
             "title": "Club Manager - Vigo Torrecedeira",
@@ -14,15 +14,15 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Automation & OT Engineer",
-            "company": "Syngenta",
-            "location": "Pontevedra, Galicia, Spain",
+            "title": "Industrial Purchasing Manager Stellantis Mangualde",
+            "company": "Stellantis",
+            "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459805487",
+            "job_url": "https://www.linkedin.com/jobs/view/4391499499",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "29/08/2026"
+            "fecha": "27/08/2026"
         },
         {
             "title": "Director/a Asociado/a | Desarrollo de una Oficina INTEDYA",
@@ -36,23 +36,12 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Team Leader de System Technology for Laser Applications",
-            "company": "AIMEN Centro Tecnológico",
-            "location": "Porriño, Galicia, Spain",
+            "title": "Finance & Controlling Director (Pontevedra Area)",
+            "company": "Michael Page",
+            "location": "Pontevedra, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459171573",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Country Finances Manager - Spain",
-            "company": "Plastic Omnium",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457264661",
+            "job_url": "https://www.linkedin.com/jobs/view/4457249248",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -69,12 +58,23 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Comercial y grupos",
-            "company": "GRUPO DESGΛL",
+            "title": "Supply Chain Planner",
+            "company": "Trivium Packaging",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457479356",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "Responsable de Administración",
+            "company": "FORBE",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458774722",
+            "job_url": "https://www.linkedin.com/jobs/view/4458178802",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -91,26 +91,15 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "IT Project Manager",
-            "company": "Michael Page",
-            "location": "Pontevedra, Galicia, Spain",
+            "title": "Junior Supply Chain",
+            "company": "Capgemini Engineering",
+            "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4455844760",
+            "job_url": "https://www.linkedin.com/jobs/view/4447553635",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
-        },
-        {
-            "title": "Administrador Sistemas | Linux | GCP | Jornada 4 días | Remoto | España",
-            "company": "Modern Talent Hub",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Remoto",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457149676",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
         },
         {
             "title": "Senior Director, Technical Services",
@@ -124,15 +113,15 @@
             "fecha": "29/08/2026"
         },
         {
-            "title": "Project Manager (EU)",
-            "company": "Parsec Automation, LLC",
-            "location": "Vigo, Galicia, Spain",
+            "title": "Adjunto/a a Dirección (área financiera)",
+            "company": "QUICK UP",
+            "location": "Pontevedra, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4448899530",
+            "job_url": "https://www.linkedin.com/jobs/view/4435804944",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "29/08/2026"
         },
         {
             "title": "Senior Director, Technical Services",
@@ -157,56 +146,23 @@
             "fecha": "28/08/2026"
         },
         {
-            "title": "Especialista Senior HVAC (Pharma)",
-            "company": "SEGULA Technologies",
-            "location": "Porriño, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459679686",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Técnico/a de proyectos ambientales",
-            "company": "EGA CONSULTORES",
-            "location": "Porriño, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457900339",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Jefe de Obra (Galicia)",
+            "title": "IT Project Manager",
             "company": "Michael Page",
             "location": "Pontevedra, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457226614",
+            "job_url": "https://www.linkedin.com/jobs/view/4455844760",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "28/08/2026"
+            "fecha": "27/08/2026"
         },
         {
-            "title": "Global Business Applications CSV and Test Management Lead",
-            "company": "Straumann Group",
-            "location": "Pontevedra, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4446237337",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Junior Supply Chain",
-            "company": "Capgemini Engineering",
+            "title": "Project Manager (EU)",
+            "company": "Parsec Automation, LLC",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4447553635",
+            "job_url": "https://www.linkedin.com/jobs/view/4448899530",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -223,48 +179,26 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "New Balance busca un Associate Trade Marketing Manager en Redondela",
-            "company": "Extradixital",
-            "location": "Redondela, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458438418",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
-            "title": "Industrial Purchasing Manager Stellantis Mangualde",
-            "company": "Stellantis",
+            "title": "Country Finances Manager - Spain",
+            "company": "Plastic Omnium",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4391499499",
+            "job_url": "https://www.linkedin.com/jobs/view/4457264661",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
         },
         {
-            "title": "Finance & Controlling Director (Pontevedra Area)",
-            "company": "Michael Page",
+            "title": "Técnico De Mantenimiento",
+            "company": "AKWEL",
             "location": "Pontevedra, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457249248",
+            "job_url": "https://www.linkedin.com/jobs/view/4457606793",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Account Manager Meat, Poultry, Seafood for Northwest Spain & Portugal",
-            "company": "Intralox",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4345500876",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "29/08/2026"
         },
         {
             "title": "Sales Territory Manager Galicia & Asturias.",
@@ -276,28 +210,6 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
-        },
-        {
-            "title": "Responsable de Administración",
-            "company": "FORBE",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458178802",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "ASESOR/A COMERCIAL INMOBILIARIO/A",
-            "company": "RE/MAX Balaídos",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4455077800",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
         },
         {
             "title": "Consultor/ a Comercial en Pontevedra",
@@ -322,6 +234,61 @@
             "fecha": "28/08/2026"
         },
         {
+            "title": "Account Manager Meat, Poultry, Seafood for Northwest Spain & Portugal",
+            "company": "Intralox",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4345500876",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
+            "title": "Comercial y grupos",
+            "company": "GRUPO DESGΛL",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4458774722",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
+            "title": "COMERCIAL JUNIOR POSTVENTA ZONA PONTEVEDRA",
+            "company": "Crown Lift Trucks UK",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4459047550",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "ASESOR/A COMERCIAL INMOBILIARIO/A",
+            "company": "RE/MAX Balaídos",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4455077800",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "Agente de Seguros en Pontevedra capital",
+            "company": "FE Seguros",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4460581938",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
             "title": "¡Únete a Leroy Merlín e impulsa tu carrera comercial con atractivas comisiones!",
             "company": "Salesland",
             "location": "Nigrán, Galicia, Spain",
@@ -339,17 +306,6 @@
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4460336104",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
-            "title": "Keytel busca un Trafficker en Vigo",
-            "company": "Extradixital",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458435424",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
@@ -405,6 +361,17 @@
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4455892502",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "Director/a Comercial | Sector Forest & Garden",
+            "company": "Servitalent",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4451205490",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
@@ -487,6 +454,17 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Coach // Instrutor de Fitness",
+            "company": "BHOUT",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4456530678",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "28/08/2026"
+        },
+        {
             "title": "Consultor/a Comercial - Holmes Place Boavista",
             "company": "Holmes Place Portugal",
             "location": "Porto, Porto, Portugal",
@@ -509,15 +487,26 @@
             "fecha": "28/08/2026"
         },
         {
-            "title": "Coach // Instrutor de Fitness",
-            "company": "BHOUT",
-            "location": "Porto, Portugal",
+            "title": "Futbolistas Femeninas – FC Prishtina City – KosovoEl FC Prishtina City busca fut",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
             "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4456530678",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/futbolistas-femeninas-fc-prishtina-city-kosovo-41246/",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "28/08/2026"
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "Entrenador – Phoenix Global Elite – Shanghái, ChinaRequisitos para optar a la of",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-phoenix-global-elite-shanghai-china-41245/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
         },
         {
             "title": "Futbolistas – Club Liga BélgicaCONVOCATORIA DE JUGADORES - LIGA BÉLGICA.Nº 9 – D",
@@ -581,28 +570,6 @@
             "modalidad": "Presencial",
             "site": "FutbolJobs",
             "job_url": "https://futboljobs.com/oferta/medico-primer-equipo-medico-brentford-fc-41239/",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Defensa Central – Club de 2ª División – PortugalDefensa Central – Club de 2ª Div",
-            "company": "Club / Entidad Deportiva",
-            "location": "Galicia / Norte Portugal / Internacional",
-            "modalidad": "Presencial",
-            "site": "FutbolJobs",
-            "job_url": "https://futboljobs.com/oferta/defensa-central-club-de-2a-division-portugal-41238/",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Fisioterapeuta – Academia Ipswich Town FCFISIOTERAPEUTA PARA ESCUELASTipo de con",
-            "company": "Club / Entidad Deportiva",
-            "location": "Galicia / Norte Portugal / Internacional",
-            "modalidad": "Presencial",
-            "site": "FutbolJobs",
-            "job_url": "https://futboljobs.com/oferta/fisioterapeuta-academia-ipswich-town-fc-41237/",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "28/08/2026"
