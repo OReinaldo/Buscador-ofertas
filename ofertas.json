@@ -1,5 +1,5 @@
 {
-    "ultima_actualizacion": "29/08/2026 14:21",
+    "ultima_actualizacion": "29/08/2026 16:21",
     "total_ofertas": 63,
     "ofertas": [
         {
@@ -12,17 +12,6 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
-        },
-        {
-            "title": "Automation & OT Engineer",
-            "company": "Syngenta",
-            "location": "Pontevedra, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459805487",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
         },
         {
             "title": "Director/a Asociado/a | Desarrollo de una Oficina INTEDYA",
@@ -78,17 +67,6 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
-        },
-        {
-            "title": "Administrador Sistemas | Linux | GCP | Jornada 4 días | Remoto | España",
-            "company": "Modern Talent Hub",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Remoto",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457149676",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
         },
         {
             "title": "Senior Director, Technical Services",
@@ -212,6 +190,17 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Quality Engineer Manager Bearing Centre",
+            "company": "Wärtsilä",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4460366412",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
             "title": "Industrial Purchasing Manager Stellantis Mangualde",
             "company": "Stellantis",
             "location": "Vigo, Galicia, Spain",
@@ -221,6 +210,17 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
+        },
+        {
+            "title": "Automation & OT Engineer",
+            "company": "Syngenta",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4459805487",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
         },
         {
             "title": "Finance & Controlling Director (Pontevedra Area)",
@@ -245,23 +245,23 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Técnico De Mantenimiento",
-            "company": "AKWEL",
-            "location": "Pontevedra, Galicia, Spain",
+            "title": "Internal Auditor",
+            "company": "CENTUM research & technology",
+            "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457606793",
+            "job_url": "https://www.linkedin.com/jobs/view/4457982733",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
         },
         {
-            "title": "Quality Engineer Manager Bearing Centre",
-            "company": "Wärtsilä",
-            "location": "Porriño, Galicia, Spain",
+            "title": "Supply Chain Planner",
+            "company": "Trivium Packaging",
+            "location": "Pontevedra, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4460366412",
+            "job_url": "https://www.linkedin.com/jobs/view/4457479356",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
@@ -289,6 +289,17 @@
             "fecha": "28/08/2026"
         },
         {
+            "title": "Adjunto/a a Dirección (área financiera)",
+            "company": "QUICK UP",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4435804944",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
             "title": "¡Únete a Leroy Merlín e impulsa tu carrera comercial con atractivas comisiones!",
             "company": "Salesland",
             "location": "Nigrán, Galicia, Spain",
@@ -306,17 +317,6 @@
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4345500876",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
-        },
-        {
-            "title": "Comercial y grupos",
-            "company": "GRUPO DESGΛL",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458774722",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -366,17 +366,6 @@
             "fecha": "29/08/2026"
         },
         {
-            "title": "Adjunto/a a Dirección (área financiera)",
-            "company": "QUICK UP",
-            "location": "Pontevedra, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4435804944",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
             "title": "Monitor/a Deportivo Multidisciplinar - Vigo Centro Areal",
             "company": "Synergym España",
             "location": "Vigo, Galicia, Spain",
@@ -386,6 +375,17 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
+        },
+        {
+            "title": "Comercial y grupos",
+            "company": "GRUPO DESGΛL",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4458774722",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
         },
         {
             "title": "Club Manager - Ourense Norte",
@@ -427,6 +427,17 @@
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4455892502",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "DESARROLLO DE NEGOCIO COMERCIAL",
+            "company": "Sargadelos",
+            "location": "Cervo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4459884484",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
@@ -542,23 +553,56 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Rececionista | Comercial - Physical Felgueiras",
+            "title": "Club Manager - Physical Maia",
             "company": "Physical",
-            "location": "Santa Eulália, Aveiro, Portugal",
+            "location": "Maia, Porto, Portugal",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459444162",
+            "job_url": "https://www.linkedin.com/jobs/view/4459314862",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
         },
         {
-            "title": "Rececionista | Comercial - Physical Leça da Palmeira",
-            "company": "Physical",
-            "location": "Leça da Palmeira, Porto, Portugal",
+            "title": "Director Educación – Academia LA Galaxy – USAEl Director de Educación del LA Gal",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
             "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459440190",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/director-educacion-academia-la-galaxy-usa-41253/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "Entrenador – Academia Louletano Desportos Clube – PortugalEl Club Deportivo Loul",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-academia-louletano-desportos-clube-portugal-41252/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "Profesor/a Educación Post-16 – Fulham Football ClubBuscamos un/a profesor/a alta",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/profesor-a-educacion-post-16-fulham-football-club-41248/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "Analista Exploración Talentos – Tottenham Hotspur Football ClubComo analista de ",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/analista-exploracion-talentos-tottenham-hotspur-football-club-41247/",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
@@ -606,50 +650,6 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
-        },
-        {
-            "title": "Responsable Desarrollo Jugadores – Asociación Fútbol KentEl Centro de Talentos E",
-            "company": "Club / Entidad Deportiva",
-            "location": "Galicia / Norte Portugal / Internacional",
-            "modalidad": "Presencial",
-            "site": "FutbolJobs",
-            "job_url": "https://futboljobs.com/oferta/responsable-desarrollo-jugadores-asociacion-futbol-kent-41242/",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
-            "title": "Entrenador Principal  – Academia Vasa IFK – FinlandiaVasa IFK busca un entrenado",
-            "company": "Club / Entidad Deportiva",
-            "location": "Galicia / Norte Portugal / Internacional",
-            "modalidad": "Presencial",
-            "site": "FutbolJobs",
-            "job_url": "https://futboljobs.com/oferta/entrenador-principal-academia-vasa-ifk-finlandia-41241/",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
-            "title": "Defensa Central – Club Norte ÁfricaSOLICITUD DEL JUGADOR | NORTE DE ÁFRICA.Puest",
-            "company": "Club / Entidad Deportiva",
-            "location": "Galicia / Norte Portugal / Internacional",
-            "modalidad": "Presencial",
-            "site": "FutbolJobs",
-            "job_url": "https://futboljobs.com/oferta/defensa-central-club-norte-africa-41240/",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Médico – Primer Equipo Médico – Brentford FCPuesto de trabajo:  Médico del club.",
-            "company": "Club / Entidad Deportiva",
-            "location": "Galicia / Norte Portugal / Internacional",
-            "modalidad": "Presencial",
-            "site": "FutbolJobs",
-            "job_url": "https://futboljobs.com/oferta/medico-primer-equipo-medico-brentford-fc-41239/",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
         },
         {
             "title": "Encargada tienda para CC Gran Via, Vigo",
