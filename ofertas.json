@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "29/08/2026 00:21",
-    "total_ofertas": 61,
+    "ultima_actualizacion": "29/08/2026 02:21",
+    "total_ofertas": 60,
     "ofertas": [
         {
             "title": "Club Manager - Vigo Torrecedeira",
@@ -102,23 +102,23 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Senior Director, Technical Services",
+            "company": "Parsec Automation, LLC",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4460566349",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
             "title": "Adjunto/a a Dirección (área financiera)",
             "company": "QUICK UP",
             "location": "Pontevedra, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4435804944",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "28/08/2026"
-        },
-        {
-            "title": "Backoffice IT Operations Lead",
-            "company": "Marosa by Wolters Kluwer",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4460301402",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "28/08/2026"
@@ -144,17 +144,6 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "28/08/2026"
-        },
-        {
-            "title": "Project Manager (EU)",
-            "company": "Parsec Automation, LLC",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4448899530",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
         },
         {
             "title": "Técnico/a de proyectos ambientales",
@@ -212,6 +201,17 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Project Manager (EU)",
+            "company": "Parsec Automation, LLC",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4448899530",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
+        },
+        {
             "title": "Coordinador/a Flying Doc – Industrialización",
             "company": "ALTEN Spain",
             "location": "Vigo, Galicia, Spain",
@@ -245,6 +245,17 @@
             "fecha": "27/08/2026"
         },
         {
+            "title": "Técnico De Mantenimiento",
+            "company": "AKWEL",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457606793",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
             "title": "Quality Engineer Manager Bearing Centre",
             "company": "Wärtsilä",
             "location": "Porriño, Galicia, Spain",
@@ -256,17 +267,6 @@
             "fecha": "28/08/2026"
         },
         {
-            "title": "Junior Contabilidad y Finanzas - O Grove",
-            "company": "Deloitte",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4448017431",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
             "title": "Account Manager Meat, Poultry, Seafood for Northwest Spain & Portugal",
             "company": "Intralox",
             "location": "Vigo, Galicia, Spain",
@@ -276,6 +276,17 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
+        },
+        {
+            "title": "COMERCIAL JUNIOR POSTVENTA ZONA PONTEVEDRA",
+            "company": "Crown Lift Trucks UK",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4459047550",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
         },
         {
             "title": "Comercial y grupos",
@@ -298,6 +309,17 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
+        },
+        {
+            "title": "ASESOR/A COMERCIAL INMOBILIARIO/A",
+            "company": "RE/MAX Balaídos",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4455077800",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
         },
         {
             "title": "Consultor/ a Comercial en Pontevedra",
@@ -333,13 +355,24 @@
             "fecha": "28/08/2026"
         },
         {
-            "title": "COMERCIAL JUNIOR POSTVENTA ZONA PONTEVEDRA",
-            "company": "Crown Lift Trucks UK",
+            "title": "Asesor/a de Seguros",
+            "company": "Preventiva Seguros",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4460336104",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
+            "title": "Keytel busca un Trafficker en Vigo",
+            "company": "Extradixital",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459047550",
-            "categoria": "DEPORTE",
+            "job_url": "https://www.linkedin.com/jobs/view/4458435424",
+            "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
         },
@@ -366,28 +399,6 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "DESARROLLO DE NEGOCIO COMERCIAL",
-            "company": "Sargadelos",
-            "location": "Cervo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459884484",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
-            "title": "Bannister Global busca un técnico de marketing para centros comerciales en A Coruña",
-            "company": "Extradixital",
-            "location": "A Coruña, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458449325",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
             "title": "Rececionista - Administrativa Full Time",
             "company": "Breathe Sport Fitness -Univip Lda",
             "location": "Porto, P13, PT",
@@ -397,17 +408,6 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "28/08/2026"
-        },
-        {
-            "title": "Consultor/a Comercial - Holmes Place V. N. Gaia",
-            "company": "Holmes Place Portugal",
-            "location": "Vila Nova de Gaia, Porto, Portugal",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458966183",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
         },
         {
             "title": "Club Manager (M/F)- Região Norte",
@@ -507,17 +507,6 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
-        },
-        {
-            "title": "Rececionista | Comercial - Physical Felgueiras",
-            "company": "Physical",
-            "location": "Santa Eulália, Aveiro, Portugal",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459444162",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
         },
         {
             "title": "Rececionista | Comercial - Physical Leça da Palmeira",
