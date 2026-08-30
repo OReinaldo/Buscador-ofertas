@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "30/08/2026 09:00",
-    "total_ofertas": 74,
+    "ultima_actualizacion": "30/08/2026 16:25",
+    "total_ofertas": 80,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -11,7 +11,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4460566349",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "29/08/2026"
+            "fecha": "29/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Adjunto/a a Dirección (área financiera)",
@@ -44,7 +46,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4458663811",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "27/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Industrial Purchasing Manager Stellantis Mangualde",
@@ -88,7 +92,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4457249248",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "27/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Director Territorial Galicia - Business Development",
@@ -99,7 +105,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4443683238",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "27/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Supply Chain Planner",
@@ -110,7 +118,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4457479356",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "29/08/2026"
+            "fecha": "29/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Responsable de Negocio (Pontevedra)",
@@ -138,12 +148,14 @@
             "title": "Senior Director, Technical Services",
             "company": "Parsec Automation",
             "location": "Pontevedra, GA, ES",
-            "modalidad": "Presencial",
+            "modalidad": "Remoto",
             "site": "indeed",
             "job_url": "https://es.indeed.com/viewjob?jk=a041d68907c0c4b0",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "29/08/2026"
+            "fecha": "29/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Quality Engineer Manager Bearing Centre",
@@ -165,7 +177,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4448899530",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "27/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Especialista Senior HVAC (Pharma)",
@@ -220,7 +234,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4455844760",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "27/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Coordinador/a Flying Doc – Industrialización",
@@ -231,7 +247,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4418767294",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "27/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Quality Engineer Manager Bearing Centre",
@@ -407,7 +425,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4458670491",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "27/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Director of Sales & Partnerships",
@@ -440,7 +460,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4460858058",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "29/08/2026"
+            "fecha": "29/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "DESARROLLO DE NEGOCIO COMERCIAL",
@@ -462,7 +484,9 @@
             "job_url": "https://pt.indeed.com/viewjob?jk=73a4b0fa69dcce5f",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "28/08/2026"
+            "fecha": "28/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Club Manager (M/F)- Região Norte",
@@ -473,7 +497,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4460111312",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "27/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Club Manager - Physical Maia",
@@ -484,7 +510,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4459314862",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "29/08/2026"
+            "fecha": "29/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Gestor Desportivo",
@@ -495,7 +523,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4458190224",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "27/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Club Manager (Região Norte)",
@@ -506,7 +536,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4460819371",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "29/08/2026"
+            "fecha": "29/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Vendedor/a Futebol",
@@ -572,7 +604,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4456530678",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "29/08/2026"
+            "fecha": "29/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Director Educación – Academia LA Galaxy – USAEl Director de Educación del LA Galaxy es responsable d",
@@ -742,7 +776,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4458629675",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "30/08/2026"
+            "fecha": "30/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Innovation Project Manager A Coruña o Madrid",
@@ -753,7 +789,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4458611738",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "30/08/2026"
+            "fecha": "30/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Product & Merchandising Manager - Retail",
@@ -775,7 +813,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4459172349",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "30/08/2026"
+            "fecha": "30/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Consultor/a Comercial - Holmes Place Boavista",
@@ -786,7 +826,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4458292882",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "30/08/2026"
+            "fecha": "30/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Monitor/a Deportivo Multidisciplinar - Vigo Centro Areal",
@@ -797,7 +839,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4457976844",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "30/08/2026"
+            "fecha": "30/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Monitor/a Deportivo",
@@ -808,7 +852,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4458951679",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "30/08/2026"
+            "fecha": "30/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Entrenador personal",
@@ -819,7 +865,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4459038346",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "30/08/2026"
+            "fecha": "30/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Specialist Transport Management Vigo (m/f/d)",
@@ -828,6 +876,86 @@
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4458780463",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
+        },
+        {
+            "title": "Club Manager - Physical Vila Nova De Gaia",
+            "company": "Physical",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4460895664",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026"
+        },
+        {
+            "title": "Club Manager - Physical Vila Nova De Gaia",
+            "company": "Physical",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4461003640",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026"
+        },
+        {
+            "title": "Club Manager - Physical Maia",
+            "company": "Physical",
+            "location": "Viseu, Viseu, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4461001579",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026"
+        },
+        {
+            "title": "Club Manager - Physical Maia",
+            "company": "Physical",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4460893634",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026"
+        },
+        {
+            "title": "Entrenador Asistente – Club Profesional – IránSE BUSCA ENTRENADOR ASISTENTE – IRÁN.Actualmente estam",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-asistente-club-profesional-iran-41257/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026"
+        },
+        {
+            "title": "Entrenador – Hobart City FC – AustraliaTEMPORADA 2027 - ENTRENADOR PRINCIPAL.Hobart City FC invita .",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-hobart-city-fc-australia-41256/",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "30/08/2026"
