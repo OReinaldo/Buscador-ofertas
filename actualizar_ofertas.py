@@ -3,9 +3,11 @@ import json
 import re
 import unicodedata
 from datetime import datetime
+from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 import cloudscraper
+import pandas as pd
 from jobspy import scrape_jobs
 
 HEADERS = {
@@ -15,54 +17,132 @@ HEADERS = {
 }
 
 # -------------------------------------------------------------------------
-# FILTROS Y NORMALIZACIÓN
+# FUNCIONES DE NORMALIZACIÓN Y LIMPIEZA
 # -------------------------------------------------------------------------
 def normalizar(texto):
-    if not texto:
+    if not texto or pd.isna(texto):
         return ""
     texto = unicodedata.normalize('NFD', str(texto))
     texto = re.sub(r'[\u0300-\u036f]', '', texto)
     return texto.lower().strip()
 
-def detectar_modalidad(texto):
-    texto_lc = normalizar(texto)
-    if any(k in texto_lc for k in ["remoto", "teletrabajo", "remote", "100% remoto"]):
+def clean_val(val, default=""):
+    if val is None or pd.isna(val):
+        return default
+    s = str(val).strip()
+    return default if s.lower() == "nan" or not s else s
+
+def detectar_modalidad(texto_combinado, is_remote_flag=None):
+    """
+    Detecta de forma precisa si la oferta es Remoto, Híbrido o Presencial
+    analizando banderas nativas y patrones en español, inglés y portugués.
+    """
+    if is_remote_flag is True:
         return "Remoto"
-    elif any(k in texto_lc for k in ["hibrido", "hybrid", "semi-presencial"]):
+
+    texto_lc = normalizar(texto_combinado)
+
+    # Patrones de Híbrido
+    patrones_hibrido = [
+        "hibrido", "hybrid", "semi-presencial", "semipresencial", 
+        "trabalho hibrido", "modelo hibrido", "flexible work"
+    ]
+    if any(p in texto_lc for p in patrones_hibrido):
         return "Híbrido"
+
+    # Patrones de Remoto
+    patrones_remoto = [
+        "remoto", "remote", "teletrabajo", "teletrabalho", 
+        "work from home", "wfh", "home office", "100% remoto", 
+        "100% remote", "distancia", "100% teletrabajo"
+    ]
+    if any(p in texto_lc for p in patrones_remoto):
+        return "Remoto"
+
     return "Presencial"
 
+
+# -------------------------------------------------------------------------
+# PALABRAS CLAVE Y FILTROS EXPANDIDOS (CV ALINEADO)
+# -------------------------------------------------------------------------
+
 KEYWORDS_DEPORTE = [
-    "deport", "desport", "sport", "futbol", "futebol", "soccer", 
-    "club", "atlet", "liga", "federac", "stadium", "scout", 
-    "coach", "entrenador", "gym", "fitness", "padel", "tenis",
-    "celta", "patrocinio", "comercial", "cuentas", "marketing deportivo"
+    # Operaciones y Gestión de Clubes (Club & Football Operations)
+    "football operations", "sports operations", "sporting operations", "club operations",
+    "academy operations", "performance operations", "commercial operations", "operations director",
+    "football project manager", "club management", "general manager", "managing director",
+    
+    # Estrategia, Transformación e Innovación Deportiva
+    "strategy", "estrategia", "transformation", "transformacion", "innovation", "innovacion",
+    "digital transformation", "transformacion digital",
+    
+    # Negocio Deportivo y Dirección General
+    "football business", "sports business", "gestao desportiva", "gestion deportiva",
+    "direccion deportiva", "diretor desportivo", "sports director", "deport", "desport", "sport",
+    "futbol", "futebol", "soccer", "club", "liga", "federac", "stadium", "control economico",
+    
+    # Rendimiento, Cantera, Scouting y Análisis Técnico
+    "cantera", "academia", "metodologia", "scout", "scouting", "analyst", "analista",
+    "tactico", "tactica", "data analyst", "performance", "rendimiento", "football data",
+    "coach", "entrenador", "treinador", "cuerpo tecnico", "preparador",
+    
+    # Comercial, Patrocinio y Clubes Objetivo
+    "patrocinio", "sponsorship", "marketing deportivo", "celta", "boavista"
+]
+
+KEYWORDS_EMPRESA = [
+    # Operaciones, Planta y Dirección Industrial
+    "director de operaciones", "director operaciones", "operations manager", 
+    "business operations manager", "business operations", "director industrial", 
+    "plant manager", "director de planta", "jefe de planta", "gerente de operaciones", 
+    "head of operations", "coo", "operaciones", "operations",
+
+    # Transformación, Innovación y Estrategia
+    "director de transformacion", "transformation manager", "director transformacion",
+    "innovation manager", "director de innovacion", "strategy manager", 
+    "director de estrategia", "estrategia", "strategy", "innovacion", "innovation",
+    "transformacion", "transformation", "digital transformation", "transformacion digital",
+
+    # PMO, Proyectos y Desarrollo de Negocio
+    "pmo director", "pmo manager", "pmo", "director de proyectos", 
+    "director proyectos", "project director", "project manager", "project management",
+    "gestion de proyectos", "business development", "desarrollo de negocio",
+
+    # Excelencia Operativa, Control Económico y Calidad
+    "continuous improvement manager", "continuous improvement", "mejora continua",
+    "operational excellence", "excelencia operativa", "lean manufacturing", "lean six sigma",
+    "control economico", "control de gestion", "controlling", "supply chain", 
+    "director de procesos", "quality manager", "director de calidad"
 ]
 
 LOCATIONS_VIGO = [
-    "vigo", "pontevedra", "porriño", "porrino", "redondela", "nigran", "nigrán",
-    "moaña", "moana", "cangas", "marin", "marín", "tui", "baiona", "gondomar",
+    "vigo", "pontevedra", "porrino", "o porrino", "redondela", "nigran",
+    "moana", "cangas", "marin", "tui", "baiona", "gondomar",
     "salvaterra", "ponteareas", "arcade", "salceda", "bueu", "vilaboa"
 ]
 
 LOCATIONS_NORTE_PORTUGAL_GALICIA = [
-    "galicia", "vigo", "coruña", "coruna", "pontevedra", "ourense", "lugo",
-    "ferrol", "santiago", "compostela", "vilagarcia", "vilagarcía", "porriño",
-    "porto", "oportu", "braga", "viana", "guimaraes", "guimarães", "famalicao", "famalicão",
-    "barcelos", "gaia", "maia", "matosinhos", "trofa", "santo tirso", "vila do conde",
-    "povoa", "póvoa", "penafiel", "amarante", "valenca", "valença", "moncao", "monção",
-    "norte de portugal", "alto minho", "cávado", "cavado", "ave"
+    "galicia", "vigo", "coruna", "pontevedra", "ourense", "lugo",
+    "ferrol", "santiago", "compostela", "vilagarc", "porrino",
+    "porto", "oportu", "braga", "viana", "guimaraes", "famalicao",
+    "barcelos", "gaia", "maia", "matosinhos", "trofa", "santo tirso", 
+    "vila do conde", "povoa", "penafiel", "amarante", "valenca", "moncao",
+    "norte de portugal", "alto minho", "cavado", "ave"
 ]
 
 EXCLUDE_LOCATIONS = [
-    "lisboa", "lisbon", "madrid", "coimbra", "setubal", "setúbal", "algarve", "faro",
-    "leiria", "evora", "évora", "beja", "castelo branco", "guarda", "portalegre",
-    "santarem", "santarém", "badajoz", "barcelona", "valencia", "sevilla"
+    "lisboa", "lisbon", "madrid", "coimbra", "setubal", "algarve", "faro",
+    "leiria", "evora", "beja", "castelo branco", "guarda", "portalegre",
+    "santarem", "badajoz", "barcelona", "valencia", "sevilla"
 ]
 
 def es_oferta_deportiva(titulo, empresa=""):
-    texto = f"{titulo} {empresa}"
-    return any(kw in normalizar(texto) for kw in KEYWORDS_DEPORTE)
+    texto = normalizar(f"{titulo} {empresa}")
+    return any(kw in texto for kw in KEYWORDS_DEPORTE)
+
+def es_oferta_empresa_relevante(titulo, empresa=""):
+    texto = normalizar(f"{titulo} {empresa}")
+    return any(kw in texto for kw in KEYWORDS_EMPRESA)
 
 def es_ubicacion_valida(ubicacion_raw, categoria):
     loc = normalizar(ubicacion_raw)
@@ -71,14 +151,14 @@ def es_ubicacion_valida(ubicacion_raw, categoria):
         return False
 
     if categoria == "EMPRESAS":
-        if any(v in loc for v in LOCATIONS_VIGO) or "remot" in loc or "teletrabaj" in loc:
+        if any(v in loc for v in LOCATIONS_VIGO) or "remot" in loc or "teletrabaj" in loc or "home office" in loc:
             return True
         return False
 
     elif categoria == "DEPORTE":
         if any(n in loc for n in LOCATIONS_NORTE_PORTUGAL_GALICIA) or "remot" in loc or "internacional" in loc:
             return True
-        if "galicia" in loc or "portugal" in loc or "españa" in loc or "espana" in loc:
+        if "galicia" in loc or "portugal" in loc or "espana" in loc:
             return True
         return False
 
@@ -86,33 +166,28 @@ def es_ubicacion_valida(ubicacion_raw, categoria):
 
 
 # =========================================================================
-# 1. SCRAPER FUTBOLJOBS (Con Bypass Cloudflare & Rotación URLs)
+# 1. SCRAPER FUTBOLJOBS
 # =========================================================================
 def obtener_ofertas_futboljobs():
     ofertas = []
-    print("\n🔍 Scraping FutbolJobs con Cloudscraper...")
+    print("\n🔍 Scraping FutbolJobs...")
 
     urls_candidatas = [
-        "https://futboljobs.com/",
         "https://futboljobs.com/ofertas-de-empleo/",
         "https://futboljobs.com/ofertas/",
-        "https://futboljobs.com/empleo/"
+        "https://futboljobs.com/"
     ]
 
     try:
         scraper = cloudscraper.create_scraper(
-            browser={
-                'browser': 'chrome',
-                'platform': 'windows',
-                'desktop': True
-            }
+            browser={'browser': 'chrome', 'platform': 'windows', 'desktop': True}
         )
 
         html_content = None
         for url in urls_candidatas:
             try:
                 res = scraper.get(url, timeout=15)
-                if res.status_code == 200:
+                if res.status_code == 200 and len(res.text) > 1000:
                     html_content = res.text
                     print(f"  └─ Conexión exitosa en {url}")
                     break
@@ -121,8 +196,6 @@ def obtener_ofertas_futboljobs():
 
         if html_content:
             soup = BeautifulSoup(html_content, 'html.parser')
-            
-            # Buscar tarjetas de empleo o enlaces con rutas de ofertas
             tarjetas = soup.find_all("li", class_=re.compile(r"(job_listing|job-card|oferta)", re.I))
             if not tarjetas:
                 tarjetas = soup.find_all("div", class_=re.compile(r"(job-item|oferta-item|article)", re.I))
@@ -131,15 +204,13 @@ def obtener_ofertas_futboljobs():
 
             vistos = set()
             for elem in tarjetas:
-                enlace_tag = elem.find("a", href=True) if elem.name != "a" else elem
+                enlace_tag = elem if elem.name == "a" else elem.find("a", href=True)
                 if not enlace_tag or not enlace_tag.has_attr("href"):
                     continue
 
-                href = enlace_tag["href"]
-                if not href.startswith("http"):
-                    href = "https://futboljobs.com" + href
-
+                href = urljoin("https://futboljobs.com", enlace_tag["href"])
                 titulo = enlace_tag.get_text(strip=True)
+                
                 if not titulo or len(titulo) < 5:
                     title_elem = elem.find(["h2", "h3", "h4", "strong"])
                     if title_elem:
@@ -148,33 +219,29 @@ def obtener_ofertas_futboljobs():
                 if not titulo or "ver oferta" in titulo.lower() or len(titulo) < 6:
                     continue
 
-                company = "Club / Entidad Deportiva"
                 company_elem = elem.find(class_=re.compile(r"(company|empresa|club)", re.I))
-                if company_elem:
-                    company = company_elem.get_text(strip=True)
+                company = company_elem.get_text(strip=True) if company_elem else "Club / Entidad Deportiva"
 
-                loc = "Galicia / Norte Portugal / Internacional"
                 loc_elem = elem.find(class_=re.compile(r"(location|ubicacion|ciudad)", re.I))
-                if loc_elem:
-                    loc = loc_elem.get_text(strip=True)
+                loc = loc_elem.get_text(strip=True) if loc_elem else "Galicia / Norte Portugal / Internacional"
 
                 if href not in vistos:
                     vistos.add(href)
                     if es_ubicacion_valida(loc, "DEPORTE"):
+                        mod = detectar_modalidad(f"{titulo} {loc}")
                         ofertas.append({
-                            "title": titulo[:80],
+                            "title": titulo[:100],
                             "company": company,
                             "location": loc,
-                            "modalidad": detectar_modalidad(f"{titulo} {loc}"),
+                            "modalidad": mod,
                             "site": "FutbolJobs",
                             "job_url": href,
                             "categoria": "DEPORTE",
                             "estado": "Pendiente"
                         })
-                        
             print(f"  └─ FutbolJobs: {len(ofertas)} ofertas.")
         else:
-            print("  └─ No se pudo obtener respuesta HTTP 200 de ninguna URL de FutbolJobs.")
+            print("  └─ Sin respuesta válida en FutbolJobs.")
 
     except Exception as e:
         print(f"  └─ Error en FutbolJobs: {e}")
@@ -191,12 +258,14 @@ def obtener_ofertas_netempregos():
     
     busquedas = [
         {"kw": "gestao desportiva", "cat": "DEPORTE"},
+        {"kw": "diretor desportivo", "cat": "DEPORTE"},
+        {"kw": "futebol", "cat": "DEPORTE"},
         {"kw": "diretor geral", "cat": "EMPRESAS"},
-        {"kw": "project manager", "cat": "EMPRESAS"},
-        {"kw": "futebol", "cat": "DEPORTE"}
+        {"kw": "director de operacoes", "cat": "EMPRESAS"},
+        {"kw": "project manager", "cat": "EMPRESAS"}
     ]
 
-    distritos_portugal = ["Porto", "Braga", "Viana do Castelo", "Lisboa", "Coimbra", "Leiria", "Aveiro", "Viseu", "Vila Real"]
+    distritos_norte = ["Porto", "Braga", "Viana do Castelo", "Vila Real", "Bragança"]
 
     for b in busquedas:
         url = f"https://www.net-empregos.com/pesquisa-empregos.asp?chaves={b['kw']}"
@@ -208,36 +277,35 @@ def obtener_ofertas_netempregos():
                 
                 vistos = set()
                 for item in items:
-                    href = item.get('href', '') if item.name == 'a' else (item.find('a', href=True)['href'] if item.find('a', href=True) else '')
-                    if not href:
+                    href_raw = item.get('href', '') if item.name == 'a' else (item.find('a', href=True)['href'] if item.find('a', href=True) else '')
+                    if not href_raw:
                         continue
                         
-                    if not href.startswith('http'):
-                        href = "https://www.net-empregos.com/" + href.lstrip('/')
-                    
+                    href = urljoin("https://www.net-empregos.com/", href_raw)
                     texto_card = item.get_text(separator=' ', strip=True)
                     titulo = item.get_text(strip=True) if item.name == 'a' else (item.find(['h2','h3','a']).get_text(strip=True) if item.find(['h2','h3','a']) else "")
                     
                     loc_detectada = "Portugal"
-                    for dist in distritos_portugal:
+                    for dist in distritos_norte:
                         if dist.lower() in texto_card.lower():
                             loc_detectada = f"{dist}, Portugal"
                             break
                     
                     if href not in vistos and len(titulo) > 6:
                         vistos.add(href)
-                        
                         if b["cat"] == "DEPORTE" and not es_oferta_deportiva(titulo):
                             continue
-
+                        if b["cat"] == "EMPRESAS" and not es_oferta_empresa_relevante(titulo):
+                            continue
                         if not es_ubicacion_valida(loc_detectada, b["cat"]):
                             continue
 
+                        mod = detectar_modalidad(f"{titulo} {texto_card} {loc_detectada}")
                         ofertas.append({
-                            "title": titulo[:80],
+                            "title": titulo[:100],
                             "company": "Empresa / Club Portugal",
                             "location": loc_detectada,
-                            "modalidad": detectar_modalidad(f"{titulo} {loc_detectada}"),
+                            "modalidad": mod,
                             "site": "Net-Empregos",
                             "job_url": href,
                             "categoria": b["cat"],
@@ -251,17 +319,21 @@ def obtener_ofertas_netempregos():
 
 
 # =========================================================================
-# 3. SCRAPER INFOJOBS (España)
+# 3. SCRAPER INFOJOBS (Pontevedra / Vigo)
 # =========================================================================
 def obtener_ofertas_infojobs():
     ofertas = []
-    print("\n🔍 Scraping InfoJobs (Vigo / Pontevedra)...")
+    print("\n🔍 Scraping InfoJobs (Pontevedra/Vigo)...")
     
     terminos = [
         {"kw": "director operaciones", "cat": "EMPRESAS"},
+        {"kw": "plant manager", "cat": "EMPRESAS"},
+        {"kw": "pmo", "cat": "EMPRESAS"},
         {"kw": "project manager", "cat": "EMPRESAS"},
-        {"kw": "ejecutivo de cuentas", "cat": "EMPRESAS"},
+        {"kw": "mejora continua", "cat": "EMPRESAS"},
+        {"kw": "director transformacion", "cat": "EMPRESAS"},
         {"kw": "director deportivo", "cat": "DEPORTE"},
+        {"kw": "analista tactico", "cat": "DEPORTE"},
         {"kw": "celta", "cat": "DEPORTE"}
     ]
 
@@ -275,27 +347,25 @@ def obtener_ofertas_infojobs():
                 
                 vistos = set()
                 for a in links:
-                    href = a.get('href', '')
-                    if not href.startswith('http'):
-                        href = "https:" + href if href.startswith('//') else "https://www.infojobs.net" + href
-                    
+                    href = urljoin("https://www.infojobs.net", a.get('href', ''))
                     titulo = a.get_text(strip=True)
                     loc = "Vigo / Pontevedra, España"
                     
                     if href not in vistos and len(titulo) > 8:
                         vistos.add(href)
-                        
                         if t["cat"] == "DEPORTE" and not es_oferta_deportiva(titulo):
                             continue
-
+                        if t["cat"] == "EMPRESAS" and not es_oferta_empresa_relevante(titulo):
+                            continue
                         if not es_ubicacion_valida(loc, t["cat"]):
                             continue
 
+                        mod = detectar_modalidad(f"{titulo} {loc}")
                         ofertas.append({
-                            "title": titulo[:80],
+                            "title": titulo[:100],
                             "company": "Empresa InfoJobs",
                             "location": loc,
-                            "modalidad": detectar_modalidad(f"{titulo} {loc}"),
+                            "modalidad": mod,
                             "site": "InfoJobs",
                             "job_url": href,
                             "categoria": t["cat"],
@@ -315,25 +385,38 @@ def obtener_ofertas_jobspy():
     ofertas = []
     
     consultas = [
-        # --- EMPRESAS (Vigo y radio) ---
-        {"term": "Director de Operaciones", "location": "Vigo", "distance": 30, "category": "EMPRESAS", "country": "spain"},
-        {"term": "Project Manager", "location": "Vigo", "distance": 30, "category": "EMPRESAS", "country": "spain"},
-        {"term": "Director Industrial", "location": "Vigo", "distance": 30, "category": "EMPRESAS", "country": "spain"},
-        {"term": "Ejecutivo de Cuentas", "location": "Vigo", "distance": 30, "category": "EMPRESAS", "country": "spain"},
-        {"term": "PMO", "location": "Vigo", "distance": 30, "category": "EMPRESAS", "country": "spain"},
+        # --- EJE EMPRESA / OPERACIONES / PMO / TRANSFORMACIÓN (Área Vigo) ---
+        {"term": "Director de Operaciones", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Operations Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Director Industrial", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Plant Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Business Operations Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Director de Transformacion", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Transformation Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Innovation Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Continuous Improvement Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Operational Excellence", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "PMO Director", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "PMO Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Strategy Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Business Development", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Director de Proyectos", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
 
-        # --- DEPORTE (Galicia + Norte de Portugal) ---
-        {"term": "RC Celta", "location": "Vigo", "distance": 30, "category": "DEPORTE", "country": "spain"},
-        {"term": "Celta", "location": "Vigo", "distance": 30, "category": "DEPORTE", "country": "spain"},
+        # --- EJE DEPORTE / OPERACIONES / CLUBES / DIRECCIÓN TÉCNICA (Galicia + Norte Portugal) ---
+        {"term": "Football Operations", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "Sports Operations", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "Club Management", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "Football Project Manager", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "General Manager Sports", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "Sports Business", "location": "Porto", "distance": 80, "category": "DEPORTE", "country": "portugal"},
+        {"term": "Diretor Desportivo", "location": "Porto", "distance": 80, "category": "DEPORTE", "country": "portugal"},
+        {"term": "Gestao Desportiva", "location": "Porto", "distance": 80, "category": "DEPORTE", "country": "portugal"},
         {"term": "Director Deportivo", "location": "Galicia", "distance": 50, "category": "DEPORTE", "country": "spain"},
-        {"term": "Marketing Deportivo", "location": "Galicia", "distance": 50, "category": "DEPORTE", "country": "spain"},
-        {"term": "Gestao Desportiva", "location": "Porto", "distance": 50, "category": "DEPORTE", "country": "portugal"},
-        {"term": "Futebol", "location": "Porto", "distance": 50, "category": "DEPORTE", "country": "portugal"},
-        {"term": "Sports Management", "location": "Porto", "distance": 50, "category": "DEPORTE", "country": "portugal"}
+        {"term": "RC Celta", "location": "Vigo", "distance": 30, "category": "DEPORTE", "country": "spain"}
     ]
 
     for c in consultas:
-        print(f"\n🔍 Buscando '{c['term']}' en {c['location']} (LinkedIn, Indeed, Google)...")
+        print(f"\n🔍 Buscando '{c['term']}' en {c['location']} vía JobSpy...")
         try:
             jobs = scrape_jobs(
                 site_name=["linkedin", "indeed", "google"],
@@ -345,27 +428,38 @@ def obtener_ofertas_jobspy():
                 country_indeed=c["country"]
             )
 
-            if not jobs.empty:
+            if jobs is not None and not jobs.empty:
                 count_aceptadas = 0
                 for _, row in jobs.iterrows():
-                    titulo = str(row.get('title', ''))
-                    empresa = str(row.get('company', ''))
-                    loc_raw = str(row.get('location', ''))
+                    titulo = clean_val(row.get('title'))
+                    empresa = clean_val(row.get('company'), "Empresa Desconocida")
+                    loc_raw = clean_val(row.get('location'), c['location'])
+                    job_url = clean_val(row.get('job_url'), "#")
+                    site = clean_val(row.get('site'), "JobSpy")
+                    is_remote_flag = row.get('is_remote') if 'is_remote' in row else None
                     cat_original = c["category"]
 
-                    if cat_original == "DEPORTE" and not es_oferta_deportiva(titulo, empresa):
+                    if not titulo or job_url == "#":
                         continue
 
+                    # Validación estricta de afinidad
+                    if cat_original == "DEPORTE" and not es_oferta_deportiva(titulo, empresa):
+                        continue
+                    if cat_original == "EMPRESAS" and not es_oferta_empresa_relevante(titulo, empresa):
+                        continue
                     if not es_ubicacion_valida(loc_raw, cat_original):
                         continue
+
+                    # Detección de Modalidad (Remoto, Híbrido, Presencial)
+                    mod = detectar_modalidad(f"{titulo} {loc_raw} {site}", is_remote_flag=is_remote_flag)
 
                     ofertas.append({
                         "title": titulo,
                         "company": empresa,
                         "location": loc_raw,
-                        "modalidad": detectar_modalidad(f"{titulo} {loc_raw}"),
-                        "site": str(row.get('site', '')),
-                        "job_url": str(row.get('job_url', '#')),
+                        "modalidad": mod,
+                        "site": site,
+                        "job_url": job_url,
                         "categoria": cat_original,
                         "estado": "Pendiente"
                     })
@@ -378,78 +472,63 @@ def obtener_ofertas_jobspy():
 
 
 # =========================================================================
-# CONTROLADOR PRINCIPAL
+# CONTROLADOR PRINCIPAL Y MERGE HISTÓRICO
 # =========================================================================
 def obtener_ofertas():
     ahora = datetime.now()
     fecha_hoy = ahora.strftime("%d/%m/%Y")
     fecha_hora_actualizacion = ahora.strftime("%d/%m/%Y %H:%M")
 
-    # 1. Recopilar vacantes de todos los scrapers
+    # 1. Cargar historial existente para no perder estados previos
+    db_existente = {}
+    if os.path.exists("ofertas.json"):
+        try:
+            with open("ofertas.json", "r", encoding="utf-8") as f:
+                datos_cargados = json.load(f)
+                existentes = datos_cargados.get("ofertas", []) if isinstance(datos_cargados, dict) else datos_cargados
+                for item in existentes:
+                    if "job_url" in item:
+                        db_existente[item["job_url"]] = item
+        except Exception as e:
+            print(f"⚠️ Error al leer ofertas.json previo: {e}")
+
+    # 2. Recopilar vacantes de todas las fuentes
     ofertas_js = obtener_ofertas_jobspy()
     ofertas_fj = obtener_ofertas_futboljobs()
     ofertas_ne = obtener_ofertas_netempregos()
     ofertas_ij = obtener_ofertas_infojobs()
     
-    todas = ofertas_js + ofertas_fj + ofertas_ne + ofertas_ij
+    nuevas_ofertas = ofertas_js + ofertas_fj + ofertas_ne + ofertas_ij
 
-    # 2. Desduplicar por URL
-    uniques = {}
-    for item in todas:
-        url = item.get("job_url", "#")
-        if url != "#" and url not in uniques:
-            uniques[url] = item
-
-    ofertas_filtradas = list(uniques.values())
-
-    # 3. Cargar historial anterior para mantener estados y fecha de primera detección
-    estados_previos = {}
-    fechas_previas = {}
-
-    if os.path.exists("ofertas.json"):
-        try:
-            with open("ofertas.json", "r", encoding="utf-8") as f:
-                datos_cargados = json.load(f)
-                
-                # Soportar si el JSON anterior era un array simple o el nuevo objeto estructurado
-                if isinstance(datos_cargados, dict):
-                    existentes = datos_cargados.get("ofertas", [])
-                else:
-                    existentes = datos_cargados
-
-                for i in existentes:
-                    if "job_url" in i:
-                        estados_previos[i["job_url"]] = i.get("estado", "Pendiente")
-                        if "fecha" in i:
-                            fechas_previas[i["job_url"]] = i["fecha"]
-        except Exception as e:
-            print(f"⚠️ No se cargaron datos previos: {e}")
-
-    # 4. Asignar estado y fecha fija de primera extracción a cada oferta
-    for item in ofertas_filtradas:
+    # 3. Fusionar datos conservando estado (Pendiente, Postulado, Descartado, etc.)
+    n_nuevas = 0
+    for item in nuevas_ofertas:
         url = item["job_url"]
-        
-        # Mantener o asignar estado
-        if url in estados_previos:
-            item["estado"] = estados_previos[url]
-
-        # Mantener fecha previa si existía; si es nueva oferta, asignar la fecha de hoy
-        if url in fechas_previas and fechas_previas[url]:
-            item["fecha"] = fechas_previas[url]
+        if url in db_existente:
+            item["estado"] = db_existente[url].get("estado", "Pendiente")
+            item["fecha"] = db_existente[url].get("fecha", fecha_hoy)
+            db_existente[url].update(item)
         else:
             item["fecha"] = fecha_hoy
+            db_existente[url] = item
+            n_nuevas += 1
 
-    # 5. Guardar la estructura completa en ofertas.json
+    lista_final = list(db_existente.values())
+
+    # 4. Guardar resultado final consolidado
     estructura_final = {
         "ultima_actualizacion": fecha_hora_actualizacion,
-        "total_ofertas": len(ofertas_filtradas),
-        "ofertas": ofertas_filtradas
+        "total_ofertas": len(lista_final),
+        "ofertas": lista_final
     }
 
     with open("ofertas.json", "w", encoding="utf-8") as f:
         json.dump(estructura_final, f, ensure_ascii=False, indent=4)
 
-    print(f"\n✅ PROCESO FINALIZADO: {len(ofertas_filtradas)} vacantes guardadas en ofertas.json a las {fecha_hora_actualizacion}.")
+    print(f"\n✅ PROCESO FINALIZADO EXITOSAMENTE:")
+    print(f"   - Total vacantes en la base de datos: {len(lista_final)}")
+    print(f"   - Nuevas ofertas incorporadas hoy: {n_nuevas}")
+    print(f"   - Archivo ofertas.json actualizado a las {fecha_hora_actualizacion}.")
 
 if __name__ == "__main__":
     obtener_ofertas()
