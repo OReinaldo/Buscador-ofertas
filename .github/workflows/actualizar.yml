@@ -3,10 +3,10 @@ name: Actualización Diaria de ofertas
 on:
   schedule:
     - cron: '17 */8 * * *'
-  workflow_dispatch: # Permite ejecutar la tarea manualmente desde la web de GitHub
+  workflow_dispatch:
 
 permissions:
-  contents: write # Otorga permisos para modificar y subir ofertas.json al repositorio
+  contents: write
 
 jobs:
   actualizar-ofertas:
@@ -24,7 +24,7 @@ jobs:
       - name: Instalar librerías
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Ejecutar script de actualización
         run: python actualizar_ofertas.py
@@ -35,15 +35,3 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add ofertas.json
           git diff --staged --quiet || (git commit -m "bot: actualización de ofertas.json [skip ci]" && git push)
-      - name: Configurar Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      -  name: Instalar dependencias
-         run: |
-            python -m pip install --upgrade pip
-            if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: Ejecutar script
-        run: python actualizar_ofertas.py
