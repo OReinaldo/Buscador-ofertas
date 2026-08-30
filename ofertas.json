@@ -1,7 +1,18 @@
 {
-    "ultima_actualizacion": "30/08/2026 00:21",
-    "total_ofertas": 66,
+    "ultima_actualizacion": "30/08/2026 02:21",
+    "total_ofertas": 63,
     "ofertas": [
+        {
+            "title": "Senior Director, Technical Services",
+            "company": "Parsec Automation, LLC",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4460566349",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
         {
             "title": "Club Manager - Vigo Torrecedeira",
             "company": "Synergym España",
@@ -12,17 +23,6 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
-        },
-        {
-            "title": "Automation & OT Engineer",
-            "company": "Syngenta",
-            "location": "Pontevedra, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459805487",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "30/08/2026"
         },
         {
             "title": "Director/a Asociado/a | Desarrollo de una Oficina INTEDYA",
@@ -36,17 +36,6 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Team Leader de System Technology for Laser Applications",
-            "company": "AIMEN Centro Tecnológico",
-            "location": "Porriño, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459171573",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
             "title": "Director Territorial Galicia - Business Development",
             "company": "Claire Joster",
             "location": "Vigo, Galicia, Spain",
@@ -58,15 +47,15 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Comercial y grupos",
-            "company": "GRUPO DESGΛL",
+            "title": "Responsable de Administración",
+            "company": "FORBE",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458774722",
+            "job_url": "https://www.linkedin.com/jobs/view/4458178802",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
-            "fecha": "27/08/2026"
+            "fecha": "30/08/2026"
         },
         {
             "title": "Responsable de Negocio (Pontevedra)",
@@ -91,28 +80,6 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Administrador Sistemas | Linux | GCP | Jornada 4 días | Remoto | España",
-            "company": "Modern Talent Hub",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Remoto",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4457149676",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "30/08/2026"
-        },
-        {
-            "title": "Senior Director, Technical Services",
-            "company": "Parsec Automation, LLC",
-            "location": "Pontevedra, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4460566349",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "29/08/2026"
-        },
-        {
             "title": "Jefe/a de Unidad – Calidad y Medio Ambiente",
             "company": "BETWEEN Group",
             "location": "Pontevedra, Galicia, Spain",
@@ -122,17 +89,6 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
-        },
-        {
-            "title": "Project Manager (EU)",
-            "company": "Parsec Automation, LLC",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4448899530",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "27/08/2026"
         },
         {
             "title": "Senior Director, Technical Services",
@@ -157,12 +113,12 @@
             "fecha": "28/08/2026"
         },
         {
-            "title": "Coordinador/a Flying Doc – Industrialización",
-            "company": "ALTEN Spain",
+            "title": "Project Manager (EU)",
+            "company": "Parsec Automation, LLC",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
             "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4418767294",
+            "job_url": "https://www.linkedin.com/jobs/view/4448899530",
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
@@ -201,6 +157,17 @@
             "fecha": "29/08/2026"
         },
         {
+            "title": "Team Leader de System Technology for Laser Applications",
+            "company": "AIMEN Centro Tecnológico",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4459171573",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/08/2026"
+        },
+        {
             "title": "Global Business Applications CSV and Test Management Lead",
             "company": "Straumann Group",
             "location": "Pontevedra, Galicia, Spain",
@@ -210,6 +177,17 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
+        },
+        {
+            "title": "Coordinador/a Flying Doc – Industrialización",
+            "company": "ALTEN Spain",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4418767294",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
         },
         {
             "title": "Quality Engineer Manager Bearing Centre",
@@ -232,6 +210,17 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
+        },
+        {
+            "title": "Automation & OT Engineer",
+            "company": "Syngenta",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4459805487",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026"
         },
         {
             "title": "Finance & Controlling Director (Pontevedra Area)",
@@ -344,17 +333,6 @@
             "fecha": "27/08/2026"
         },
         {
-            "title": "Responsable de Administración",
-            "company": "FORBE",
-            "location": "Vigo, Galicia, Spain",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4458178802",
-            "categoria": "EMPRESAS",
-            "estado": "Pendiente",
-            "fecha": "30/08/2026"
-        },
-        {
             "title": "Especialista comercial canal empresas (Vigo)",
             "company": "Santander Assurance Solutions, S.A.",
             "location": "Vigo, Galicia, Spain",
@@ -386,6 +364,17 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "29/08/2026"
+        },
+        {
+            "title": "Comercial y grupos",
+            "company": "GRUPO DESGΛL",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4458774722",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/08/2026"
         },
         {
             "title": "Club Manager - Ourense Norte",
@@ -551,28 +540,6 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/08/2026"
-        },
-        {
-            "title": "Rececionista | Comercial - Physical Felgueiras",
-            "company": "Physical",
-            "location": "Santa Eulália, Aveiro, Portugal",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459444162",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "30/08/2026"
-        },
-        {
-            "title": "Rececionista | Comercial - Physical Leça da Palmeira",
-            "company": "Physical",
-            "location": "Leça da Palmeira, Porto, Portugal",
-            "modalidad": "Presencial",
-            "site": "linkedin",
-            "job_url": "https://www.linkedin.com/jobs/view/4459440190",
-            "categoria": "DEPORTE",
-            "estado": "Pendiente",
-            "fecha": "30/08/2026"
         },
         {
             "title": "Club Manager - Physical Maia",
