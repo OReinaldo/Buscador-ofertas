@@ -191,6 +191,7 @@
         .icon-meta-empresa { color: #2563eb; }
         .icon-meta-ubicacion { color: #ef4444; }
         .icon-meta-modalidad { color: #10b981; }
+        .icon-meta-contrato { color: #8b5cf6; }
         .icon-meta-fecha { color: #f59e0b; }
         .icon-meta-fuente { color: #6366f1; }
 
@@ -597,6 +598,8 @@
                 badgeCategoriaHTML = `<span class="badge badge-general">${item.categoria || 'General'}</span>`;
             }
 
+            const tipoContrato = item.tipo_contrato || item.contrato || 'No especificado';
+
             return `
                 <div class="job-card ${esDescartada ? 'card-descartada' : ''} ${esInteresa ? 'card-interesa' : ''}">
                     <div class="badge-container">
@@ -618,6 +621,10 @@
                         <div class="job-meta">
                             <i class="fa-solid fa-laptop icon-meta-modalidad"></i>
                             <span>${item.modalidad || 'Presencial'}</span>
+                        </div>
+                        <div class="job-meta">
+                            <i class="fa-solid fa-file-contract icon-meta-contrato"></i>
+                            <span>${tipoContrato}</span>
                         </div>
                         <div class="job-meta">
                             <i class="fa-regular fa-calendar icon-meta-fecha"></i>
