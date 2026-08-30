@@ -2,7 +2,7 @@ name: Actualización Diaria de ofertas
 
 on:
   schedule:
-    - cron: '17 */2 * * *'
+    - cron: '17 */8 * * *'
   workflow_dispatch: # Permite ejecutar la tarea manualmente desde la web de GitHub
 
 permissions:
