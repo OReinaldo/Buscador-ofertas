@@ -34,32 +34,55 @@ def clean_val(val, default=""):
 
 def detectar_modalidad(texto_combinado, is_remote_flag=None):
     """
-    Detecta de forma precisa si la oferta es Remoto, Híbrido o Presencial
-    analizando banderas nativas y patrones en español, inglés y portugués.
+    Detecta de forma precisa si la oferta es Remoto, Híbrido o Presencial.
+    Analiza la bandera de la API, el título, la descripción y etiquetas de LinkedIn/Indeed.
     """
-    if is_remote_flag is True:
+    # 1. Flag explícito devuelto por APIs como JobSpy / LinkedIn / Indeed
+    if is_remote_flag is True or str(is_remote_flag).strip().lower() in ['true', '1']:
         return "Remoto"
 
     texto_lc = normalizar(texto_combinado)
 
-    # Patrones de Híbrido
-    patrones_hibrido = [
-        "hibrido", "hybrid", "semi-presencial", "semipresencial", 
-        "trabalho hibrido", "modelo hibrido", "flexible work"
-    ]
-    if any(p in texto_lc for p in patrones_hibrido):
+    # 2. Patrones de Híbrido (se evalúan antes para evitar falsos 100% remoto)
+    patrones_hibrido = r'\b(hibrid[oa]s?|hybrid|semi[- ]?presencial|semipresencial|trabalho hibrido|modelo hibrido|flexible work|flexiwork|misto|hybrid work|presencial / remoto|remoto / presencial)\b'
+    if re.search(patrones_hibrido, texto_lc):
         return "Híbrido"
 
-    # Patrones de Remoto
-    patrones_remoto = [
-        "remoto", "remote", "teletrabajo", "teletrabalho", 
-        "work from home", "wfh", "home office", "100% remoto", 
-        "100% remote", "distancia", "100% teletrabajo"
-    ]
-    if any(p in texto_lc for p in patrones_remoto):
+    # 3. Patrones de Remoto (incluye expresiones frecuentes de LinkedIn en español e inglés)
+    patrones_remoto = r'\b(en remoto|remot[oa]s?|remote|teletrabaj[oa]s?|teletrabalh[oa]s?|work from home|wfh|home office|100% remoto|100% remote|full remote|fully remote|a distancia|trabalho a distancia|remotamente)\b'
+    if re.search(patrones_remoto, texto_lc):
         return "Remoto"
 
+    # 4. Fallback por defecto
     return "Presencial"
+
+def detectar_tipo_jornada(texto_combinado, job_type_raw=""):
+    """
+    Detecta la modalidad de contrato/jornada (Jornada Completa, Media Jornada, Prácticas, Freelance).
+    """
+    texto_lc = normalizar(f"{texto_combinado} {job_type_raw}")
+
+    if re.search(r'\b(practicas|beca|becario|estagio|estagiario|internship|intern|trainee)\b', texto_lc):
+        return "Prácticas / Beca"
+    if re.search(r'\b(media jornada|part[- ]time|meio tempo|jornada parcial|parcial)\b', texto_lc):
+        return "Media Jornada"
+    if re.search(r'\b(freelance|autonomo|contractor|por proyecto|project-based|prestacao de servicos)\b', texto_lc):
+        return "Proyecto / Freelance"
+    if re.search(r'\b(jornada completa|full[- ]time|fulltime|tempo inteiro|completa|tiempo completo|indefinido)\b', texto_lc):
+        return "Jornada Completa"
+
+    # Validación adicional sobre el tipo nativo de JobSpy
+    jt = normalizar(job_type_raw)
+    if "fulltime" in jt or "full_time" in jt:
+        return "Jornada Completa"
+    elif "parttime" in jt or "part_time" in jt:
+        return "Media Jornada"
+    elif "internship" in jt:
+        return "Prácticas / Beca"
+    elif "contract" in jt:
+        return "Proyecto / Freelance"
+
+    return "Jornada Completa"
 
 
 # -------------------------------------------------------------------------
@@ -95,7 +118,7 @@ KEYWORDS_EMPRESA = [
     "director de operaciones", "director operaciones", "operations manager", 
     "business operations manager", "business operations", "director industrial", 
     "plant manager", "director de planta", "jefe de planta", "gerente de operaciones", 
-    "head of operations", "coo", "operaciones", "operations",
+    "head of operations", "coo", "operaciones", "operations", "technical services", "director, technical",
 
     # Transformación, Innovación y Estrategia
     "director de transformacion", "transformation manager", "director transformacion",
@@ -229,11 +252,14 @@ def obtener_ofertas_futboljobs():
                     vistos.add(href)
                     if es_ubicacion_valida(loc, "DEPORTE"):
                         mod = detectar_modalidad(f"{titulo} {loc}")
+                        jornada = detectar_tipo_jornada(f"{titulo} {loc}")
                         ofertas.append({
                             "title": titulo[:100],
                             "company": company,
                             "location": loc,
                             "modalidad": mod,
+                            "tipo_jornada": jornada,
+                            "tipo_contrato": jornada,
                             "site": "FutbolJobs",
                             "job_url": href,
                             "categoria": "DEPORTE",
@@ -300,12 +326,16 @@ def obtener_ofertas_netempregos():
                         if not es_ubicacion_valida(loc_detectada, b["cat"]):
                             continue
 
-                        mod = detectar_modalidad(f"{titulo} {texto_card} {loc_detectada}")
+                        texto_completo = f"{titulo} {texto_card} {loc_detectada}"
+                        mod = detectar_modalidad(texto_completo)
+                        jornada = detectar_tipo_jornada(texto_completo)
                         ofertas.append({
                             "title": titulo[:100],
                             "company": "Empresa / Club Portugal",
                             "location": loc_detectada,
                             "modalidad": mod,
+                            "tipo_jornada": jornada,
+                            "tipo_contrato": jornada,
                             "site": "Net-Empregos",
                             "job_url": href,
                             "categoria": b["cat"],
@@ -361,11 +391,14 @@ def obtener_ofertas_infojobs():
                             continue
 
                         mod = detectar_modalidad(f"{titulo} {loc}")
+                        jornada = detectar_tipo_jornada(f"{titulo} {loc}")
                         ofertas.append({
                             "title": titulo[:100],
                             "company": "Empresa InfoJobs",
                             "location": loc,
                             "modalidad": mod,
+                            "tipo_jornada": jornada,
+                            "tipo_contrato": jornada,
                             "site": "InfoJobs",
                             "job_url": href,
                             "categoria": t["cat"],
@@ -388,6 +421,7 @@ def obtener_ofertas_jobspy():
         # --- EJE EMPRESA / OPERACIONES / PMO / TRANSFORMACIÓN (Área Vigo) ---
         {"term": "Director de Operaciones", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
         {"term": "Operations Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Senior Director Technical Services", "location": "Pontevedra", "distance": 35, "category": "EMPRESAS", "country": "spain"},
         {"term": "Director Industrial", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
         {"term": "Plant Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
         {"term": "Business Operations Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
@@ -437,6 +471,8 @@ def obtener_ofertas_jobspy():
                     job_url = clean_val(row.get('job_url'), "#")
                     site = clean_val(row.get('site'), "JobSpy")
                     is_remote_flag = row.get('is_remote') if 'is_remote' in row else None
+                    description = clean_val(row.get('description'))
+                    job_type_raw = clean_val(row.get('job_type'))
                     cat_original = c["category"]
 
                     if not titulo or job_url == "#":
@@ -450,14 +486,18 @@ def obtener_ofertas_jobspy():
                     if not es_ubicacion_valida(loc_raw, cat_original):
                         continue
 
-                    # Detección de Modalidad (Remoto, Híbrido, Presencial)
-                    mod = detectar_modalidad(f"{titulo} {loc_raw} {site}", is_remote_flag=is_remote_flag)
+                    # Detección enriquecida con descripción y tipo de trabajo nativo
+                    texto_eval = f"{titulo} {loc_raw} {job_type_raw} {description[:1500]} {site}"
+                    mod = detectar_modalidad(texto_eval, is_remote_flag=is_remote_flag)
+                    jornada = detectar_tipo_jornada(texto_eval, job_type_raw=job_type_raw)
 
                     ofertas.append({
                         "title": titulo,
                         "company": empresa,
                         "location": loc_raw,
                         "modalidad": mod,
+                        "tipo_jornada": jornada,
+                        "tipo_contrato": jornada,
                         "site": site,
                         "job_url": job_url,
                         "categoria": cat_original,
@@ -479,7 +519,7 @@ def obtener_ofertas():
     fecha_hoy = ahora.strftime("%d/%m/%Y")
     fecha_hora_actualizacion = ahora.strftime("%d/%m/%Y %H:%M")
 
-    # 1. Cargar historial existente para no perder estados previos
+    # 1. Cargar historial existente para no perder estados previos ni fechas
     db_existente = {}
     if os.path.exists("ofertas.json"):
         try:
@@ -500,7 +540,7 @@ def obtener_ofertas():
     
     nuevas_ofertas = ofertas_js + ofertas_fj + ofertas_ne + ofertas_ij
 
-    # 3. Fusionar datos conservando estado (Pendiente, Postulado, Descartado, etc.)
+    # 3. Fusionar datos actualizando modalidad/contrato y conservando estados previos
     n_nuevas = 0
     for item in nuevas_ofertas:
         url = item["job_url"]
@@ -526,9 +566,9 @@ def obtener_ofertas():
         json.dump(estructura_final, f, ensure_ascii=False, indent=4)
 
     print(f"\n✅ PROCESO FINALIZADO EXITOSAMENTE:")
-    print(f"   - Total vacantes en la base de datos: {len(lista_final)}")
-    print(f"   - Nuevas ofertas incorporadas hoy: {n_nuevas}")
-    print(f"   - Archivo ofertas.json actualizado a las {fecha_hora_actualizacion}.")
+    print(f"    - Total vacantes en la base de datos: {len(lista_final)}")
+    print(f"    - Nuevas ofertas incorporadas hoy: {n_nuevas}")
+    print(f"    - Archivo ofertas.json actualizado a las {fecha_hora_actualizacion}.")
 
 if __name__ == "__main__":
     obtener_ofertas()
