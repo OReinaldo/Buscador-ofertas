@@ -1,622 +1,534 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Empleo y Deporte</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-hover: #1d4ed8;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --text-muted: #64748b;
-            --border: #e2e8f0;
-            --success: #10b981;
-            --danger: #ef4444;
-            --warning: #f59e0b;
-        }
+import os
+import json
+import re
+import unicodedata
+from datetime import datetime
+from urllib.parse import urljoin
+import requests
+from bs4 import BeautifulSoup
+import cloudscraper
+import pandas as pd
+from jobspy import scrape_jobs
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
-        body { background-color: var(--bg); color: var(--text); padding: 20px; }
-        .container { max-width: 1300px; margin: 0 auto; }
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept-Language": "es-ES,es;q=0.9,en;q=0.8,pt;q=0.7",
+    "Referer": "https://google.com"
+}
 
-        header { margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-        h1 { font-size: 1.8rem; font-weight: 700; color: #0f172a; display: flex; align-items: center; gap: 10px; }
-        .update-time { font-size: 0.85rem; color: var(--text-muted); background: #e0f2fe; padding: 6px 12px; border-radius: 20px; font-weight: 500; }
+# -------------------------------------------------------------------------
+# FUNCIONES DE NORMALIZACIÓN Y LIMPIEZA
+# -------------------------------------------------------------------------
+def normalizar(texto):
+    if not texto or pd.isna(texto):
+        return ""
+    texto = unicodedata.normalize('NFD', str(texto))
+    texto = re.sub(r'[\u0300-\u036f]', '', texto)
+    return texto.lower().strip()
 
-        /* BLOQUE DE CONTADORES CON FILTRADO INTERACTIVO */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 12px;
-            margin-bottom: 25px;
-        }
+def clean_val(val, default=""):
+    if val is None or pd.isna(val):
+        return default
+    s = str(val).strip()
+    return default if s.lower() == "nan" or not s else s
 
-        .stat-card {
-            background: var(--card-bg);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            user-select: none;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-        }
+def detectar_modalidad(texto_combinado, is_remote_flag=None):
+    """
+    Detecta de forma precisa si la oferta es Remoto, Híbrido o Presencial
+    analizando banderas nativas y patrones en español, inglés y portugués.
+    """
+    if is_remote_flag is True:
+        return "Remoto"
 
-        .stat-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--primary);
-            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
-        }
+    texto_lc = normalizar(texto_combinado)
 
-        .stat-card.active {
-            border-color: var(--primary);
-            background: #eff6ff;
-            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-        }
+    # Patrones de Híbrido
+    patrones_hibrido = [
+        "hibrido", "hybrid", "semi-presencial", "semipresencial", 
+        "trabalho hibrido", "modelo hibrido", "flexible work"
+    ]
+    if any(p in texto_lc for p in patrones_hibrido):
+        return "Híbrido"
 
-        .stat-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-        }
+    # Patrones de Remoto
+    patrones_remoto = [
+        "remoto", "remote", "teletrabajo", "teletrabalho", 
+        "work from home", "wfh", "home office", "100% remoto", 
+        "100% remote", "distancia", "100% teletrabajo"
+    ]
+    if any(p in texto_lc for p in patrones_remoto):
+        return "Remoto"
 
-        .icon-total { background: #dbeafe; color: #2563eb; }
-        .icon-nuevas { background: #fef9c3; color: #ca8a04; }
-        .icon-deporte { background: #f3e8ff; color: #7c3aed; }
-        .icon-empresas { background: #ffedd5; color: #ea580c; }
-        .icon-pendientes { background: #e0f2fe; color: #0284c7; }
-        .icon-interesa { background: #d1fae5; color: #059669; }
-        .icon-descartadas { background: #ffe4e6; color: #e11d48; }
+    return "Presencial"
 
-        .stat-info { display: flex; flex-direction: column; overflow: hidden; }
-        .stat-number { font-size: 1.3rem; font-weight: 700; color: #0f172a; line-height: 1.1; }
-        .stat-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; margin-top: 3px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 
-        /* BARRA DE FILTROS METADATA Y FECHAS */
-        .filter-panel {
-            background: var(--card-bg);
-            padding: 16px;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-            border: 1px solid var(--border);
-            margin-bottom: 25px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-        }
+# -------------------------------------------------------------------------
+# PALABRAS CLAVE Y FILTROS EXPANDIDOS (CV ALINEADO)
+# -------------------------------------------------------------------------
 
-        .filter-group {
-            display: flex;
-            align-items: center;
-            background: #f1f5f9;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 8px 12px;
-            gap: 8px;
-            flex: 1 1 180px;
-        }
+KEYWORDS_DEPORTE = [
+    # Operaciones y Gestión de Clubes (Club & Football Operations)
+    "football operations", "sports operations", "sporting operations", "club operations",
+    "academy operations", "performance operations", "commercial operations", "operations director",
+    "football project manager", "club management", "general manager", "managing director",
+    
+    # Estrategia, Transformación e Innovación Deportiva
+    "strategy", "estrategia", "transformation", "transformacion", "innovation", "innovacion",
+    "digital transformation", "transformacion digital",
+    
+    # Negocio Deportivo y Dirección General
+    "football business", "sports business", "gestao desportiva", "gestion deportiva",
+    "direccion deportiva", "diretor desportivo", "sports director", "deport", "desport", "sport",
+    "futbol", "futebol", "soccer", "club", "liga", "federac", "stadium", "control economico",
+    
+    # Rendimiento, Cantera, Scouting y Análisis Técnico
+    "cantera", "academia", "metodologia", "scout", "scouting", "analyst", "analista",
+    "tactico", "tactica", "data analyst", "performance", "rendimiento", "football data",
+    "coach", "entrenador", "treinador", "cuerpo tecnico", "preparador",
+    
+    # Comercial, Patrocinio y Clubes Objetivo
+    "patrocinio", "sponsorship", "marketing deportivo", "celta", "boavista"
+]
 
-        .filter-group i { color: var(--primary); font-size: 0.95rem; }
-        
-        .filter-group input, .filter-group select {
-            border: none;
-            background: transparent;
-            outline: none;
-            width: 100%;
-            font-size: 0.88rem;
-            color: var(--text);
-        }
+KEYWORDS_EMPRESA = [
+    # Operaciones, Planta y Dirección Industrial
+    "director de operaciones", "director operaciones", "operations manager", 
+    "business operations manager", "business operations", "director industrial", 
+    "plant manager", "director de planta", "jefe de planta", "gerente de operaciones", 
+    "head of operations", "coo", "operaciones", "operations",
 
-        .filter-group input[type="date"] {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-        }
+    # Transformación, Innovación y Estrategia
+    "director de transformacion", "transformation manager", "director transformacion",
+    "innovation manager", "director de innovacion", "strategy manager", 
+    "director de estrategia", "estrategia", "strategy", "innovacion", "innovation",
+    "transformacion", "transformation", "digital transformation", "transformacion digital",
 
-        .active-filter-indicator {
-            width: 100%;
-            font-size: 0.85rem;
-            color: var(--primary);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 5px;
-            border-top: 1px dashed var(--border);
-        }
+    # PMO, Proyectos y Desarrollo de Negocio
+    "pmo director", "pmo manager", "pmo", "director de proyectos", 
+    "director proyectos", "project director", "project manager", "project management",
+    "gestion de proyectos", "business development", "desarrollo de negocio",
 
-        .btn-reset-filter {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            text-decoration: underline;
-            font-size: 0.8rem;
-        }
+    # Excelencia Operativa, Control Económico y Calidad
+    "continuous improvement manager", "continuous improvement", "mejora continua",
+    "operational excellence", "excelencia operativa", "lean manufacturing", "lean six sigma",
+    "control economico", "control de gestion", "controlling", "supply chain", 
+    "director de procesos", "quality manager", "director de calidad"
+]
 
-        /* GRID DE TARJETAS */
-        .jobs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 18px; }
-        
-        .job-card {
-            background: var(--card-bg);
-            border-radius: 10px;
-            padding: 18px;
-            border: 1px solid var(--border);
-            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+LOCATIONS_VIGO = [
+    "vigo", "pontevedra", "porrino", "o porrino", "redondela", "nigran",
+    "moana", "cangas", "marin", "tui", "baiona", "gondomar",
+    "salvaterra", "ponteareas", "arcade", "salceda", "bueu", "vilaboa"
+]
 
-        .job-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        .job-card.card-descartada { border-color: #fecdd3; background: #ffebee; opacity: 0.85; }
-        .job-card.card-interesa { border-color: #a7f3d0; background: #f0fdf4; }
+LOCATIONS_NORTE_PORTUGAL_GALICIA = [
+    "galicia", "vigo", "coruna", "pontevedra", "ourense", "lugo",
+    "ferrol", "santiago", "compostela", "vilagarc", "porrino",
+    "porto", "oportu", "braga", "viana", "guimaraes", "famalicao",
+    "barcelos", "gaia", "maia", "matosinhos", "trofa", "santo tirso", 
+    "vila do conde", "povoa", "penafiel", "amarante", "valenca", "moncao",
+    "norte de portugal", "alto minho", "cavado", "ave"
+]
 
-        .badge-container { display: flex; gap: 6px; position: absolute; top: 12px; right: 12px; flex-wrap: wrap; justify-content: flex-end; }
-        
-        .badge {
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 12px;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            text-transform: uppercase;
-        }
+EXCLUDE_LOCATIONS = [
+    "lisboa", "lisbon", "madrid", "coimbra", "setubal", "algarve", "faro",
+    "leiria", "evora", "beja", "castelo branco", "guarda", "portalegre",
+    "santarem", "badajoz", "barcelona", "valencia", "sevilla"
+]
 
-        .badge-nueva { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
-        .badge-deporte { background: #f3e8ff; color: #6b21a8; }
-        .badge-empresa { background: #ffedd5; color: #c2410c; }
-        .badge-general { background: #e0e7ff; color: #3730a3; }
+def es_oferta_deportiva(titulo, empresa=""):
+    texto = normalizar(f"{titulo} {empresa}")
+    return any(kw in texto for kw in KEYWORDS_DEPORTE)
 
-        .job-title { font-size: 1.05rem; font-weight: 600; margin: 15px 0 12px 0; color: #0f172a; padding-right: 60px; line-height: 1.3; }
-        
-        .job-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
-        
-        .icon-meta-empresa { color: #2563eb; }
-        .icon-meta-ubicacion { color: #ef4444; }
-        .icon-meta-modalidad { color: #10b981; }
-        .icon-meta-fecha { color: #f59e0b; }
-        .icon-meta-fuente { color: #6366f1; }
+def es_oferta_empresa_relevante(titulo, empresa=""):
+    texto = normalizar(f"{titulo} {empresa}")
+    return any(kw in texto for kw in KEYWORDS_EMPRESA)
 
-        .state-actions {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed var(--border);
-        }
+def es_ubicacion_valida(ubicacion_raw, categoria):
+    loc = normalizar(ubicacion_raw)
 
-        .btn-state {
-            border: 1px solid var(--border);
-            background: #f8fafc;
-            color: var(--text-muted);
-            border-radius: 6px;
-            padding: 5px 10px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: all 0.15s;
-            flex: 1;
-            justify-content: center;
-        }
+    if any(ex in loc for ex in EXCLUDE_LOCATIONS):
+        return False
 
-        .btn-state:hover { background: #e2e8f0; }
-        .btn-state.active-interesa { background: #d1fae5; color: #047857; border-color: #a7f3d0; }
-        .btn-state.active-descartar { background: #ffe4e6; color: #be123c; border-color: #fecdd3; }
+    if categoria == "EMPRESAS":
+        if any(v in loc for v in LOCATIONS_VIGO) or "remot" in loc or "teletrabaj" in loc or "home office" in loc:
+            return True
+        return False
 
-        .job-footer {
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    elif categoria == "DEPORTE":
+        if any(n in loc for n in LOCATIONS_NORTE_PORTUGAL_GALICIA) or "remot" in loc or "internacional" in loc:
+            return True
+        if "galicia" in loc or "portugal" in loc or "espana" in loc:
+            return True
+        return False
 
-        .btn-apply {
-            background: var(--primary);
-            color: white;
-            padding: 7px 14px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.2s;
-        }
-        .btn-apply:hover { background: var(--primary-hover); }
+    return True
 
-        .empty-state { text-align: center; grid-column: 1 / -1; padding: 40px; color: var(--text-muted); font-size: 1.1rem; }
-    </style>
-</head>
-<body>
 
-<div class="container">
-    <header>
-        <h1><i class="fa-solid fa-briefcase" style="color: var(--primary);"></i> Panel de Oportunidades</h1>
-        <div id="updateTime" class="update-time"><i class="fa-regular fa-clock" style="color: var(--primary);"></i> Cargando actualización...</div>
-    </header>
+# =========================================================================
+# 1. SCRAPER FUTBOLJOBS
+# =========================================================================
+def obtener_ofertas_futboljobs():
+    ofertas = []
+    print("\n🔍 Scraping FutbolJobs...")
 
-    <div class="stats-grid">
-        <div class="stat-card active" id="stat-TODAS" onclick="seleccionarFiltroContador('TODAS')">
-            <div class="stat-icon icon-total"><i class="fa-solid fa-layer-group"></i></div>
-            <div class="stat-info">
-                <span class="stat-number" id="countTotal">0</span>
-                <span class="stat-label">Total Ofertas</span>
-            </div>
-        </div>
+    urls_candidatas = [
+        "https://futboljobs.com/ofertas-de-empleo/",
+        "https://futboljobs.com/ofertas/",
+        "https://futboljobs.com/"
+    ]
 
-        <div class="stat-card" id="stat-NUEVAS" onclick="seleccionarFiltroContador('NUEVAS')">
-            <div class="stat-icon icon-nuevas"><i class="fa-solid fa-bolt"></i></div>
-            <div class="stat-info">
-                <span class="stat-number" id="countNuevas">0</span>
-                <span class="stat-label">Nuevas Hoy</span>
-            </div>
-        </div>
+    try:
+        scraper = cloudscraper.create_scraper(
+            browser={'browser': 'chrome', 'platform': 'windows', 'desktop': True}
+        )
 
-        <div class="stat-card" id="stat-DEPORTE" onclick="seleccionarFiltroContador('DEPORTE')">
-            <div class="stat-icon icon-deporte"><i class="fa-solid fa-trophy"></i></div>
-            <div class="stat-info">
-                <span class="stat-number" id="countDeporte">0</span>
-                <span class="stat-label">Deporte</span>
-            </div>
-        </div>
+        html_content = None
+        for url in urls_candidatas:
+            try:
+                res = scraper.get(url, timeout=15)
+                if res.status_code == 200 and len(res.text) > 1000:
+                    html_content = res.text
+                    print(f"  └─ Conexión exitosa en {url}")
+                    break
+            except Exception:
+                continue
 
-        <div class="stat-card" id="stat-EMPRESAS" onclick="seleccionarFiltroContador('EMPRESAS')">
-            <div class="stat-icon icon-empresas"><i class="fa-solid fa-building"></i></div>
-            <div class="stat-info">
-                <span class="stat-number" id="countEmpresas">0</span>
-                <span class="stat-label">Empresas Vigo</span>
-            </div>
-        </div>
+        if html_content:
+            soup = BeautifulSoup(html_content, 'html.parser')
+            tarjetas = soup.find_all("li", class_=re.compile(r"(job_listing|job-card|oferta)", re.I))
+            if not tarjetas:
+                tarjetas = soup.find_all("div", class_=re.compile(r"(job-item|oferta-item|article)", re.I))
+            if not tarjetas:
+                tarjetas = [a.parent for a in soup.find_all("a", href=re.compile(r"/oferta/|/job/|/empleo/", re.I))]
 
-        <div class="stat-card" id="stat-PENDIENTES" onclick="seleccionarFiltroContador('PENDIENTES')">
-            <div class="stat-icon icon-pendientes"><i class="fa-regular fa-clock"></i></div>
-            <div class="stat-info">
-                <span class="stat-number" id="countPendientes">0</span>
-                <span class="stat-label">Pendientes</span>
-            </div>
-        </div>
+            vistos = set()
+            for elem in tarjetas:
+                enlace_tag = elem if elem.name == "a" else elem.find("a", href=True)
+                if not enlace_tag or not enlace_tag.has_attr("href"):
+                    continue
 
-        <div class="stat-card" id="stat-INTERESA" onclick="seleccionarFiltroContador('INTERESA')">
-            <div class="stat-icon icon-interesa"><i class="fa-solid fa-heart"></i></div>
-            <div class="stat-info">
-                <span class="stat-number" id="countInteresa">0</span>
-                <span class="stat-label">Me Interesa</span>
-            </div>
-        </div>
+                href = urljoin("https://futboljobs.com", enlace_tag["href"])
+                titulo = enlace_tag.get_text(strip=True)
+                
+                if not titulo or len(titulo) < 5:
+                    title_elem = elem.find(["h2", "h3", "h4", "strong"])
+                    if title_elem:
+                        titulo = title_elem.get_text(strip=True)
 
-        <div class="stat-card" id="stat-DESCARTADAS" onclick="seleccionarFiltroContador('DESCARTADAS')">
-            <div class="stat-icon icon-descartadas"><i class="fa-solid fa-circle-xmark"></i></div>
-            <div class="stat-info">
-                <span class="stat-number" id="countDescartadas">0</span>
-                <span class="stat-label">Descartadas</span>
-            </div>
-        </div>
-    </div>
+                if not titulo or "ver oferta" in titulo.lower() or len(titulo) < 6:
+                    continue
 
-    <div class="filter-panel">
-        <div class="filter-group" style="flex: 2 1 240px;">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="inputBuscar" placeholder="Buscar cargo, empresa o ubicación..." oninput="filtrarOfertas()">
-        </div>
+                company_elem = elem.find(class_=re.compile(r"(company|empresa|club)", re.I))
+                company = company_elem.get_text(strip=True) if company_elem else "Club / Entidad Deportiva"
 
-        <div class="filter-group">
-            <i class="fa-solid fa-filter"></i>
-            <select id="selectCategoria" onchange="filtrarOfertas()">
-                <option value="">Todas las categorías</option>
-                <option value="DEPORTE">🏆 Deporte</option>
-                <option value="EMPRESAS">🏢 Empresas</option>
-            </select>
-        </div>
+                loc_elem = elem.find(class_=re.compile(r"(location|ubicacion|ciudad)", re.I))
+                loc = loc_elem.get_text(strip=True) if loc_elem else "Galicia / Norte Portugal / Internacional"
 
-        <div class="filter-group">
-            <i class="fa-solid fa-laptop-house"></i>
-            <select id="selectModalidad" onchange="filtrarOfertas()">
-                <option value="">Todas las modalidades</option>
-                <option value="Presencial">Presencial</option>
-                <option value="Híbrido">Híbrido</option>
-                <option value="Remoto">Remoto</option>
-            </select>
-        </div>
+                if href not in vistos:
+                    vistos.add(href)
+                    if es_ubicacion_valida(loc, "DEPORTE"):
+                        mod = detectar_modalidad(f"{titulo} {loc}")
+                        ofertas.append({
+                            "title": titulo[:100],
+                            "company": company,
+                            "location": loc,
+                            "modalidad": mod,
+                            "site": "FutbolJobs",
+                            "job_url": href,
+                            "categoria": "DEPORTE",
+                            "estado": "Pendiente"
+                        })
+            print(f"  └─ FutbolJobs: {len(ofertas)} ofertas.")
+        else:
+            print("  └─ Sin respuesta válida en FutbolJobs.")
 
-        <div class="filter-group" title="Fecha desde">
-            <i class="fa-regular fa-calendar-minus" style="color: var(--warning);"></i>
-            <input type="date" id="fechaDesde" onchange="filtrarOfertas()">
-        </div>
+    except Exception as e:
+        print(f"  └─ Error en FutbolJobs: {e}")
 
-        <div class="filter-group" title="Fecha hasta">
-            <i class="fa-regular fa-calendar-plus" style="color: var(--warning);"></i>
-            <input type="date" id="fechaHasta" onchange="filtrarOfertas()">
-        </div>
+    return ofertas
 
-        <div id="activeFilterLabel" class="active-filter-indicator">
-            <span>Filtro activo: <strong>Todas las ofertas</strong></span>
-            <button class="btn-reset-filter" onclick="limpiarTodosFiltros()">Restablecer todos los filtros</button>
-        </div>
-    </div>
 
-    <div id="jobsGrid" class="jobs-grid"></div>
-</div>
+# =========================================================================
+# 2. SCRAPER NET-EMPREGOS (Portugal)
+# =========================================================================
+def obtener_ofertas_netempregos():
+    ofertas = []
+    print("\n🔍 Scraping Net-Empregos (Portugal)...")
+    
+    busquedas = [
+        {"kw": "gestao desportiva", "cat": "DEPORTE"},
+        {"kw": "diretor desportivo", "cat": "DEPORTE"},
+        {"kw": "futebol", "cat": "DEPORTE"},
+        {"kw": "diretor geral", "cat": "EMPRESAS"},
+        {"kw": "director de operacoes", "cat": "EMPRESAS"},
+        {"kw": "project manager", "cat": "EMPRESAS"}
+    ]
 
-<script>
-    let todasLasOfertas = [];
-    let fechaUltimaActualizacion = "";
-    let filtroContadorActivo = "TODAS";
+    distritos_norte = ["Porto", "Braga", "Viana do Castelo", "Vila Real", "Bragança"]
 
-    // 1. Lógica auxiliar para validar si una oferta es PENDIENTE
-    function esPendiente(oferta) {
-        return !oferta.estado || oferta.estado === 'pendiente' || (oferta.estado !== 'me_interesa' && oferta.estado !== 'descartada');
+    for b in busquedas:
+        url = f"https://www.net-empregos.com/pesquisa-empregos.asp?chaves={b['kw']}"
+        try:
+            res = requests.get(url, headers=HEADERS, timeout=10)
+            if res.status_code == 200:
+                soup = BeautifulSoup(res.text, 'html.parser')
+                items = soup.select('.oferta-link, .job-item, .panel-body, a[href*="oferta-de-emprego"]')
+                
+                vistos = set()
+                for item in items:
+                    href_raw = item.get('href', '') if item.name == 'a' else (item.find('a', href=True)['href'] if item.find('a', href=True) else '')
+                    if not href_raw:
+                        continue
+                        
+                    href = urljoin("https://www.net-empregos.com/", href_raw)
+                    texto_card = item.get_text(separator=' ', strip=True)
+                    titulo = item.get_text(strip=True) if item.name == 'a' else (item.find(['h2','h3','a']).get_text(strip=True) if item.find(['h2','h3','a']) else "")
+                    
+                    loc_detectada = "Portugal"
+                    for dist in distritos_norte:
+                        if dist.lower() in texto_card.lower():
+                            loc_detectada = f"{dist}, Portugal"
+                            break
+                    
+                    if href not in vistos and len(titulo) > 6:
+                        vistos.add(href)
+                        if b["cat"] == "DEPORTE" and not es_oferta_deportiva(titulo):
+                            continue
+                        if b["cat"] == "EMPRESAS" and not es_oferta_empresa_relevante(titulo):
+                            continue
+                        if not es_ubicacion_valida(loc_detectada, b["cat"]):
+                            continue
+
+                        mod = detectar_modalidad(f"{titulo} {texto_card} {loc_detectada}")
+                        ofertas.append({
+                            "title": titulo[:100],
+                            "company": "Empresa / Club Portugal",
+                            "location": loc_detectada,
+                            "modalidad": mod,
+                            "site": "Net-Empregos",
+                            "job_url": href,
+                            "categoria": b["cat"],
+                            "estado": "Pendiente"
+                        })
+        except Exception as e:
+            print(f"  └─ Error Net-Empregos ({b['kw']}): {e}")
+
+    print(f"  └─ Net-Empregos: {len(ofertas)} ofertas.")
+    return ofertas
+
+
+# =========================================================================
+# 3. SCRAPER INFOJOBS (Pontevedra / Vigo)
+# =========================================================================
+def obtener_ofertas_infojobs():
+    ofertas = []
+    print("\n🔍 Scraping InfoJobs (Pontevedra/Vigo)...")
+    
+    terminos = [
+        {"kw": "director operaciones", "cat": "EMPRESAS"},
+        {"kw": "plant manager", "cat": "EMPRESAS"},
+        {"kw": "pmo", "cat": "EMPRESAS"},
+        {"kw": "project manager", "cat": "EMPRESAS"},
+        {"kw": "mejora continua", "cat": "EMPRESAS"},
+        {"kw": "director transformacion", "cat": "EMPRESAS"},
+        {"kw": "director deportivo", "cat": "DEPORTE"},
+        {"kw": "analista tactico", "cat": "DEPORTE"},
+        {"kw": "celta", "cat": "DEPORTE"}
+    ]
+
+    for t in terminos:
+        url = f"https://www.infojobs.net/ofertas-trabajo/pontevedra?q={t['kw'].replace(' ', '+')}"
+        try:
+            res = requests.get(url, headers=HEADERS, timeout=10)
+            if res.status_code == 200:
+                soup = BeautifulSoup(res.text, 'html.parser')
+                links = soup.select('a[href*="/of-i"]')
+                
+                vistos = set()
+                for a in links:
+                    href = urljoin("https://www.infojobs.net", a.get('href', ''))
+                    titulo = a.get_text(strip=True)
+                    loc = "Vigo / Pontevedra, España"
+                    
+                    if href not in vistos and len(titulo) > 8:
+                        vistos.add(href)
+                        if t["cat"] == "DEPORTE" and not es_oferta_deportiva(titulo):
+                            continue
+                        if t["cat"] == "EMPRESAS" and not es_oferta_empresa_relevante(titulo):
+                            continue
+                        if not es_ubicacion_valida(loc, t["cat"]):
+                            continue
+
+                        mod = detectar_modalidad(f"{titulo} {loc}")
+                        ofertas.append({
+                            "title": titulo[:100],
+                            "company": "Empresa InfoJobs",
+                            "location": loc,
+                            "modalidad": mod,
+                            "site": "InfoJobs",
+                            "job_url": href,
+                            "categoria": t["cat"],
+                            "estado": "Pendiente"
+                        })
+        except Exception as e:
+            print(f"  └─ Error InfoJobs ({t['kw']}): {e}")
+
+    print(f"  └─ InfoJobs: {len(ofertas)} ofertas.")
+    return ofertas
+
+
+# =========================================================================
+# 4. JOBSPY (LinkedIn, Indeed, Google Jobs)
+# =========================================================================
+def obtener_ofertas_jobspy():
+    ofertas = []
+    
+    consultas = [
+        # --- EJE EMPRESA / OPERACIONES / PMO / TRANSFORMACIÓN (Área Vigo) ---
+        {"term": "Director de Operaciones", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Operations Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Director Industrial", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Plant Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Business Operations Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Director de Transformacion", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Transformation Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Innovation Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Continuous Improvement Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Operational Excellence", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "PMO Director", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "PMO Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Strategy Manager", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Business Development", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+        {"term": "Director de Proyectos", "location": "Vigo", "distance": 35, "category": "EMPRESAS", "country": "spain"},
+
+        # --- EJE DEPORTE / OPERACIONES / CLUBES / DIRECCIÓN TÉCNICA (Galicia + Norte Portugal) ---
+        {"term": "Football Operations", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "Sports Operations", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "Club Management", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "Football Project Manager", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "General Manager Sports", "location": "Galicia", "distance": 100, "category": "DEPORTE", "country": "spain"},
+        {"term": "Sports Business", "location": "Porto", "distance": 80, "category": "DEPORTE", "country": "portugal"},
+        {"term": "Diretor Desportivo", "location": "Porto", "distance": 80, "category": "DEPORTE", "country": "portugal"},
+        {"term": "Gestao Desportiva", "location": "Porto", "distance": 80, "category": "DEPORTE", "country": "portugal"},
+        {"term": "Director Deportivo", "location": "Galicia", "distance": 50, "category": "DEPORTE", "country": "spain"},
+        {"term": "RC Celta", "location": "Vigo", "distance": 30, "category": "DEPORTE", "country": "spain"}
+    ]
+
+    for c in consultas:
+        print(f"\n🔍 Buscando '{c['term']}' en {c['location']} vía JobSpy...")
+        try:
+            jobs = scrape_jobs(
+                site_name=["linkedin", "indeed", "google"],
+                search_term=c["term"],
+                location=c["location"],
+                distance=c["distance"],
+                results_wanted=15,
+                hours_old=168,
+                country_indeed=c["country"]
+            )
+
+            if jobs is not None and not jobs.empty:
+                count_aceptadas = 0
+                for _, row in jobs.iterrows():
+                    titulo = clean_val(row.get('title'))
+                    empresa = clean_val(row.get('company'), "Empresa Desconocida")
+                    loc_raw = clean_val(row.get('location'), c['location'])
+                    job_url = clean_val(row.get('job_url'), "#")
+                    site = clean_val(row.get('site'), "JobSpy")
+                    is_remote_flag = row.get('is_remote') if 'is_remote' in row else None
+                    cat_original = c["category"]
+
+                    if not titulo or job_url == "#":
+                        continue
+
+                    # Validación estricta de afinidad
+                    if cat_original == "DEPORTE" and not es_oferta_deportiva(titulo, empresa):
+                        continue
+                    if cat_original == "EMPRESAS" and not es_oferta_empresa_relevante(titulo, empresa):
+                        continue
+                    if not es_ubicacion_valida(loc_raw, cat_original):
+                        continue
+
+                    # Detección de Modalidad (Remoto, Híbrido, Presencial)
+                    mod = detectar_modalidad(f"{titulo} {loc_raw} {site}", is_remote_flag=is_remote_flag)
+
+                    ofertas.append({
+                        "title": titulo,
+                        "company": empresa,
+                        "location": loc_raw,
+                        "modalidad": mod,
+                        "site": site,
+                        "job_url": job_url,
+                        "categoria": cat_original,
+                        "estado": "Pendiente"
+                    })
+                    count_aceptadas += 1
+                print(f"  └─ Coincidencias válidas: {count_aceptadas}")
+        except Exception as e:
+            print(f"  └─ Error JobSpy '{c['term']}': {e}")
+
+    return ofertas
+
+
+# =========================================================================
+# CONTROLADOR PRINCIPAL Y MERGE HISTÓRICO
+# =========================================================================
+def obtener_ofertas():
+    ahora = datetime.now()
+    fecha_hoy = ahora.strftime("%d/%m/%Y")
+    fecha_hora_actualizacion = ahora.strftime("%d/%m/%Y %H:%M")
+
+    # 1. Cargar historial existente para no perder estados previos
+    db_existente = {}
+    if os.path.exists("ofertas.json"):
+        try:
+            with open("ofertas.json", "r", encoding="utf-8") as f:
+                datos_cargados = json.load(f)
+                existentes = datos_cargados.get("ofertas", []) if isinstance(datos_cargados, dict) else datos_cargados
+                for item in existentes:
+                    if "job_url" in item:
+                        db_existente[item["job_url"]] = item
+        except Exception as e:
+            print(f"⚠️ Error al leer ofertas.json previo: {e}")
+
+    # 2. Recopilar vacantes de todas las fuentes
+    ofertas_js = obtener_ofertas_jobspy()
+    ofertas_fj = obtener_ofertas_futboljobs()
+    ofertas_ne = obtener_ofertas_netempregos()
+    ofertas_ij = obtener_ofertas_infojobs()
+    
+    nuevas_ofertas = ofertas_js + ofertas_fj + ofertas_ne + ofertas_ij
+
+    # 3. Fusionar datos conservando estado (Pendiente, Postulado, Descartado, etc.)
+    n_nuevas = 0
+    for item in nuevas_ofertas:
+        url = item["job_url"]
+        if url in db_existente:
+            item["estado"] = db_existente[url].get("estado", "Pendiente")
+            item["fecha"] = db_existente[url].get("fecha", fecha_hoy)
+            db_existente[url].update(item)
+        else:
+            item["fecha"] = fecha_hoy
+            db_existente[url] = item
+            n_nuevas += 1
+
+    lista_final = list(db_existente.values())
+
+    # 4. Guardar resultado final consolidado
+    estructura_final = {
+        "ultima_actualizacion": fecha_hora_actualizacion,
+        "total_ofertas": len(lista_final),
+        "ofertas": lista_final
     }
 
-    // 2. Recuperar estados de localStorage
-    function getEstadosGuardados() {
-        try {
-            return JSON.parse(localStorage.getItem('ofertas_estados_v1')) || {};
-        } catch(e) {
-            return {};
-        }
-    }
+    with open("ofertas.json", "w", encoding="utf-8") as f:
+        json.dump(estructura_final, f, ensure_ascii=False, indent=4)
 
-    // 3. Guardar estado en localStorage
-    function setEstadoGuardado(id, estado) {
-        const estados = getEstadosGuardados();
-        if (estado === 'pendiente') {
-            delete estados[id];
-        } else {
-            estados[id] = estado;
-        }
-        localStorage.setItem('ofertas_estados_v1', JSON.stringify(estados));
-    }
+    print(f"\n✅ PROCESO FINALIZADO EXITOSAMENTE:")
+    print(f"   - Total vacantes en la base de datos: {len(lista_final)}")
+    print(f"   - Nuevas ofertas incorporadas hoy: {n_nuevas}")
+    print(f"   - Archivo ofertas.json actualizado a las {fecha_hora_actualizacion}.")
 
-    async function cargarOfertas() {
-        try {
-            const response = await fetch('ofertas.json');
-            const data = await response.json();
-            const estadosGuardados = getEstadosGuardados();
-
-            todasLasOfertas = (data.ofertas || []).map((item, index) => {
-                const idUnico = item.id || item.job_url || (item.title + '_' + item.company + '_' + index);
-                const estadoGuardado = estadosGuardados[idUnico];
-                return {
-                    ...item,
-                    id: idUnico,
-                    estado: estadoGuardado || item.estado || 'pendiente'
-                };
-            });
-            
-            if (data.ultima_actualizacion) {
-                document.getElementById('updateTime').innerHTML = `<i class="fa-regular fa-clock" style="color: var(--primary);"></i> Actualizado: ${data.ultima_actualizacion}`;
-                fechaUltimaActualizacion = data.ultima_actualizacion.split(' ')[0];
-            }
-
-            actualizarContadoresGenerales();
-            filtrarOfertas();
-        } catch (error) {
-            console.error('Error al cargar ofertas.json:', error);
-            document.getElementById('jobsGrid').innerHTML = '<div class="empty-state"><i class="fa-solid fa-circle-exclamation" style="color:var(--danger)"></i> No se pudieron cargar las ofertas. Asegúrate de tener ofertas.json accesible.</div>';
-        }
-    }
-
-    function esOfertaUltimaActualizacion(fechaOferta) {
-        if (!fechaOferta || !fechaUltimaActualizacion) return false;
-        return fechaOferta.trim() === fechaUltimaActualizacion.trim();
-    }
-
-    function parsearFecha(fechaStr) {
-        if (!fechaStr) return null;
-        if (typeof fechaStr === 'string' && fechaStr.includes('/')) {
-            const partes = fechaStr.split('/');
-            if (partes.length === 3) {
-                return new Date(partes[2], partes[1] - 1, partes[0]);
-            }
-        }
-        return new Date(fechaStr);
-    }
-
-    function seleccionarFiltroContador(tipo) {
-        filtroContadorActivo = tipo;
-        
-        document.querySelectorAll('.stat-card').forEach(card => card.classList.remove('active'));
-        const cardActiva = document.getElementById(`stat-${tipo}`);
-        if (cardActiva) cardActiva.classList.add('active');
-
-        const labels = {
-            'TODAS': 'Todas las ofertas',
-            'NUEVAS': 'Nuevas (última actualización)',
-            'DEPORTE': 'Sector Deporte',
-            'EMPRESAS': 'Empresas Vigo',
-            'PENDIENTES': 'Pendientes (sin responder)',
-            'INTERESA': 'Me Interesa',
-            'DESCARTADAS': 'Descartadas'
-        };
-        
-        document.getElementById('activeFilterLabel').querySelector('strong').textContent = labels[tipo] || tipo;
-        filtrarOfertas();
-    }
-
-    function cambiarEstadoOferta(id, nuevoEstado) {
-        const oferta = todasLasOfertas.find(o => o.id === id);
-        if (oferta) {
-            const estadoFinal = (oferta.estado === nuevoEstado) ? 'pendiente' : nuevoEstado;
-            oferta.estado = estadoFinal;
-            setEstadoGuardado(id, estadoFinal);
-
-            actualizarContadoresGenerales();
-            filtrarOfertas();
-        }
-    }
-
-    function actualizarContadoresGenerales() {
-        const total = todasLasOfertas.length;
-        const nuevas = todasLasOfertas.filter(o => esOfertaUltimaActualizacion(o.fecha)).length;
-        const deporte = todasLasOfertas.filter(o => o.categoria === 'DEPORTE').length;
-        const empresas = todasLasOfertas.filter(o => o.categoria === 'EMPRESAS').length;
-        
-        const pendientes = todasLasOfertas.filter(o => esPendiente(o)).length;
-        const interesa = todasLasOfertas.filter(o => o.estado === 'me_interesa').length;
-        const descartadas = todasLasOfertas.filter(o => o.estado === 'descartada').length;
-
-        document.getElementById('countTotal').textContent = total;
-        document.getElementById('countNuevas').textContent = nuevas;
-        document.getElementById('countDeporte').textContent = deporte;
-        document.getElementById('countEmpresas').textContent = empresas;
-        document.getElementById('countPendientes').textContent = pendientes;
-        document.getElementById('countInteresa').textContent = interesa;
-        document.getElementById('countDescartadas').textContent = descartadas;
-    }
-
-    function limpiarTodosFiltros() {
-        document.getElementById('inputBuscar').value = '';
-        document.getElementById('selectCategoria').value = '';
-        document.getElementById('selectModalidad').value = '';
-        document.getElementById('fechaDesde').value = '';
-        document.getElementById('fechaHasta').value = '';
-        seleccionarFiltroContador('TODAS');
-    }
-
-    function filtrarOfertas() {
-        const texto = document.getElementById('inputBuscar').value.toLowerCase();
-        const categoria = document.getElementById('selectCategoria').value;
-        const modalidad = document.getElementById('selectModalidad').value;
-        
-        const fDesdeStr = document.getElementById('fechaDesde').value;
-        const fHastaStr = document.getElementById('fechaHasta').value;
-        const fDesde = fDesdeStr ? new Date(fDesdeStr + 'T00:00:00') : null;
-        const fHasta = fHastaStr ? new Date(fHastaStr + 'T23:59:59') : null;
-
-        const filtradas = todasLasOfertas.filter(item => {
-            const coincideTexto = (item.title + ' ' + item.company + ' ' + item.location).toLowerCase().includes(texto);
-            const coincideCategoria = !categoria || item.categoria === categoria;
-            const coincideModalidad = !modalidad || item.modalidad === modalidad;
-
-            let coincideFecha = true;
-            if (fDesde || fHasta) {
-                const fechaItem = parsearFecha(item.fecha);
-                if (fechaItem) {
-                    if (fDesde && fechaItem < fDesde) coincideFecha = false;
-                    if (fHasta && fechaItem > fHasta) coincideFecha = false;
-                }
-            }
-
-            let coincideContador = true;
-            if (filtroContadorActivo === 'NUEVAS') coincideContador = esOfertaUltimaActualizacion(item.fecha);
-            else if (filtroContadorActivo === 'DEPORTE') coincideContador = (item.categoria === 'DEPORTE');
-            else if (filtroContadorActivo === 'EMPRESAS') coincideContador = (item.categoria === 'EMPRESAS');
-            else if (filtroContadorActivo === 'PENDIENTES') coincideContador = esPendiente(item);
-            else if (filtroContadorActivo === 'INTERESA') coincideContador = (item.estado === 'me_interesa');
-            else if (filtroContadorActivo === 'DESCARTADAS') coincideContador = (item.estado === 'descartada');
-
-            return coincideTexto && coincideCategoria && coincideModalidad && coincideFecha && coincideContador;
-        });
-
-        // Ordenación por fecha por defecto (más recientes primero)
-        filtradas.sort((a, b) => {
-            const fechaA = parsearFecha(a.fecha);
-            const fechaB = parsearFecha(b.fecha);
-            const timeA = fechaA && !isNaN(fechaA) ? fechaA.getTime() : 0;
-            const timeB = fechaB && !isNaN(fechaB) ? fechaB.getTime() : 0;
-            return timeB - timeA;
-        });
-
-        renderizarOfertas(filtradas);
-    }
-
-    function renderizarOfertas(ofertas) {
-        const grid = document.getElementById('jobsGrid');
-        
-        if (ofertas.length === 0) {
-            grid.innerHTML = '<div class="empty-state"><i class="fa-solid fa-folder-open"></i> No se encontraron ofertas con los filtros seleccionados.</div>';
-            return;
-        }
-
-        grid.innerHTML = ofertas.map(item => {
-            const esNueva = esOfertaUltimaActualizacion(item.fecha);
-            const esDescartada = item.estado === 'descartada';
-            const esInteresa = item.estado === 'me_interesa';
-            
-            let badgeCategoriaHTML = '';
-            if (item.categoria === 'DEPORTE') {
-                badgeCategoriaHTML = `<span class="badge badge-deporte"><i class="fa-solid fa-trophy"></i> Deporte</span>`;
-            } else if (item.categoria === 'EMPRESAS') {
-                badgeCategoriaHTML = `<span class="badge badge-empresa"><i class="fa-solid fa-building"></i> Empresas</span>`;
-            } else {
-                badgeCategoriaHTML = `<span class="badge badge-general">${item.categoria || 'General'}</span>`;
-            }
-
-            return `
-                <div class="job-card ${esDescartada ? 'card-descartada' : ''} ${esInteresa ? 'card-interesa' : ''}">
-                    <div class="badge-container">
-                        ${esNueva ? `<span class="badge badge-nueva"><i class="fa-solid fa-bolt" style="color: #ca8a04;"></i> ¡Nueva!</span>` : ''}
-                        ${badgeCategoriaHTML}
-                    </div>
-
-                    <h2 class="job-title">${item.title}</h2>
-
-                    <div>
-                        <div class="job-meta">
-                            <i class="fa-solid fa-building icon-meta-empresa"></i>
-                            <span>${item.company || 'Empresa no especificada'}</span>
-                        </div>
-                        <div class="job-meta">
-                            <i class="fa-solid fa-location-dot icon-meta-ubicacion"></i>
-                            <span>${item.location}</span>
-                        </div>
-                        <div class="job-meta">
-                            <i class="fa-solid fa-laptop icon-meta-modalidad"></i>
-                            <span>${item.modalidad || 'Presencial'}</span>
-                        </div>
-                        <div class="job-meta">
-                            <i class="fa-regular fa-calendar icon-meta-fecha"></i>
-                            <span>Detectada: ${item.fecha || 'Reciente'}</span>
-                        </div>
-                    </div>
-
-                    <div class="state-actions">
-                        <button class="btn-state ${esInteresa ? 'active-interesa' : ''}" onclick="cambiarEstadoOferta('${item.id}', 'me_interesa')">
-                            <i class="fa-${esInteresa ? 'solid' : 'regular'} fa-heart" style="color: #059669;"></i> ${esInteresa ? 'Guardado' : 'Guardar'}
-                        </button>
-                        <button class="btn-state ${esDescartada ? 'active-descartar' : ''}" onclick="cambiarEstadoOferta('${item.id}', 'descartada')">
-                            <i class="fa-solid fa-trash-can" style="color: #e11d48;"></i> ${esDescartada ? 'Descartada' : 'Descartar'}
-                        </button>
-                    </div>
-
-                    <div class="job-footer">
-                        <span style="font-size: 0.8rem; color: var(--text-muted);">
-                            <i class="fa-solid fa-globe icon-meta-fuente"></i> ${item.site || 'Web'}
-                        </span>
-                        <a href="${item.job_url}" target="_blank" rel="noopener" class="btn-apply">
-                            Ver oferta <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
-            `;
-        }).join('');
-    }
-
-    cargarOfertas();
-</script>
-
-</body>
-</html>
+if __name__ == "__main__":
+    obtener_ofertas()
