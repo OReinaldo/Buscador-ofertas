@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "30/08/2026 08:12",
-    "total_ofertas": 71,
+    "ultima_actualizacion": "30/08/2026 08:17",
+    "total_ofertas": 74,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -779,6 +779,39 @@
             "modalidad": "Presencial",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4457976844",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026"
+        },
+        {
+            "title": "Monitor/a Deportivo",
+            "company": "Impulsyn",
+            "location": "Baiona, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4458951679",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026"
+        },
+        {
+            "title": "Entrenador personal",
+            "company": "Well Street",
+            "location": "Oleiros, Galicia, Spain",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4459038346",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/08/2026"
+        },
+        {
+            "title": "Specialist Transport Management Vigo (m/f/d)",
+            "company": "4flow",
+            "location": "Galicia",
+            "modalidad": "Presencial",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4458780463",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "30/08/2026"
