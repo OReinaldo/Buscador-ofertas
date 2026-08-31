@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "30/08/2026 16:25",
-    "total_ofertas": 80,
+    "ultima_actualizacion": "31/08/2026 00:25",
+    "total_ofertas": 81,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -438,7 +438,9 @@
             "job_url": "https://www.linkedin.com/jobs/view/4457739202",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
-            "fecha": "29/08/2026"
+            "fecha": "29/08/2026",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa"
         },
         {
             "title": "Director/a Comercial",
@@ -959,6 +961,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "30/08/2026"
+        },
+        {
+            "title": "Monitor/a Deportivo Multidisciplinar - Vigo Centro Areal",
+            "company": "Synergym Academy",
+            "location": "Vigo",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457235943",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "31/08/2026"
         }
     ]
 }
