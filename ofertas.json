@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "31/08/2026 16:25",
-    "total_ofertas": 101,
+    "ultima_actualizacion": "01/09/2026 00:41",
+    "total_ofertas": 102,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -1236,6 +1236,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "31/08/2026"
+        },
+        {
+            "title": "Entrenador personal",
+            "company": "EZEN Salud y Rendimiento",
+            "location": "Narón, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4461282089",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "01/09/2026"
         }
     ]
 }
