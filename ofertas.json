@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "01/09/2026 16:44",
-    "total_ofertas": 123,
+    "ultima_actualizacion": "02/09/2026 00:38",
+    "total_ofertas": 126,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -1116,7 +1116,7 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4419283742",
-            "categoria": "EMPRESAS",
+            "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "31/08/2026"
         },
@@ -1522,6 +1522,45 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "01/09/2026"
+        },
+        {
+            "title": "Treinador adjunto / Analista de jogo U19",
+            "company": "Merelinense Futebol Clube",
+            "location": "Braga, Braga, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4462093457",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/09/2026"
+        },
+        {
+            "title": "Treinador | Futebol",
+            "company": "Ermentão SC",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4462072610",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/09/2026"
+        },
+        {
+            "title": "Personal Trainer (m/f) - Holmes Place Boavista",
+            "company": "Holmes Place Portugal",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4461770540",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/09/2026"
         }
     ]
 }
