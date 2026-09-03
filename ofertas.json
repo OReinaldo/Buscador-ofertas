@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "02/09/2026 16:31",
-    "total_ofertas": 149,
+    "ultima_actualizacion": "03/09/2026 00:40",
+    "total_ofertas": 153,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -1116,7 +1116,7 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4419283742",
-            "categoria": "EMPRESAS",
+            "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "31/08/2026"
         },
@@ -1860,6 +1860,58 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "02/09/2026"
+        },
+        {
+            "title": "License Owner / Operator, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, GA, ES",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=add1a7f8ebd500ed",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "03/09/2026"
+        },
+        {
+            "title": "Instructor deportivo",
+            "company": "PsicoPico",
+            "location": "Monterroso, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4462474670",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "03/09/2026"
+        },
+        {
+            "title": "Agile Coach",
+            "company": "Sanoma Learning",
+            "location": "Culleredo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4434152099",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "03/09/2026"
+        },
+        {
+            "title": "Treinador",
+            "company": "FC Porto",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4462452361",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "03/09/2026"
         }
     ]
 }
