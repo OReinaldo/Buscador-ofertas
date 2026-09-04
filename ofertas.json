@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "03/09/2026 16:31",
-    "total_ofertas": 172,
+    "ultima_actualizacion": "04/09/2026 00:37",
+    "total_ofertas": 175,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -1116,7 +1116,7 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4419283742",
-            "categoria": "EMPRESAS",
+            "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "31/08/2026"
         },
@@ -2159,6 +2159,45 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "03/09/2026"
+        },
+        {
+            "title": "Analista / Desarrollador/A Cobol Host",
+            "company": "BCNC GROUP",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4461320372",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "04/09/2026"
+        },
+        {
+            "title": "Analista / Desarrollador/A Cobol Host",
+            "company": "BCNC GROUP",
+            "location": "Arbo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4460622586",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "04/09/2026"
+        },
+        {
+            "title": "Analista / Desarrollador/A Cobol Host",
+            "company": "BCNC GROUP",
+            "location": "Saiáns (San Salvador), Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4460620615",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "04/09/2026"
         }
     ]
 }
