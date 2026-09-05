@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "05/09/2026 08:29",
-    "total_ofertas": 203,
+    "ultima_actualizacion": "05/09/2026 16:29",
+    "total_ofertas": 206,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -1116,7 +1116,7 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4419283742",
-            "categoria": "DEPORTE",
+            "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "31/08/2026"
         },
@@ -2559,6 +2559,45 @@
             "tipo_contrato": "Jornada Completa",
             "site": "FutbolJobs",
             "job_url": "https://futboljobs.com/oferta/entrenador-desarrollo-infantil-rosenhoj-boldklub-copenhague-dinamarca-41402/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "Assistant Manager (M/F) JD Faro (Portugal)",
+            "company": "JD Sports Iberia",
+            "location": "La Estrada, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4444497914",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "VENDEDOR/A DEPORTISTA Decathlon Vigo (Plan de Carrera)",
+            "company": "Decathlon",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4462600024",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "VENDEDOR/A DEPORTISTA Ciclismo Decathlon Vigo",
+            "company": "Decathlon",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4462385868",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "05/09/2026"
