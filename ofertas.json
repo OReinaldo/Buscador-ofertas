@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "04/09/2026 16:31",
-    "total_ofertas": 193,
+    "ultima_actualizacion": "05/09/2026 00:39",
+    "total_ofertas": 199,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -1537,7 +1537,7 @@
             "fecha": "02/09/2026"
         },
         {
-            "title": "Treinador | Futebol",
+            "title": "Football Coach",
             "company": "Ermentão SC",
             "location": "Porto, Porto, Portugal",
             "modalidad": "Presencial",
@@ -2432,6 +2432,84 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "04/09/2026"
+        },
+        {
+            "title": "Coordinador de flota",
+            "company": "Gliders Force",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4463601141",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "Operaciones en Transporte Terrestre",
+            "company": "TW Group",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4461158938",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "IT Project Manager",
+            "company": "Selecta Digital",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4461142876",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "License Owner / Operator, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4463616840",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "Head of Enterprise Performance (ABM)",
+            "company": "Revolut",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4440210602",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "Personal trainer",
+            "company": "Sports Concept - Power Projects",
+            "location": "Matosinhos, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4463397466",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
         }
     ]
 }
