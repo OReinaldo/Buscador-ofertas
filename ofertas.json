@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "05/09/2026 00:39",
-    "total_ofertas": 199,
+    "ultima_actualizacion": "05/09/2026 08:29",
+    "total_ofertas": 203,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -2507,6 +2507,58 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4463397466",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "Entrenador – Prime Talent Football Academy – DubáiESTAMOS CONTRATANDO | ENTRENADOR DE LA ACADEMIA JU",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-prime-talent-football-academy-dubai-41405/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "Prácticas Cientíco Deportivo / Fisioterapeuta – Mjällby AIF – SueciaPRÁCTICAS DE CIENCIA DEL DEPORTE",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Prácticas / Beca",
+            "tipo_contrato": "Prácticas / Beca",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/practicas-cientico-deportivo-fisioterapeuta-mjallby-aif-suecia-41404/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "Entrenadores- Academia DFT – Gotemburgo, Suecia¿QUIERES FORMAR PARTE DEL EQUIPO DFT?Tu entrenador de",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenadores-academia-dft-gotemburgo-suecia-41403/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "05/09/2026"
+        },
+        {
+            "title": "Entrenador Desarrollo Infantil – Rosenhøj Boldklub – Copenhague, DinamarcaRosenhøj Boldklub busca un",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-desarrollo-infantil-rosenhoj-boldklub-copenhague-dinamarca-41402/",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "05/09/2026"
