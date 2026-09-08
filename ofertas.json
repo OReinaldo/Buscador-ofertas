@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "07/09/2026 16:31",
-    "total_ofertas": 230,
+    "ultima_actualizacion": "08/09/2026 00:42",
+    "total_ofertas": 236,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -2913,6 +2913,84 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "07/09/2026"
+        },
+        {
+            "title": "License Owner, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, GA, ES",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=ce806ec29609e06c",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "08/09/2026"
+        },
+        {
+            "title": "Responsável de Desporto Porto (25.500€ - 31.000€)",
+            "company": "Decathlon",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4451864693",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "08/09/2026"
+        },
+        {
+            "title": "Assistant Manager (M/F) JD Viana do Castelo",
+            "company": "JD Sports Iberia",
+            "location": "Castelo do Neiva, Viana do Castelo, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464371828",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "08/09/2026"
+        },
+        {
+            "title": "Store Manager (M/F) JD Viana Do Castelo",
+            "company": "JD Sports Iberia",
+            "location": "Viseu, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464372795",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "08/09/2026"
+        },
+        {
+            "title": "Professor(a) de Atividade Física e Desportiva - Monção",
+            "company": "Cooperativa de Solidariedade Social Múltipla Escolha Crl",
+            "location": "Monção, P16, PT",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Proyecto / Freelance",
+            "tipo_contrato": "Proyecto / Freelance",
+            "site": "indeed",
+            "job_url": "https://pt.indeed.com/viewjob?jk=e2f687b5dda7cee8",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "08/09/2026"
+        },
+        {
+            "title": "Professor(a) de Atividade Física e Desportiva - Braga",
+            "company": "Cooperativa de Solidariedade Social Múltipla Escolha Crl",
+            "location": "Braga, P03, PT",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Proyecto / Freelance",
+            "tipo_contrato": "Proyecto / Freelance",
+            "site": "indeed",
+            "job_url": "https://pt.indeed.com/viewjob?jk=e88b1cfc07f7df60",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "08/09/2026"
         }
     ]
 }
