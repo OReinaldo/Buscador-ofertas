@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "08/09/2026 16:34",
-    "total_ofertas": 253,
+    "ultima_actualizacion": "09/09/2026 00:41",
+    "total_ofertas": 256,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -3212,6 +3212,45 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "08/09/2026"
+        },
+        {
+            "title": "Engenheiro/a Mecânico – Projeto e Desenho Técnico (AutoCAD) | Sports&You",
+            "company": "Salvador Caetano",
+            "location": "Porto, P13, PT",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://pt.indeed.com/viewjob?jk=e1e960f06c4c7ff0",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "09/09/2026"
+        },
+        {
+            "title": "Engenheiro/a Mecânico – Projeto e Desenho Técnico (AutoCAD) | Sports&You",
+            "company": "Salvador Caetano",
+            "location": "Porto, P13, PT",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Prácticas / Beca",
+            "tipo_contrato": "Prácticas / Beca",
+            "site": "indeed",
+            "job_url": "https://pt.indeed.com/viewjob?jk=4b5710019b6e5628",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "09/09/2026"
+        },
+        {
+            "title": "Business Data Analyst",
+            "company": "Solverde.pt",
+            "location": "Espinho, Aveiro, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464637224",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "09/09/2026"
         }
     ]
 }
