@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "10/09/2026 16:30",
-    "total_ofertas": 299,
+    "ultima_actualizacion": "11/09/2026 00:37",
+    "total_ofertas": 307,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -3810,6 +3810,110 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "10/09/2026"
+        },
+        {
+            "title": "Consultor/a I+D+i Vigo",
+            "company": "INCOTEC - Innovación Eficiente",
+            "location": "Vigo",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4465681623",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "11/09/2026"
+        },
+        {
+            "title": "Educador Deportivo",
+            "company": "FUNDACIÓN PEGASUS",
+            "location": "El Ferrol, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464579683",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/09/2026"
+        },
+        {
+            "title": "Educador Deportivo",
+            "company": "FUNDACIÓN PEGASUS",
+            "location": "Lugo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464567733",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/09/2026"
+        },
+        {
+            "title": "Social Performance Mananger",
+            "company": "Alcoa",
+            "location": "Cervo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4465833890",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/09/2026"
+        },
+        {
+            "title": "Técnico/a de PRL Servicio Propio - Galicia",
+            "company": "rpc - The Retail Performance Company",
+            "location": "Marín, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464578664",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/09/2026"
+        },
+        {
+            "title": "Técnico/a de PRL Servicio Propio - Galicia",
+            "company": "rpc - The Retail Performance Company",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464557748",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/09/2026"
+        },
+        {
+            "title": "Técnico/a de PRL Servicio Propio - Galicia",
+            "company": "rpc - The Retail Performance Company",
+            "location": "Villagarcía de Arosa, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464555779",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/09/2026"
+        },
+        {
+            "title": "Técnico/a de PRL Servicio Propio - Galicia",
+            "company": "rpc - The Retail Performance Company",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464571683",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/09/2026"
         }
     ]
 }
