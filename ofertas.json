@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "12/09/2026 08:30",
-    "total_ofertas": 338,
+    "ultima_actualizacion": "12/09/2026 16:29",
+    "total_ofertas": 340,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -4314,6 +4314,32 @@
             "tipo_contrato": "Jornada Completa",
             "site": "FutbolJobs",
             "job_url": "https://futboljobs.com/oferta/jefe-analisis-rendimiento-academia-nottingham-forest-41573/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "12/09/2026"
+        },
+        {
+            "title": "Junior Supply Chain",
+            "company": "Capgemini Engineering",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4447553635",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "12/09/2026"
+        },
+        {
+            "title": "Educador Deportivo",
+            "company": "FUNDACIÓN PEGASUS",
+            "location": "Guntín, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464578677",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "12/09/2026"
