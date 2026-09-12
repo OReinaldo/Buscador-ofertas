@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "11/09/2026 16:32",
-    "total_ofertas": 327,
+    "ultima_actualizacion": "12/09/2026 00:36",
+    "total_ofertas": 330,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -4174,6 +4174,45 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "11/09/2026"
+        },
+        {
+            "title": "Bodegas Martín Códax busca Brand Manager para liderar su estrategia de marca desde Cambados",
+            "company": "Extradixital",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464248585",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "12/09/2026"
+        },
+        {
+            "title": "Operations Internship - Galicia - Start 2027",
+            "company": "Amazon",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Prácticas / Beca",
+            "tipo_contrato": "Prácticas / Beca",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4457036235",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "12/09/2026"
+        },
+        {
+            "title": "Educador Deportivo",
+            "company": "FUNDACIÓN PEGASUS",
+            "location": "Chantada, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4464561742",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "12/09/2026"
         }
     ]
 }
