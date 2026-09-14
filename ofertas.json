@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "13/09/2026 16:30",
-    "total_ofertas": 345,
+    "ultima_actualizacion": "14/09/2026 00:39",
+    "total_ofertas": 346,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -4408,6 +4408,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "13/09/2026"
+        },
+        {
+            "title": "Educador Deportivo",
+            "company": "FUNDACIÓN PEGASUS",
+            "location": "Ourense, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4465498042",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "14/09/2026"
         }
     ]
 }
