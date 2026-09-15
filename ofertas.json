@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "14/09/2026 16:32",
-    "total_ofertas": 363,
+    "ultima_actualizacion": "15/09/2026 00:40",
+    "total_ofertas": 364,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -4642,6 +4642,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "14/09/2026"
+        },
+        {
+            "title": "Product & Category Manager - Fashion & Accessories",
+            "company": "ARGO- People Strategy",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4462597812",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "15/09/2026"
         }
     ]
 }
