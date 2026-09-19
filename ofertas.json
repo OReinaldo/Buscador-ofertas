@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "19/09/2026 08:30",
-    "total_ofertas": 453,
+    "ultima_actualizacion": "19/09/2026 16:29",
+    "total_ofertas": 455,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -5809,6 +5809,32 @@
             "tipo_contrato": "Jornada Completa",
             "site": "FutbolJobs",
             "job_url": "https://futboljobs.com/oferta/futbolistas-3a-division-francesa-ligue-3-41767/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "19/09/2026"
+        },
+        {
+            "title": "Entrenador/a Fitness Funcional",
+            "company": "Impulsyn",
+            "location": "Galicia",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4468083723",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "19/09/2026"
+        },
+        {
+            "title": "Profesor del Ciclo Superior en Enseñanza y Animación Sociodeportiva  y de Educación Primaria",
+            "company": "CPR Plurilingüe SEI San Narciso",
+            "location": "Marín, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4469536512",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "19/09/2026"
