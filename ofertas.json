@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "19/09/2026 16:29",
-    "total_ofertas": 455,
+    "ultima_actualizacion": "20/09/2026 00:38",
+    "total_ofertas": 456,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -5838,6 +5838,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "19/09/2026"
+        },
+        {
+            "title": "Analista / Desarrollador/A Cobol Host",
+            "company": "BCNC GROUP",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4468092648",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/09/2026"
         }
     ]
 }
