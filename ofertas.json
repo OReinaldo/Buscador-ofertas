@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "21/09/2026 16:32",
-    "total_ofertas": 470,
+    "ultima_actualizacion": "22/09/2026 00:37",
+    "total_ofertas": 472,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -6033,6 +6033,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "21/09/2026"
+        },
+        {
+            "title": "Business Development & Talent Acquisition Specialist (M/F/D)",
+            "company": "Qualitice",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4469941429",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "22/09/2026"
+        },
+        {
+            "title": "Entrenador personal",
+            "company": "EZEN Salud y Rendimiento",
+            "location": "Narón, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4469953864",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "22/09/2026"
         }
     ]
 }
