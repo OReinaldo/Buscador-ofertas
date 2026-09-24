@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "23/09/2026 16:33",
-    "total_ofertas": 516,
+    "ultima_actualizacion": "24/09/2026 00:38",
+    "total_ofertas": 519,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -6631,6 +6631,45 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "23/09/2026"
+        },
+        {
+            "title": "Operator & License Owner, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, GA, ES",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=aa0a1ac9231c1bb3",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "24/09/2026"
+        },
+        {
+            "title": "Operator & License Owner, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4471141213",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "24/09/2026"
+        },
+        {
+            "title": "Coach // Instrutor de Fitness",
+            "company": "BHOUT",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4469374226",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "24/09/2026"
         }
     ]
 }
