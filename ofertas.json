@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "24/09/2026 16:33",
-    "total_ofertas": 539,
+    "ultima_actualizacion": "25/09/2026 00:39",
+    "total_ofertas": 543,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -6930,6 +6930,58 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "24/09/2026"
+        },
+        {
+            "title": "Fisioterapeuta Futebol (início Outubro)",
+            "company": "Empresa / Club Portugal",
+            "location": "Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "Net-Empregos",
+            "job_url": "https://www.net-empregos.com/15982459/fisioterapeuta-futebol-inicio-outubro/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/09/2026"
+        },
+        {
+            "title": "Montagem de Eventtos Desportivos",
+            "company": "Empresa / Club Portugal",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "Net-Empregos",
+            "job_url": "https://www.net-empregos.com/15989464/montagem-de-eventtos-desportivos/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/09/2026"
+        },
+        {
+            "title": "Treinador para Escolinha de Futebol - introdução ao futebol",
+            "company": "Empresa / Club Portugal",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "Net-Empregos",
+            "job_url": "https://www.net-empregos.com/16025435/treinador-para-escolinha-de-futebol-introducao-ao-futebol/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/09/2026"
+        },
+        {
+            "title": "Preparador de Materiais (M/F) - Trofa",
+            "company": "Empresa / Club Portugal",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "Net-Empregos",
+            "job_url": "https://www.net-empregos.com/15819398/preparador-de-materiais-m-f-trofa/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/09/2026"
         }
     ]
 }
