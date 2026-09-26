@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "26/09/2026 13:11",
-    "total_ofertas": 573,
+    "ultima_actualizacion": "26/09/2026 19:14",
+    "total_ofertas": 576,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -7369,6 +7369,45 @@
             "tipo_contrato": "Jornada Completa",
             "site": "FutbolJobs",
             "job_url": "https://futboljobs.com/oferta/portero-gillingham-town-fc-londres-41954/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/09/2026"
+        },
+        {
+            "title": "Educador Deportivo",
+            "company": "FUNDACIÓN PEGASUS",
+            "location": "Betanzos, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4471065111",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/09/2026"
+        },
+        {
+            "title": "Phd Computational Medicinal Chemist",
+            "company": "Celtarys Research",
+            "location": "Arbo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4471061355",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/09/2026"
+        },
+        {
+            "title": "Phd Computational Medicinal Chemist",
+            "company": "Celtarys Research",
+            "location": "Saiáns (San Salvador), Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4471064179",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "26/09/2026"
