@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "25/09/2026 16:33",
-    "total_ofertas": 563,
+    "ultima_actualizacion": "26/09/2026 00:37",
+    "total_ofertas": 565,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -7242,6 +7242,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "25/09/2026"
+        },
+        {
+            "title": "Security Operations Analyst (SIEM Operations and Threat Detection)",
+            "company": "Talan",
+            "location": "Vigo, GA, ES",
+            "modalidad": "Remoto",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=3de6bc082279cdde",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "26/09/2026"
+        },
+        {
+            "title": "Phd Computational Medicinal Chemist",
+            "company": "Celtarys Research",
+            "location": "Arbo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4470366415",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/09/2026"
         }
     ]
 }
