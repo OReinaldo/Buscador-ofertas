@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "27/09/2026 14:03",
-    "total_ofertas": 581,
+    "ultima_actualizacion": "27/09/2026 19:47",
+    "total_ofertas": 584,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -7473,6 +7473,45 @@
             "tipo_contrato": "Jornada Completa",
             "site": "FutbolJobs",
             "job_url": "https://futboljobs.com/oferta/entrenador-porteros-fc-locarno-suiza-41962/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/09/2026"
+        },
+        {
+            "title": "Operator & License Owner, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4472458639",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/09/2026"
+        },
+        {
+            "title": "Phd Computational Medicinal Chemist",
+            "company": "Celtarys Research",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4471098461",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/09/2026"
+        },
+        {
+            "title": "Entrenador de fútbol juvenil – JK SEPPS – Estonia (UE)JK SEPPS busca un entrenador de fútbol juvenil",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-de-futbol-juvenil-jk-sepps-estonia-ue-41974/",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/09/2026"
