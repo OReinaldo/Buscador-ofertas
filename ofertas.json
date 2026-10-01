@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "30/09/2026 20:51",
-    "total_ofertas": 647,
+    "ultima_actualizacion": "01/10/2026 06:06",
+    "total_ofertas": 649,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -8334,6 +8334,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "30/09/2026"
+        },
+        {
+            "title": "Data Collection Analyst (Support)",
+            "company": "Stats Perform",
+            "location": "Aveiro, Aveiro, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4472155819",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "01/10/2026"
+        },
+        {
+            "title": "Instrutor/a de Aulas de Grupo – Cycling",
+            "company": "Academia Nokaute",
+            "location": "Guimarães, Braga, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4473513537",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "01/10/2026"
         }
     ]
 }
