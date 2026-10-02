@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "02/10/2026 05:49",
-    "total_ofertas": 673,
+    "ultima_actualizacion": "02/10/2026 14:47",
+    "total_ofertas": 681,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -1253,7 +1253,7 @@
         {
             "title": "Responsable del desarrollo de negocio en proyectos integrales de automatización de plantas industriales",
             "company": "Syspro Automation",
-            "location": "Vigo",
+            "location": "Greater Vigo Metropolitan Area",
             "modalidad": "Presencial",
             "tipo_jornada": "Jornada Completa",
             "tipo_contrato": "Jornada Completa",
@@ -2941,7 +2941,7 @@
             "fecha": "08/09/2026"
         },
         {
-            "title": "Assistant Manager (M/F) JD Viana do Castelo",
+            "title": "Assistant Manager - Subgerente de Loja (M/F) JD Viana do Castelo",
             "company": "JD Sports Iberia",
             "location": "Castelo do Neiva, Viana do Castelo, Portugal",
             "modalidad": "Presencial",
@@ -8669,6 +8669,110 @@
             "tipo_contrato": "Jornada Completa",
             "site": "FutbolJobs",
             "job_url": "https://futboljobs.com/oferta/director-general-cs-sedan-ardennes-regional-1-francia-42120/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Responsable Desarrollo Fútbol – Federación de Fútbol de LeicestershireEstamos reclutando: Responsabl",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/responsable-desarrollo-futbol-federacion-de-futbol-de-leicestershire-42145/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Asistente Terapeuta Deportivo – Vancouver Whitecaps FC – CanadáVancouver Whitecaps FC busca un asist",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/asistente-terapeuta-deportivo-vancouver-whitecaps-fc-canada-42144/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Responsable Medios – Grimsby Town Football Club FemeninoBuscamos un/a Voluntaria, Responsable de Med",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/responsable-medios-grimsby-town-football-club-femenino-42143/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Director Academia – Newport County Association Football Club – GalesEl Newport County AFC busca un/a",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/director-academia-newport-county-association-football-club-gales-42142/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Entrenadores – First Football Coaching Academy – Gran Mánchester, Reino UnidoFFCA - FIRST FOOTBALL C",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenadores-first-football-coaching-academy-gran-manchester-reino-unido-42141/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Delantero – Club 1ª división – PoloniaBuscamos un delantero 9, de buen nivel en España, 1a rfef, ...",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/delantero-club-1a-division-polonia-42139/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Entrenadores y Preparadores Físicos – Football NSW – AustraliaFootball NSW está invitando a entrenad",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenadores-y-preparadores-fisicos-football-nsw-australia-42138/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Entrenador Porteros – Chester FC Community TrustChester FC Community Trust busca un entrenador de po",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-porteros-chester-fc-community-trust-42137/",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "02/10/2026"
