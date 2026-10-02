@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "01/10/2026 21:04",
-    "total_ofertas": 663,
+    "ultima_actualizacion": "02/10/2026 05:49",
+    "total_ofertas": 673,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -8542,6 +8542,136 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "01/10/2026"
+        },
+        {
+            "title": "Responsável de Desporto Braga (25.500€ - 31.000€)",
+            "company": "Decathlon",
+            "location": "Braga, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4474586659",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "General Manager",
+            "company": "Arda Core",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4474500483",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Entrenador/a – Club Deportivo Femenino – New Cairo, EgiptoESTAMOS CONTRATANDO | ENTRENADOR/A DE FÚTB",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-a-club-deportivo-femenino-new-cairo-egipto-42127/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Scout Fútbol – JEP Sports Management – Gernika, BizkaiaJEP Sports Management continúa ampliando su r",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/scout-futbol-jep-sports-management-gernika-bizkaia-42126/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Entrenador/a – Departamentos Deportivos – FC Schalke 04Para reforzar nuestros departamentos deportiv",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-a-departamentos-deportivos-fc-schalke-04-42125/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Becario/a – Fútbol Femenino – Borussia DortmundEn el departamento de fútbol femenino, impulsamos con",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Prácticas / Beca",
+            "tipo_contrato": "Prácticas / Beca",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/becario-a-futbol-femenino-borussia-dortmund-42124/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Entrenador/a Rendimiento Físico – Tottenham Hotspur FC FemeninoEl rol:Para ayudar en el desarrollo e",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-a-rendimiento-fisico-tottenham-hotspur-fc-femenino-42123/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Médico – 1º Equipo Stoke City FCEl Stoke City busca un médico del primer equipo dedicado y ...",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/medico-1o-equipo-stoke-city-fc-42122/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Fisioterapeuta Principal – Academia Blackburn RoversTítulo profesional: Fisioterapeuta principal de ",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/fisioterapeuta-principal-academia-blackburn-rovers-42121/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
+        },
+        {
+            "title": "Director General – CS Sedan Ardennes – Régional 1 – FranciaCS Sedan Ardennes está reclutando a su Di",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/director-general-cs-sedan-ardennes-regional-1-francia-42120/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/10/2026"
         }
     ]
 }
