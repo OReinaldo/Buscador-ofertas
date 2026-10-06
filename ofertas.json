@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "06/10/2026 15:16",
-    "total_ofertas": 730,
+    "ultima_actualizacion": "06/10/2026 21:02",
+    "total_ofertas": 735,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -9324,7 +9324,7 @@
             "fecha": "06/10/2026"
         },
         {
-            "title": "JugadorPremiumFutbolistas – Club 3ª división – Greciaalrededor de 2k/2.5kGreeceHace 5 horas",
+            "title": "JugadorPremiumFutbolistas – Club 3ª división – Greciaalrededor de 2k/2.5kGreeceHace 6 horas",
             "company": "Club / Entidad Deportiva",
             "location": "Galicia / Norte Portugal / Internacional",
             "modalidad": "Presencial",
@@ -9350,7 +9350,7 @@
             "fecha": "06/10/2026"
         },
         {
-            "title": "NutricionistaTécnico de Operaciones F&B – Atlético de MadridCompetitivoSpainHace 6 horas",
+            "title": "NutricionistaTécnico de Operaciones F&B – Atlético de MadridCompetitivoSpainHace 7 horas",
             "company": "Club / Entidad Deportiva",
             "location": "Galicia / Norte Portugal / Internacional",
             "modalidad": "Presencial",
@@ -9363,7 +9363,7 @@
             "fecha": "06/10/2026"
         },
         {
-            "title": "EntrenadorPremiumEntrenador – Everton in the Community – LiverpoolCompetitivoUnited KingdomHace 6 ho",
+            "title": "EntrenadorPremiumEntrenador – Everton in the Community – LiverpoolCompetitivoUnited KingdomHace 7 ho",
             "company": "Club / Entidad Deportiva",
             "location": "Galicia / Norte Portugal / Internacional",
             "modalidad": "Presencial",
@@ -9410,6 +9410,71 @@
             "tipo_contrato": "Jornada Completa",
             "site": "FutbolJobs",
             "job_url": "https://futboljobs.com/oferta/entrenador-gamlakarleby-bollklubb-gbk-kokkola-finlandia-42223/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "06/10/2026"
+        },
+        {
+            "title": "Gerente de Operaciones",
+            "company": "Randstad España",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4474072909",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "06/10/2026"
+        },
+        {
+            "title": "Gestor/a de Projetos - Inovação e Desenvolvimento de Software",
+            "company": "Liga Portugal",
+            "location": "Porto Metropolitan Area",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4476332469",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "06/10/2026"
+        },
+        {
+            "title": "GerentePremiumGerente Desarrollo Gestión Deportiva – Federación Fútbol FinlandiaCompetitivoFinlandHa",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/gerente-desarrollo-gestion-deportiva-federacion-futbol-finlandia-42232/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "06/10/2026"
+        },
+        {
+            "title": "EntrenadorPremiumEntrenador/a – Academia Fútbol Werder Bremen – AlemaniaA negociarGermanyHace 6 hora",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-a-academia-futbol-werder-bremen-alemania-42231/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "06/10/2026"
+        },
+        {
+            "title": "ComercialAsistente Ventas – Tienda Oficial Club – Football Club Lausana-Sport...CompetitivoSwaziland",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/asistente-ventas-tienda-oficial-club-football-club-lausana-sport-suiza-42230/",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "06/10/2026"
