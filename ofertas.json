@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "10/10/2026 06:01",
-    "total_ofertas": 810,
+    "ultima_actualizacion": "10/10/2026 14:30",
+    "total_ofertas": 811,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -10450,6 +10450,19 @@
             "tipo_contrato": "Prácticas / Beca",
             "site": "FutbolJobs",
             "job_url": "https://futboljobs.com/oferta/fisioterapeuta-practicas-wexford-fc-1a-division-irlanda-42331/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "10/10/2026"
+        },
+        {
+            "title": "Cycling Coach",
+            "company": "Cycling District",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4478044484",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "10/10/2026"
