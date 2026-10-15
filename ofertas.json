@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "14/10/2026 20:14",
-    "total_ofertas": 891,
+    "ultima_actualizacion": "15/10/2026 04:50",
+    "total_ofertas": 893,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -11506,6 +11506,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "14/10/2026"
+        },
+        {
+            "title": "Director de Agencia – Franquicia y Emprendimiento",
+            "company": "Avenir Rénovations",
+            "location": "A Coruña, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4478777531",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "15/10/2026"
+        },
+        {
+            "title": "Warehouse & Distribution Logistics Analyst",
+            "company": "Lear Corporation",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4478411025",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "15/10/2026"
         }
     ]
 }
