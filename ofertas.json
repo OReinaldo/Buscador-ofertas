@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "20/10/2026 04:59",
-    "total_ofertas": 962,
+    "ultima_actualizacion": "20/10/2026 13:38",
+    "total_ofertas": 972,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -11170,7 +11170,7 @@
             "fecha": "13/10/2026"
         },
         {
-            "title": "Responsable de Lean Manufacturing",
+            "title": "Técnico/a Mejora Continua",
             "company": "Hinojosa Packaging Group",
             "location": "Vigo, Galicia, Spain",
             "modalidad": "Presencial",
@@ -12429,6 +12429,136 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "19/10/2026"
+        },
+        {
+            "title": "Coordinador/a de Clínica Dental – Vigo",
+            "company": "TalentHop Consulting",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4481276662",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
+        },
+        {
+            "title": "Entrenador personal",
+            "company": "Centro de Entrenamiento Personal Alén García",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4481564066",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
+        },
+        {
+            "title": "EntrenadorPremiumEntrenador/a Principal – Equipo Femenino Juvenil – Helsingin Palloseura – H...A neg",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-a-principal-equipo-femenino-juvenil-helsingin-palloseura-helsinki-42630/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
+        },
+        {
+            "title": "Ojeador ScoutPremiumAnalista Captación Talentos – Newcastle United FC – ÁfricaCompetitivoHace 3 hora",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/analista-captacion-talentos-newcastle-united-fc-africa-42629/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
+        },
+        {
+            "title": "EntrenadorPremiumEntrenador Principal – Espoon Palloseura FC Femenino – FinlandiaCompetitivoFinlandH",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-principal-espoon-palloseura-fc-femenino-finlandia-42628/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
+        },
+        {
+            "title": "EntrenadorEntrenadores – Centro Desarrollo Femenino – Colchester Unitedde 12,25 £ a 14,25 £United Ki",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenadores-centro-desarrollo-femenino-colchester-united-42626/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
+        },
+        {
+            "title": "Director DeportivoPremiumDirector Fútbol – Masar Athletic – Abu Dabi, EAUCompetitivoUnited Arab Emir",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/director-futbol-masar-athletic-abu-dabi-eau-42625/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
+        },
+        {
+            "title": "EntrenadorPremiumJefe Entrenamiento – Academia Femenina Chelsea FCCompetitivoUnited KingdomHace 19 h",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/jefe-entrenamiento-academia-femenina-chelsea-fc-42623/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
+        },
+        {
+            "title": "EntrenadorEntrenadores – Northern United FC – Noida, IndiaA negociarIndiaHace 19 horas",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenadores-northern-united-fc-noida-india-42622/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
+        },
+        {
+            "title": "EntrenadorResponsable Educación – Academia Niños 9 / 16 – CF Charlton Athleticentre 36.000 y 38.250 ",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/responsable-educacion-academia-ninos-9-16-cf-charlton-athletic-42621/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/10/2026"
         }
     ]
 }
