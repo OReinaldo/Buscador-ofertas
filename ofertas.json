@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "20/10/2026 20:01",
-    "total_ofertas": 984,
+    "ultima_actualizacion": "21/10/2026 04:58",
+    "total_ofertas": 985,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -12715,6 +12715,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "20/10/2026"
+        },
+        {
+            "title": "Business Development Manager",
+            "company": "Hubexo",
+            "location": "Vigo, GA, Spain",
+            "modalidad": "Híbrido",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=8ffc78df1a71e55e",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "21/10/2026"
         }
     ]
 }
