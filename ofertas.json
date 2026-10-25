@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "25/10/2026 04:53",
-    "total_ofertas": 1051,
+    "ultima_actualizacion": "25/10/2026 13:13",
+    "total_ofertas": 1057,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -13484,7 +13484,7 @@
             "fecha": "24/10/2026"
         },
         {
-            "title": "JugadorPremiumDelantero – 2ª División B – EgiptoCompetitivoEgyptHace 19 horas",
+            "title": "JugadorPremiumDelantero – 2ª División B – EgiptoCompetitivoEgyptHace 2 días",
             "company": "Club / Entidad Deportiva",
             "location": "Galicia / Norte Portugal / Internacional",
             "modalidad": "Presencial",
@@ -13497,7 +13497,7 @@
             "fecha": "24/10/2026"
         },
         {
-            "title": "EntrenadorEntrenador Programas Juveniles –  New York City FC$35–$55/ horaUnited StatesHace 19 horas",
+            "title": "EntrenadorEntrenador Programas Juveniles –  New York City FC$35–$55/ horaUnited StatesHace 2 días",
             "company": "Club / Entidad Deportiva",
             "location": "Galicia / Norte Portugal / Internacional",
             "modalidad": "Presencial",
@@ -13583,6 +13583,84 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4483336953",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/10/2026"
+        },
+        {
+            "title": "Minitor multo deportivo",
+            "company": "Liceo casino de pontevedra",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4483374251",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/10/2026"
+        },
+        {
+            "title": "EntrenadorEntrenador – Equipo Juvenil de BarcelonaA convenirSpainHace 18 horas",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/entrenador-equipo-juvenil-de-barcelona-42775/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/10/2026"
+        },
+        {
+            "title": "JugadorFutbolistas – Club Liga de ItaliacompetitivoItalyHace 1 día",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/futbolistas-club-liga-de-italia-42774/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/10/2026"
+        },
+        {
+            "title": "JugadorFutbolistas – 1ª división Irlanda1.500–1.800 € por semanaIrelandHace 2 días",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/futbolistas-1a-division-irlanda-42771/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/10/2026"
+        },
+        {
+            "title": "GerenteGerente Licencias – Chelsea Football ClubcompetitivoUnited KingdomHace 2 días",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/gerente-licencias-chelsea-football-club-42770/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/10/2026"
+        },
+        {
+            "title": "JugadorPremiumFutbolistas – Club 2ª división PoloniacompetitivoPolandHace 2 días",
+            "company": "Club / Entidad Deportiva",
+            "location": "Galicia / Norte Portugal / Internacional",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "FutbolJobs",
+            "job_url": "https://futboljobs.com/oferta/futbolistas-club-2a-division-polonia-42769/",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "25/10/2026"
