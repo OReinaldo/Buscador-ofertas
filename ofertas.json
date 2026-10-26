@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "26/10/2026 04:57",
-    "total_ofertas": 1057,
+    "ultima_actualizacion": "26/10/2026 15:16",
+    "total_ofertas": 1061,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -13664,6 +13664,58 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "25/10/2026"
+        },
+        {
+            "title": "Director/a Gerente de Transporte Urbano (Santiago)",
+            "company": "Michael Page",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4481455444",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/10/2026"
+        },
+        {
+            "title": "Coordenador(a) de Cibersegurança (Lisboa/Porto)",
+            "company": "FPF - Federação Portuguesa de Futebol",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4483550118",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/10/2026"
+        },
+        {
+            "title": "Técnico de Transportes (f/m/div.)",
+            "company": "Bosch",
+            "location": "Aveiro, P01, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://pt.indeed.com/viewjob?jk=da06a9b5f61f21f0",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/10/2026"
+        },
+        {
+            "title": "Fisiologista do Exercício - Carnaxide, Lisboa",
+            "company": "António Gaspar - Physio Therapy & Performance",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4483557031",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/10/2026"
         }
     ]
 }
