@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "26/10/2026 15:16",
-    "total_ofertas": 1061,
+    "ultima_actualizacion": "26/10/2026 21:04",
+    "total_ofertas": 1064,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -13714,6 +13714,45 @@
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4483557031",
             "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/10/2026"
+        },
+        {
+            "title": "Project Manager - Vigo",
+            "company": "Klinea Biotech & Pharma Engineering",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4483207450",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "26/10/2026"
+        },
+        {
+            "title": "Instructor/a de actividades físico-deportivas",
+            "company": "ENKI",
+            "location": "A Coruña, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4483568863",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/10/2026"
+        },
+        {
+            "title": "Coordinador/a de ventas",
+            "company": "Empresa InfoJobs",
+            "location": "Vigo / Pontevedra, España",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "InfoJobs",
+            "job_url": "https://www.infojobs.net/vilagarcia-de-arousa/coordinador-ventas/of-ieaee5c7d8d49e88c6b649e9f05a89e?applicationOrigin=search-new&page=1&sortBy=PUBLICATION_DATE",
+            "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "26/10/2026"
         }
