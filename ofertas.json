@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "27/10/2026 14:37",
-    "total_ofertas": 1064,
+    "ultima_actualizacion": "27/10/2026 20:46",
+    "total_ofertas": 1065,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -13755,6 +13755,19 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "26/10/2026"
+        },
+        {
+            "title": "Técnico Emprendimiento",
+            "company": "Fundación Venancio Salcines",
+            "location": "Mellid, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484208660",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/10/2026"
         }
     ]
 }
