@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "28/10/2026 15:11",
-    "total_ofertas": 1067,
+    "ultima_actualizacion": "28/10/2026 21:10",
+    "total_ofertas": 1071,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -13791,6 +13791,58 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4484458566",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "28/10/2026"
+        },
+        {
+            "title": "Space Project Manager",
+            "company": "Alén Space",
+            "location": "Nigrán, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484495551",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "28/10/2026"
+        },
+        {
+            "title": "License Owner / Operator, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, GA, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=4c891c1e610ec5ba",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "28/10/2026"
+        },
+        {
+            "title": "License Owner / Operator, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484489247",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "28/10/2026"
+        },
+        {
+            "title": "Entrenador personal",
+            "company": "Rebel Boutique Fitness",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484426648",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "28/10/2026"
