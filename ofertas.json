@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "29/10/2026 05:57",
-    "total_ofertas": 1071,
+    "ultima_actualizacion": "29/10/2026 15:16",
+    "total_ofertas": 1073,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -13846,6 +13846,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "28/10/2026"
+        },
+        {
+            "title": "Senior IT Project Manager – OT Infrastructure in Pharma",
+            "company": "Fusion Consulting",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484949889",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/10/2026"
+        },
+        {
+            "title": "Senior IT Project Manager – OT Infrastructure in Pharma",
+            "company": "Fusion Consulting",
+            "location": "Porriño, GA, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=bce881933811c8d5",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/10/2026"
         }
     ]
 }
