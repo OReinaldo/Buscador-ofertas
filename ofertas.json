@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "29/10/2026 15:16",
-    "total_ofertas": 1073,
+    "ultima_actualizacion": "29/10/2026 21:12",
+    "total_ofertas": 1074,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -13870,6 +13870,19 @@
             "site": "indeed",
             "job_url": "https://es.indeed.com/viewjob?jk=bce881933811c8d5",
             "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "29/10/2026"
+        },
+        {
+            "title": "Personal Trainer (m/f) - Holmes Place Boavista",
+            "company": "Holmes Place Portugal",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484988682",
+            "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "29/10/2026"
         }
