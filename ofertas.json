@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "29/10/2026 21:12",
-    "total_ofertas": 1074,
+    "ultima_actualizacion": "30/10/2026 05:59",
+    "total_ofertas": 1078,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -13885,6 +13885,58 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "29/10/2026"
+        },
+        {
+            "title": "Responsable de Operaciones Sector Formación (Vigo)",
+            "company": "Michael Page",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4483077210",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "30/10/2026"
+        },
+        {
+            "title": "Project Manager - Farma",
+            "company": "BETWEEN Group",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4485248030",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "30/10/2026"
+        },
+        {
+            "title": "Controller de gestión y operaciones",
+            "company": "LAMS SUMINISTROS NOROESTE SL",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4485255152",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "30/10/2026"
+        },
+        {
+            "title": "Data Collection Analyst (Performance Data)",
+            "company": "Stats Perform",
+            "location": "Aveiro, Aveiro, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4483011934",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "30/10/2026"
         }
     ]
 }
