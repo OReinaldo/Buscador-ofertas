@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "30/10/2026 20:52",
-    "total_ofertas": 1097,
+    "ultima_actualizacion": "31/10/2026 05:54",
+    "total_ofertas": 1099,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14184,6 +14184,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "30/10/2026"
+        },
+        {
+            "title": "Vendedor(a) de Loja / Sales Assistant (M/F) JD Guimarães",
+            "company": "JD Sports Iberia",
+            "location": "Felgueiras, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484977674",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "31/10/2026"
+        },
+        {
+            "title": "FISIOTERAPIA NO FUTEBOL (Clube de Futebol Santa Iria)",
+            "company": "Empresa / Club Portugal",
+            "location": "Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "Net-Empregos",
+            "job_url": "https://www.net-empregos.com/16168358/fisioterapia-no-futebol-clube-de-futebol-santa-iria/",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "31/10/2026"
         }
     ]
 }
