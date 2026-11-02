@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "02/11/2026 06:22",
-    "total_ofertas": 1100,
+    "ultima_actualizacion": "02/11/2026 18:30",
+    "total_ofertas": 1104,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14220,6 +14220,58 @@
             "tipo_contrato": "Media Jornada",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4484436577",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/11/2026"
+        },
+        {
+            "title": "Coordinador/a de Clínica Dental – Vigo",
+            "company": "TalentHop Consulting",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4486418628",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "02/11/2026"
+        },
+        {
+            "title": "Project Manager - Instalaciones Farmacéuticas",
+            "company": "Amaris Consulting  | Part of Mantu",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484379346",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "02/11/2026"
+        },
+        {
+            "title": "License Owner, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, GA, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=e677ab68aec78d1e",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/11/2026"
+        },
+        {
+            "title": "License Owner, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4486199961",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "02/11/2026"
