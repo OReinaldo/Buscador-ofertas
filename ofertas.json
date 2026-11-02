@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "01/11/2026 20:35",
-    "total_ofertas": 1099,
+    "ultima_actualizacion": "02/11/2026 06:22",
+    "total_ofertas": 1100,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14210,6 +14210,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "31/10/2026"
+        },
+        {
+            "title": "Assistente de Venda a Part Time – Sports Direct Povoa de Varzim - Portugal",
+            "company": "Frasers Group",
+            "location": "Beiriz, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Media Jornada",
+            "tipo_contrato": "Media Jornada",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484436577",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "02/11/2026"
         }
     ]
 }
