@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "03/11/2026 06:57",
-    "total_ofertas": 1105,
+    "ultima_actualizacion": "03/11/2026 16:20",
+    "total_ofertas": 1107,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14286,6 +14286,32 @@
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4486478608",
             "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "03/11/2026"
+        },
+        {
+            "title": "E-commerce Trading & Business Analyst",
+            "company": "hôma",
+            "location": "Vila Nova de Gaia, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4484650532",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "03/11/2026"
+        },
+        {
+            "title": "Professor(a) de Atividade Física e Desportiva - Braga",
+            "company": "Cooperativa de Solidariedade Social Múltipla Escolha Crl",
+            "location": "Braga, P03, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Proyecto / Freelance",
+            "tipo_contrato": "Proyecto / Freelance",
+            "site": "indeed",
+            "job_url": "https://pt.indeed.com/viewjob?jk=83370ac52b424d12",
+            "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "03/11/2026"
         }
