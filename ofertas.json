@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "02/11/2026 18:30",
-    "total_ofertas": 1104,
+    "ultima_actualizacion": "03/11/2026 06:57",
+    "total_ofertas": 1105,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14275,6 +14275,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "02/11/2026"
+        },
+        {
+            "title": "Project Manager - Instalaciones Farmacéuticas | Vigo | Hybrid",
+            "company": "Amaris Consulting  | Part of Mantu",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Híbrido",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4486478608",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "03/11/2026"
         }
     ]
 }
