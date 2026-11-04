@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "04/11/2026 06:39",
-    "total_ofertas": 1108,
+    "ultima_actualizacion": "04/11/2026 16:24",
+    "total_ofertas": 1110,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14325,6 +14325,32 @@
             "site": "indeed",
             "job_url": "https://pt.indeed.com/viewjob?jk=f73504fc26b4b602",
             "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "04/11/2026"
+        },
+        {
+            "title": "Técnico/a Operaciones Industriales",
+            "company": "DINAK Energy Systems",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4487249027",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "04/11/2026"
+        },
+        {
+            "title": "Responsable del desarrollo de negocio en proyectos integrales de automatización de plantas industriales",
+            "company": "Syspro Automation",
+            "location": "Greater Vigo Metropolitan Area",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4487227891",
+            "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "04/11/2026"
         }
