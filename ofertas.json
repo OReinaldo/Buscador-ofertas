@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "03/11/2026 16:20",
-    "total_ofertas": 1107,
+    "ultima_actualizacion": "04/11/2026 06:39",
+    "total_ofertas": 1108,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14314,6 +14314,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "03/11/2026"
+        },
+        {
+            "title": "Professor(a) de Atividade Física e Desportiva - Esposende",
+            "company": "Cooperativa de Solidariedade Social Múltipla Escolha Crl",
+            "location": "Esposende, P03, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Media Jornada",
+            "tipo_contrato": "Media Jornada",
+            "site": "indeed",
+            "job_url": "https://pt.indeed.com/viewjob?jk=f73504fc26b4b602",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "04/11/2026"
         }
     ]
 }
