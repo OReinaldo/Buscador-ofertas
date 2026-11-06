@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "06/11/2026 06:58",
-    "total_ofertas": 1115,
+    "ultima_actualizacion": "06/11/2026 15:59",
+    "total_ofertas": 1117,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14415,6 +14415,32 @@
             "tipo_contrato": "Jornada Completa",
             "site": "indeed",
             "job_url": "https://es.indeed.com/viewjob?jk=46315804f1179e76",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "06/11/2026"
+        },
+        {
+            "title": "Fisioterapeuta",
+            "company": "Clube Desportivo do Candal",
+            "location": "Vila Nova de Gaia, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4465940071",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "06/11/2026"
+        },
+        {
+            "title": "Chefe de Departamento de Operações e Performance",
+            "company": "Portway - Handling de Portugal S. A.",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4486986975",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "06/11/2026"
