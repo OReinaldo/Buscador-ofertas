@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "06/11/2026 15:59",
-    "total_ofertas": 1117,
+    "ultima_actualizacion": "06/11/2026 21:35",
+    "total_ofertas": 1119,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14441,6 +14441,32 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4486986975",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "06/11/2026"
+        },
+        {
+            "title": "Entrenador personal",
+            "company": "EZEN Salud y Rendimiento",
+            "location": "Narón, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4488429203",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "06/11/2026"
+        },
+        {
+            "title": "Software Engineer (Backend) - Sportsbet",
+            "company": "Blip.pt",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4488195711",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "06/11/2026"
