@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "05/11/2026 16:32",
-    "total_ofertas": 1114,
+    "ultima_actualizacion": "06/11/2026 06:58",
+    "total_ofertas": 1115,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14405,6 +14405,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "05/11/2026"
+        },
+        {
+            "title": "HR & Administration Coordinator | Full-Time | Estadio Abanca Balaídos (Vigo Stadium)",
+            "company": "Oak View Group",
+            "location": "Vigo, GA, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=46315804f1179e76",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "06/11/2026"
         }
     ]
 }
