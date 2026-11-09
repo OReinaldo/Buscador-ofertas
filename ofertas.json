@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "09/11/2026 06:48",
-    "total_ofertas": 1119,
+    "ultima_actualizacion": "09/11/2026 18:54",
+    "total_ofertas": 1121,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14470,6 +14470,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "06/11/2026"
+        },
+        {
+            "title": "Responsable de Proyectos de Transformación Digital",
+            "company": "Inova",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4485334466",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "09/11/2026"
+        },
+        {
+            "title": "Coordenador Técnico",
+            "company": "Futebol Clube de Gaia",
+            "location": "Vila Nova de Gaia, P13, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Media Jornada",
+            "tipo_contrato": "Media Jornada",
+            "site": "indeed",
+            "job_url": "https://pt.indeed.com/viewjob?jk=6e1f08f954bc4e32",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "09/11/2026"
         }
     ]
 }
