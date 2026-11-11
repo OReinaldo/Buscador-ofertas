@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "10/11/2026 16:27",
-    "total_ofertas": 1123,
+    "ultima_actualizacion": "11/11/2026 06:41",
+    "total_ofertas": 1125,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14522,6 +14522,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "10/11/2026"
+        },
+        {
+            "title": "Responsável de Desporto Matosinhos (25.500€ - 31.000€)",
+            "company": "Decathlon",
+            "location": "Matosinhos, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4488609738",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/11/2026"
+        },
+        {
+            "title": "Responsável de Desporto Porto Boavista (25.500€ - 31.000€)",
+            "company": "Decathlon",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4488623529",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/11/2026"
         }
     ]
 }
