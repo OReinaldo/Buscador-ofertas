@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "11/11/2026 06:41",
-    "total_ofertas": 1125,
+    "ultima_actualizacion": "11/11/2026 16:17",
+    "total_ofertas": 1126,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14545,6 +14545,19 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4488623529",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "11/11/2026"
+        },
+        {
+            "title": "Assistente Executiva (Porto)",
+            "company": "FPF - Federação Portuguesa de Futebol",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4489929049",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "11/11/2026"
