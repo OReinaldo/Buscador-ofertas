@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "11/11/2026 16:17",
-    "total_ofertas": 1126,
+    "ultima_actualizacion": "12/11/2026 07:22",
+    "total_ofertas": 1127,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14561,6 +14561,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "11/11/2026"
+        },
+        {
+            "title": "Gestor/a de Projetos - Inovação e Desenvolvimento de Software",
+            "company": "Liga Portugal",
+            "location": "Porto Metropolitan Area",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4489622368",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "12/11/2026"
         }
     ]
 }
