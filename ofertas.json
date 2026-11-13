@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "13/11/2026 06:55",
-    "total_ofertas": 1130,
+    "ultima_actualizacion": "13/11/2026 16:31",
+    "total_ofertas": 1133,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14610,6 +14610,45 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4490521362",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "13/11/2026"
+        },
+        {
+            "title": "License Owner & Operator, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4490725532",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "13/11/2026"
+        },
+        {
+            "title": "Atendimento ao cliente",
+            "company": "Foto Sport",
+            "location": "Braga, Braga, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4490707468",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "13/11/2026"
+        },
+        {
+            "title": "General Manager",
+            "company": "Maestro Knitting Portugal",
+            "location": "Guimarães, Braga, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4490729359",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "13/11/2026"
