@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "12/11/2026 16:52",
-    "total_ofertas": 1129,
+    "ultima_actualizacion": "13/11/2026 06:55",
+    "total_ofertas": 1130,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14600,6 +14600,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "12/11/2026"
+        },
+        {
+            "title": "Mozo/a de almacén: Preparador/a de pedidos",
+            "company": "Eurobanan",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4490521362",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "13/11/2026"
         }
     ]
 }
