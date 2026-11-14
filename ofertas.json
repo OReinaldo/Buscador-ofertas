@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "13/11/2026 16:31",
-    "total_ofertas": 1133,
+    "ultima_actualizacion": "14/11/2026 06:40",
+    "total_ofertas": 1136,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14652,6 +14652,45 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "13/11/2026"
+        },
+        {
+            "title": "Fitnesscoach",
+            "company": "LAGO zwemparadijzen",
+            "location": "Lago, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4489599319",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "14/11/2026"
+        },
+        {
+            "title": "Flexi fitnesscoach",
+            "company": "LAGO zwemparadijzen",
+            "location": "Lago, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4489594516",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "14/11/2026"
+        },
+        {
+            "title": "Sportsbook Manager",
+            "company": "Solverde.pt",
+            "location": "Espinho, Aveiro, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4490754371",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "14/11/2026"
         }
     ]
 }
