@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "17/11/2026 08:05",
-    "total_ofertas": 1138,
+    "ultima_actualizacion": "17/11/2026 17:40",
+    "total_ofertas": 1141,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14715,6 +14715,45 @@
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4491512362",
             "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "17/11/2026"
+        },
+        {
+            "title": "Project Manager - Farma",
+            "company": "BETWEEN Group",
+            "location": "Porriño, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4491580336",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "17/11/2026"
+        },
+        {
+            "title": "DIRECTOR/A DE DESARROLLO DE NEGOCIO",
+            "company": "Possible Incorporated",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4491599267",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "17/11/2026"
+        },
+        {
+            "title": "Consultor/a de Transformación Digital e Inteligencia Artificial",
+            "company": "EGA CONSULTORES",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4491136207",
+            "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "17/11/2026"
         }
