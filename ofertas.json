@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "16/11/2026 18:39",
-    "total_ofertas": 1137,
+    "ultima_actualizacion": "17/11/2026 08:05",
+    "total_ofertas": 1138,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14704,6 +14704,19 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "16/11/2026"
+        },
+        {
+            "title": "Chefe de Equipa de Manutenção de Jardins (Porto)",
+            "company": "RED - Relvados e Equipamentos Desportivos",
+            "location": "Maia, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4491512362",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "17/11/2026"
         }
     ]
 }
