@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "18/11/2026 07:40",
-    "total_ofertas": 1141,
+    "ultima_actualizacion": "18/11/2026 17:20",
+    "total_ofertas": 1143,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14756,6 +14756,32 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "17/11/2026"
+        },
+        {
+            "title": "Club Manager - Âmbito nacional",
+            "company": "Physical",
+            "location": "Vila Nova de Famalicão, Braga, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4492037584",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "18/11/2026"
+        },
+        {
+            "title": "Product Manager - Retalho",
+            "company": "ARGO- People Strategy",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4488939693",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "18/11/2026"
         }
     ]
 }
