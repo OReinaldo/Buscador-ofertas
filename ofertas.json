@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "18/11/2026 17:20",
-    "total_ofertas": 1143,
+    "ultima_actualizacion": "19/11/2026 07:37",
+    "total_ofertas": 1148,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14782,6 +14782,71 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "18/11/2026"
+        },
+        {
+            "title": "Coordinador/a de Proyectos de Obras Lineales",
+            "company": "Agudiza Ingeniería",
+            "location": "Greater Vigo Metropolitan Area",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4492203667",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "19/11/2026"
+        },
+        {
+            "title": "Operator & License Owner, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, GA, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=6830dedb16dc65ee",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "19/11/2026"
+        },
+        {
+            "title": "Operator & License Owner, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4492214437",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "19/11/2026"
+        },
+        {
+            "title": "Club Manager Physical - Âmbito Nacional",
+            "company": "Physical",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4491897484",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "19/11/2026"
+        },
+        {
+            "title": "Senior Finance Analyst",
+            "company": "FARFETCH",
+            "location": "Porto, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4492090959",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "19/11/2026"
         }
     ]
 }
