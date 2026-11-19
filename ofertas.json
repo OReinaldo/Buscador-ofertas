@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "19/11/2026 07:37",
-    "total_ofertas": 1148,
+    "ultima_actualizacion": "19/11/2026 17:26",
+    "total_ofertas": 1150,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14844,6 +14844,32 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4492090959",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "19/11/2026"
+        },
+        {
+            "title": "Data Collection Analyst (Performance Data)",
+            "company": "Stats Perform",
+            "location": "Aveiro, Aveiro, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4491611005",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "19/11/2026"
+        },
+        {
+            "title": "Professor Musculação",
+            "company": "Awake Club",
+            "location": "Matosinhos, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4483125615",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "19/11/2026"
