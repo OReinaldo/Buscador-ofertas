@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "20/11/2026 07:28",
-    "total_ofertas": 1150,
+    "ultima_actualizacion": "20/11/2026 17:00",
+    "total_ofertas": 1152,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14873,6 +14873,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "19/11/2026"
+        },
+        {
+            "title": "Técnico de futebol",
+            "company": "Academia sporting vizela",
+            "location": "Paços de Ferreira, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4492956160",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/11/2026"
+        },
+        {
+            "title": "Massagista Desportivo",
+            "company": "FOSP Bike Fitting",
+            "location": "Vila Nova de Famalicão, Braga, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4487261179",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "20/11/2026"
         }
     ]
 }
