@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "20/11/2026 17:00",
-    "total_ofertas": 1152,
+    "ultima_actualizacion": "21/11/2026 07:22",
+    "total_ofertas": 1157,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -14899,6 +14899,71 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "20/11/2026"
+        },
+        {
+            "title": "Information Technology Operations Lead",
+            "company": "SOPliance Inc.",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4493221092",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "21/11/2026"
+        },
+        {
+            "title": "Coordinador/a de proyectos de obras lineales",
+            "company": "G.O.C., S/A",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4492935348",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "21/11/2026"
+        },
+        {
+            "title": "Live Sports Data Analyst",
+            "company": "Apex Logic",
+            "location": "Vigo, GA, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=d66a75a4fc397caf",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "21/11/2026"
+        },
+        {
+            "title": "Nike Retail Supervisor: Team Coach - La Coruna",
+            "company": "Nike",
+            "location": "Culleredo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4493214703",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "21/11/2026"
+        },
+        {
+            "title": "Ratalho",
+            "company": "JD Sports Fashion",
+            "location": "Oia, Aveiro, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4493201186",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "21/11/2026"
         }
     ]
 }
