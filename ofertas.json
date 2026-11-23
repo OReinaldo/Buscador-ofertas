@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "23/11/2026 07:51",
-    "total_ofertas": 1160,
+    "ultima_actualizacion": "23/11/2026 20:19",
+    "total_ofertas": 1164,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -15001,6 +15001,58 @@
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4492368482",
             "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "23/11/2026"
+        },
+        {
+            "title": "Director/a de Operaciones Logísticas",
+            "company": "Grupo Clave",
+            "location": "Pontevedra, GA, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=692aaa4e34afd551",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "23/11/2026"
+        },
+        {
+            "title": "Director/a de Operaciones Logísticas",
+            "company": "Grupo Clave",
+            "location": "Pontevedra, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4493680053",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "23/11/2026"
+        },
+        {
+            "title": "Junior PMO General (H/M)- Vigo",
+            "company": "MIGSO-PCUBED",
+            "location": "Greater Vigo Metropolitan Area",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4492602174",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "23/11/2026"
+        },
+        {
+            "title": "Coordinador/a de Proyectos de Obras Lineales.",
+            "company": "Agudiza Ingeniería",
+            "location": "Greater Vigo Metropolitan Area",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4493644902",
+            "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "23/11/2026"
         }
