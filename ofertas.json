@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "23/11/2026 20:19",
-    "total_ofertas": 1164,
+    "ultima_actualizacion": "24/11/2026 10:03",
+    "total_ofertas": 1166,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -15055,6 +15055,32 @@
             "categoria": "EMPRESAS",
             "estado": "Pendiente",
             "fecha": "23/11/2026"
+        },
+        {
+            "title": "Project Manager - Instalaciones Farmacéuticas | Vigo | Hybrid",
+            "company": "Amaris Consulting  | Part of Mantu",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Híbrido",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4493959820",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "24/11/2026"
+        },
+        {
+            "title": "Entrenador personal",
+            "company": "Centro Fía",
+            "location": "Lugo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4493922844",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "24/11/2026"
         }
     ]
 }
