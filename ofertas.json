@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "24/11/2026 10:03",
-    "total_ofertas": 1166,
+    "ultima_actualizacion": "25/11/2026 00:51",
+    "total_ofertas": 1170,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -15081,6 +15081,58 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "24/11/2026"
+        },
+        {
+            "title": "Junior Enterprise Technology | Tecnología & Transformación - Empieza tu carrera con impacto | Vigo",
+            "company": "Deloitte",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4493020690",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "25/11/2026"
+        },
+        {
+            "title": "Coordinador/a de Proyectos de Obras Lineales..",
+            "company": "Agudiza Ingeniería",
+            "location": "Greater Vigo Metropolitan Area",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4494161135",
+            "categoria": "EMPRESAS",
+            "estado": "Pendiente",
+            "fecha": "25/11/2026"
+        },
+        {
+            "title": "Assistente administrativo financeiro",
+            "company": "Speedy Motorsport and Speedy Eventos Lda",
+            "location": "Maia, Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4494128008",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/11/2026"
+        },
+        {
+            "title": "Técnico/a de Gestão Comercial e Administrativa (m/f/d) | Sports & You",
+            "company": "Grupo Salvador Caetano",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4494160314",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/11/2026"
         }
     ]
 }
