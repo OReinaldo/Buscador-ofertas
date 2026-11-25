@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "25/11/2026 00:51",
-    "total_ofertas": 1170,
+    "ultima_actualizacion": "25/11/2026 18:41",
+    "total_ofertas": 1171,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -15130,6 +15130,19 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4494160314",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "25/11/2026"
+        },
+        {
+            "title": "License Owner / Operator, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, GA, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "indeed",
+            "job_url": "https://es.indeed.com/viewjob?jk=2a686909e21fc841",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "25/11/2026"
