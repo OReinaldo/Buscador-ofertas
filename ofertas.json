@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "25/11/2026 18:41",
-    "total_ofertas": 1171,
+    "ultima_actualizacion": "26/11/2026 08:34",
+    "total_ofertas": 1173,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -15146,6 +15146,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "25/11/2026"
+        },
+        {
+            "title": "Instructor deportivo",
+            "company": "ENKI",
+            "location": "A Coruña, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4494679986",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/11/2026"
+        },
+        {
+            "title": "Entrenador personal",
+            "company": "2Steps Entrenamiento Personal y Nutrición",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4495203070",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "26/11/2026"
         }
     ]
 }
