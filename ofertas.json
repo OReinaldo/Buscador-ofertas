@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "26/11/2026 08:34",
-    "total_ofertas": 1173,
+    "ultima_actualizacion": "27/11/2026 00:39",
+    "total_ofertas": 1176,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -15172,6 +15172,45 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "26/11/2026"
+        },
+        {
+            "title": "Senior Transformation Project Manager (m/f/d) with Catalan",
+            "company": "Deutsche Telekom",
+            "location": "A Coruña, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4495277780",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/11/2026"
+        },
+        {
+            "title": "Coach",
+            "company": "BHOUT",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4495513179",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/11/2026"
+        },
+        {
+            "title": "Fisioterapeuta",
+            "company": "Celta",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4495298808",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/11/2026"
         }
     ]
 }
