@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "27/11/2026 00:39",
-    "total_ofertas": 1176,
+    "ultima_actualizacion": "27/11/2026 18:15",
+    "total_ofertas": 1177,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -15208,6 +15208,19 @@
             "tipo_contrato": "Jornada Completa",
             "site": "linkedin",
             "job_url": "https://www.linkedin.com/jobs/view/4495298808",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "27/11/2026"
+        },
+        {
+            "title": "Entrenador",
+            "company": "bz55",
+            "location": "Vigo, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4495592671",
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/11/2026"
