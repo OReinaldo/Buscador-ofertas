@@ -1,6 +1,6 @@
 {
-    "ultima_actualizacion": "27/11/2026 18:15",
-    "total_ofertas": 1177,
+    "ultima_actualizacion": "28/11/2026 08:00",
+    "total_ofertas": 1179,
     "ofertas": [
         {
             "title": "Senior Director, Technical Services",
@@ -15224,6 +15224,32 @@
             "categoria": "DEPORTE",
             "estado": "Pendiente",
             "fecha": "27/11/2026"
+        },
+        {
+            "title": "License Owner / Operator, Santiago",
+            "company": "Stranger Soccer",
+            "location": "Santiago de Compostela, Galicia, Spain",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4495854436",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "28/11/2026"
+        },
+        {
+            "title": "Assistente Executiva (Porto)",
+            "company": "FPF - Federação Portuguesa de Futebol",
+            "location": "Porto, Portugal",
+            "modalidad": "Presencial",
+            "tipo_jornada": "Jornada Completa",
+            "tipo_contrato": "Jornada Completa",
+            "site": "linkedin",
+            "job_url": "https://www.linkedin.com/jobs/view/4495856273",
+            "categoria": "DEPORTE",
+            "estado": "Pendiente",
+            "fecha": "28/11/2026"
         }
     ]
 }
